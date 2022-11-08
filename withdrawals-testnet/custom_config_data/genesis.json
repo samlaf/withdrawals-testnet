@@ -12,6 +12,9 @@
     "berlinBlock": 0,
     "londonBlock": 0,
     "mergeForkBlock": 0,
+    "arrowGlacierBlock": 0,
+    "grayGlacierBlock": 0,
+    "shanghaiBlock": 1668078444,
     "terminalTotalDifficulty": 0
   },
   "alloc": {

@@ -38,7 +38,9 @@
     "eip1559Transition": "0x0",
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
-    "eip3541Transition": "0x0"
+    "eip3541Transition": "0x0",
+    "eip4895TransitionTimestamp": "0x636CDB6C",
+    "terminalTotalDifficulty": "0x0"
   },
   "genesis": {
     "seal": {

@@ -24,14 +24,14 @@
 - import_playbook: tasks/init_geth_node.yml
   when: el_client_name == 'geth' or el_client_name == 'erigon'
 
+# stars beacon node docker container
+- import_playbook: tasks/start_beacon.yml
+
 # starts execution container
 - import_playbook: tasks/start_execution_node.yml
 
 # starts the json rpc snooper
 - import_playbook: tasks/start_snooper.yml
-
-# stars beacon node docker container
-- import_playbook: tasks/start_beacon.yml
 
 # stars validator docker container
 - import_playbook: tasks/start_validator.yml

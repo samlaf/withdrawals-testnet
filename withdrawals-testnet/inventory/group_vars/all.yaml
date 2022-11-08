@@ -41,8 +41,6 @@ bootnode_enrs:
 el_bootnode_enode:
 
 
-
-
 ##############################################
 # metric information
 ##############################################
@@ -163,6 +161,6 @@ firewall_allowed_udp_ports:
   - 9000
 
 firewall_additional_rules:
-  - "iptables -A INPUT -p tcp --dport 8545 -s 167.172.168.242 -j ACCEPT"
-  - "iptables -A INPUT -p tcp --dport 4000 -s 167.172.168.242 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 161.35.69.19 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 4000 -s 161.35.69.19 -j ACCEPT"
   - "iptables -A INPUT -p tcp --dport 8545 -s 81.206.101.77 -j ACCEPT"
