@@ -59,9 +59,9 @@ beacon_start_args: >
   --grpc-gateway-host=0.0.0.0
   --grpc-gateway-port={{beacon_api_port}}
   --enable-debug-rpc-endpoints
+  --terminal-total-difficulty-override={{ttd}}
   --jwt-secret=/jwtsecret
   --suggested-fee-recipient={{ fee_recipient }}
-  --contract-deployment-block=14675001
   {% if mev_boost == 'true' %}
   --http-mev-relay="http://127.0.0.1:{{mev_boost_port}}"
   {% endif %}

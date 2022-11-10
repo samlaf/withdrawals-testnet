@@ -10,7 +10,6 @@
     "maximumExtraDataSize": "0xffff",
     "minGasLimit": "0x1388",
     "networkID": "0x1469cb",
-    "MergeForkIdTransition": "0x0",
     "eip150Transition": "0x0",
     "eip158Transition": "0x0",
     "eip160Transition": "0x0",
@@ -39,8 +38,8 @@
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
     "eip3541Transition": "0x0",
-    "eip4895TransitionTimestamp": "0x636CDB6C",
-    "terminalTotalDifficulty": "0x0"
+    "eip4895TransitionTimestamp": "0x636d0554",
+    "terminalTotalDifficulty": "0x9"
   },
   "genesis": {
     "seal": {
@@ -51,7 +50,7 @@
     },
     "difficulty": "0x01",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x636cd9b0",
+    "timestamp": "0x636cf828",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "",
     "gasLimit": "0x400000"
@@ -881,5 +880,7 @@
       "balance": "1000000000000000000000000000"
     }
   },
-  "nodes": []
+  "nodes": [
+    "enode://402e65e43a8926029450075a62934cf5263cd8caca8f0042725f640c881f76c7b72c112767675327e4169c41473140cf88135a5607587087367038738384173a@161.35.213.167:30303"
+  ]
 }

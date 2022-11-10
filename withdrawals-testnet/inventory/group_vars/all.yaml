@@ -37,8 +37,10 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
+  - "enr:-MK4QJqzhzW1nRwMT_taiB0yopjQcOIDXyEDhUx3kefPL0-AbjXlkVdUC7B0-1FEtzkrmiDLRL8EzJ0vgWpc3nFIQ4mGAYRhl8irh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDpk0VSQAAAOf__________gmlkgnY0gmlwhKEj1aeJc2VjcDI1NmsxoQOWX2n2dsIThGpObyBgRIeSyWziQ5BYjfHmoJND4NyxuYhzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
 
 el_bootnode_enode:
+  - "enode://402e65e43a8926029450075a62934cf5263cd8caca8f0042725f640c881f76c7b72c112767675327e4169c41473140cf88135a5607587087367038738384173a@161.35.213.167:30303"
 
 
 ##############################################
@@ -139,6 +141,7 @@ common_log_options:
   max-buffer-size: 4m
 common_log_driver: json-file
 
+ttd: 9
 
 ##############################################
 # container names
@@ -161,6 +164,5 @@ firewall_allowed_udp_ports:
   - 9000
 
 firewall_additional_rules:
-  - "iptables -A INPUT -p tcp --dport 8545 -s 161.35.69.19 -j ACCEPT"
-  - "iptables -A INPUT -p tcp --dport 4000 -s 161.35.69.19 -j ACCEPT"
-  - "iptables -A INPUT -p tcp --dport 8545 -s 81.206.101.77 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 161.35.213.167 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 4000 -s 161.35.213.167 -j ACCEPT"

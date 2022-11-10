@@ -25,9 +25,8 @@ el_volumes:
   - "{{home_dir}}/jwtsecret:/jwtsecret"
 
 el_start_args: >
-  --config=mainnet_shadowfork
   --datadir="/eldata"
-  --Init.ChainSpecPath="/networkdata/nethermind_genesis.json"
+  --Init.ChainSpecPath="/networkdata/chainspec.json"
   --Init.WebSocketsEnabled=true
   --JsonRpc.Enabled=true
   --JsonRpc.EnabledModules="net,eth,consensus,subscribe,web3,admin"
@@ -37,9 +36,12 @@ el_start_args: >
   --Network.DiscoveryPort=30303
   --Network.P2PPort=30303
   --Merge.Enabled=true
-  --Merge.TerminalTotalDifficulty={{terminal_total_difficulty}}
+  --Merge.TerminalTotalDifficulty={{ttd}}
   --Init.DiagnosticMode="None"
   --Init.IsMining=true
+  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
+  --Network.Bootnodes="{{ el_bootnode_enode | join(',') }}"
+  {% endif %}
   --JsonRpc.JwtSecretFile=/jwtsecret
   --JsonRpc.AdditionalRpcUrls="http://localhost:{{el_engine_port_no_auth}}|http;ws|net;eth;subscribe;engine;web3;client|no-auth,http://localhost:{{el_engine_port}}|http;ws|net;eth;subscribe;engine;web3;client"
   {% if (ethstats_enabled) %}

@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: lodestar
 
-beacon_image_name: bbusa/lodestar-withdrawals
-validator_image_name: bbusa/lodestar-withdrawals
+beacon_image_name: g11tech/lodestar:withdrawals
+validator_image_name: g11tech/lodestar:withdrawals
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
@@ -40,8 +40,9 @@ beacon_start_args: >
         --dataDir=/beacondata
         --paramsFile=/custom_config_data/config.yaml
         --genesisStateFile=/custom_config_data/genesis.ssz
-        --bootnodes="enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-        --network.connectToDiscv5Bootnodes
+        {% if (bootnode_enrs is defined) and bootnode_enrs %}
+        --bootnodes="{{ bootnode_enrs | join(',') }}"
+        {% endif %} --network.connectToDiscv5Bootnodes
         --rest.port={{beacon_api_port}}
         --execution.urls={{execution_endpoint}}
         --rest
@@ -49,6 +50,8 @@ beacon_start_args: >
         --rest.cors="*"
         --logLevel={{ beacon_log_level | lower }}
         --enr.ip={{ansible_host}}
+        --eth1 false
+        --terminal-total-difficulty-override={{ttd}}
         --metrics
         --metrics.port={{ beacon_metrics_port }}
         --eth1.depositContractDeployBlock=14675001

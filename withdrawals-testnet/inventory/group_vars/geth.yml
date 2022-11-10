@@ -38,6 +38,7 @@ el_start_args: >
   --authrpc.jwtsecret=/jwtsecret
   --nat extip:{{ansible_host}}
   --allow-insecure-unlock
+  --override.terminaltotaldifficulty={{ttd}}
   --metrics --pprof --pprof.addr 0.0.0.0 --pprof.port={{el_metrics_port}}
   --maxpeers=75
   --syncmode=full
