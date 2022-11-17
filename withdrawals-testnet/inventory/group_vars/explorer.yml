@@ -45,9 +45,7 @@ beacon_explorer_volumes:
 
 beacon_explorer_start_args: "./explorer --config=/data/config.yaml"
 
-execution_explorer_start_args: "sh -c \"echo $DATABASE_URL &&
-                                 mix do ecto.create, ecto.migrate &&
-                                 exec mix phx.server\" "
+execution_explorer_start_args: bash -c "bin/blockscout eval \"Elixir.Explorer.ReleaseTasks.create_and_migrate()\" && bin/blockscout start"
 
 explorer_stats_container_name: explorerstats
 

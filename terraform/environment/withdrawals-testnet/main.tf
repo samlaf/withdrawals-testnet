@@ -117,3 +117,49 @@ module "withdrawals-lodestar-nethermind" {
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
+
+
+module "withdrawals-prysm-besu" {
+  droplet_count = 1
+
+  size      =  local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawals-prysm-besu"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","besu","withdrawals"])
+  ssh_key_name = local.ssh_key_name
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawals-lodestar-besu" {
+  droplet_count = 1
+
+  size      =  local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawals-lodestar-besu"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","besu","withdrawals"])
+  ssh_key_name = local.ssh_key_name
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawals-lodestar-ethereumjs" {
+  droplet_count = 1
+
+  size      =  local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawals-lodestar-ethereumjs"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","geth","ethereumjs","withdrawals"])
+  ssh_key_name = local.ssh_key_name
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}

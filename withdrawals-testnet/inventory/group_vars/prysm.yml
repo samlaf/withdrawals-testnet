@@ -62,6 +62,7 @@ beacon_start_args: >
   --terminal-total-difficulty-override={{ttd}}
   --jwt-secret=/jwtsecret
   --suggested-fee-recipient={{ fee_recipient }}
+  --contract-deployment-block=0
   {% if mev_boost == 'true' %}
   --http-mev-relay="http://127.0.0.1:{{mev_boost_port}}"
   {% endif %}

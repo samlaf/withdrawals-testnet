@@ -1,5 +1,5 @@
 el_client_name: geth
-el_image_name: bbusa/geth-withdrawals:latest
+el_image_name: bbusa/geth-withdrawals
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -9,6 +9,7 @@ el_github_external_user_pubkeys:
   - mariusVanDerWijden
   - holiman
   - karalabe
+  - g11tech
 
 # bare websocket
 elendpoint_ws: ws://127.0.0.1:8546
@@ -25,13 +26,14 @@ geth_init_args: >
 el_start_args: >
   --datadir=/eldata
   --networkid={{chainID}}
-  --http --http.api "admin,engine,net,eth"
+  --http --http.api "debug,txpool,admin,engine,net,eth"
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
   --http.corsdomain "*"
   --ws --ws.api "net,eth,engine"
   --ws.port={{el_ws_rpc_port}}
   --ws.addr 0.0.0.0
+  --gcmode=archive
   --authrpc.port={{el_engine_port}}
   --authrpc.addr=0.0.0.0
   --authrpc.vhosts="*"
