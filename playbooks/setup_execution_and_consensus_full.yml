@@ -11,6 +11,10 @@
 # creates requisite directories for data and sets permissions
 - import_playbook: tasks/mkdatadirs.yml
 
+# Import static nodes config for besu
+- import_playbook: tasks/upload_static_nodes.yml
+  when: el_client_name == 'besu'
+
 # uploads validator keys corresponding to the host
 - import_playbook: tasks/upload_validator_keys.yml
   when: no_validator_keys != 'true'

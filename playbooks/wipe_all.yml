@@ -43,6 +43,10 @@
       file:
         path: "{{ home_dir }}/jwtsecret"
         state: absent
+    - name: Remove static nodes dir
+      file: 
+        path: "{{home_dir}}/static_nodes"
+        state: absent
     - name: Stop RPC snooper container
       shell: "docker rm -f {{snoop_container_name}}"
       register: stop_result

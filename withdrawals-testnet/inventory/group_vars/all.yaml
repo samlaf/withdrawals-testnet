@@ -8,6 +8,10 @@ initial_remote_user: "root"
 github_user_pubkeys:
   - parithosh
   - barnabasbusa
+  - g11tech
+  - potuz
+  - mariusVanDerWijden
+  - MarekM25
 
 
 ansible_python_interpreter: /usr/bin/python3
@@ -37,12 +41,11 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-MK4QJqzhzW1nRwMT_taiB0yopjQcOIDXyEDhUx3kefPL0-AbjXlkVdUC7B0-1FEtzkrmiDLRL8EzJ0vgWpc3nFIQ4mGAYRhl8irh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDpk0VSQAAAOf__________gmlkgnY0gmlwhKEj1aeJc2VjcDI1NmsxoQOWX2n2dsIThGpObyBgRIeSyWziQ5BYjfHmoJND4NyxuYhzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
-
+  - "enr:-LK4QILubq-jonr5XP7TReF5IOkGlWO_9blpZsdK2QIM9KMQIvF4AC1Y07TqsbC053Q4iosKjIj8eDRBhX2qAklvhqoHh2F0dG5ldHOI__________-EZXRoMpAVV9wEIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQPElMf2PNkYknCIyIRrChIHnc-DJ6MbbfcPv_TJu19gCoN0Y3CCIyiDdWRwgiMo"
 el_bootnode_enode:
-  - "enode://402e65e43a8926029450075a62934cf5263cd8caca8f0042725f640c881f76c7b72c112767675327e4169c41473140cf88135a5607587087367038738384173a@161.35.213.167:30303"
-
-
+  - "enode://9ca8e7c2a7ef6d1418044ade003bc32d6edea152be64a2724c39add51892fc228becc5df93ceb520d3b3f2e0570e5b68b7730e5ccca4047e3ee3401458fc828b@159.65.113.251:30303"
+el_static_enodes:
+  - "enode://9ca8e7c2a7ef6d1418044ade003bc32d6edea152be64a2724c39add51892fc228becc5df93ceb520d3b3f2e0570e5b68b7730e5ccca4047e3ee3401458fc828b@159.65.113.251:30303"
 ##############################################
 # metric information
 ##############################################
@@ -60,6 +63,8 @@ remote_write_password: "test"
 
 no_validator_keys: false
 ethstats_enabled: false 
+metrics_enabled: false
+snapsync_enabled: false
 ethstats_url: "example.io"
 ethstats_password: "example"
 
@@ -158,11 +163,15 @@ firewall_allowed_tcp_ports:
   - 9000
   - 80
   - 443
+  - 3334
 
 firewall_allowed_udp_ports:
   - 30303
   - 9000
 
 firewall_additional_rules:
-  - "iptables -A INPUT -p tcp --dport 8545 -s 161.35.213.167 -j ACCEPT"
-  - "iptables -A INPUT -p tcp --dport 4000 -s 161.35.213.167 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 172.16.0.0/12 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8546 -s 172.16.0.0/12 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 4000 -s 159.65.113.251 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 159.65.113.251 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 81.206.101.77 -j ACCEPT"

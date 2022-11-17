@@ -50,7 +50,7 @@ beacon_start_args: >
         --rest.cors="*"
         --logLevel={{ beacon_log_level | lower }}
         --enr.ip={{ansible_host}}
-        --eth1 false
+        --enr.udp {{ beacon_p2p_port }}
         --terminal-total-difficulty-override={{ttd}}
         --metrics
         --metrics.port={{ beacon_metrics_port }}

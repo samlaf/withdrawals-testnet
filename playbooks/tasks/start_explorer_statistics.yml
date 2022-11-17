@@ -13,7 +13,7 @@
         network_mode: bridge
         networks:
           - name: "{{explorer_docker_network_name}}"
-            ipv4_address: "172.1.1.104"
+            ipv4_address: "172.28.0.104"
         restart: "{{ explorer_stats_require_restart | default(false) }}"
         command: "{{ explorer_stats_start_args }}"
         volumes: "{{explorer_stats_volumes}}"
