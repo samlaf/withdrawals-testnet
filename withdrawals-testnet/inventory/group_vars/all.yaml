@@ -41,12 +41,14 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-
+  - "enr:-LK4QFAGE_Z_kfN-AgSDz7JccqWMEAwATXIfg27IbHTAiaApdLtrdVBKuLIEmDHBAaQW9dUhJmo7cBF2e5ynAIs3d0UGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpB39OJhIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQJkVlfnbh30OE4AOlbfMCNrScidqUwJkV8Q5mQRxMoEUIN0Y3CCIyiDdWRwgiMo"
 multiaddrs:
-
+  - "/ip4/159.65.113.251/tcp/9000/p2p/16Uiu2HAm2BM7U1wawBu3ovt3mx4tm1adnmoQiGZaoBwdgX8x5aYw"
 el_bootnode_enode:
+  - "enode://8e516578e8646de302b062093b987c87857ff30b77eea931be1bb73c4553e224aed27f8f9a40603d34f41e551e370ad9b981aec0edd86f4b3efc246fc6e3d690@159.65.113.251:30303"
 
 el_static_enodes:
+  - "enode://8e516578e8646de302b062093b987c87857ff30b77eea931be1bb73c4553e224aed27f8f9a40603d34f41e551e370ad9b981aec0edd86f4b3efc246fc6e3d690@159.65.113.251:30303"
 
 ##############################################
 # metric information
@@ -63,7 +65,7 @@ eth_metrics_exporter_image: "samcm/ethereum-metrics-exporter:0.16.5"
 remote_write_username: "test"
 remote_write_password: "test"
 
-no_validator_keys: false
+no_validator_keys: true
 ethstats_enabled: false 
 metrics_enabled: false
 snapsync_enabled: false
