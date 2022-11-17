@@ -178,8 +178,8 @@
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
     "eip3541Transition": "0x0",
-    "eip4895TransitionTimestamp": "0x63764616",
-    "terminalTotalDifficulty": "0x8"
+    "eip4895TransitionTimestamp": "0x63765554",
+    "terminalTotalDifficulty": "0x9"
   },
   "genesis": {
     "seal": {
@@ -190,7 +190,7 @@
     },
     "difficulty": "0x01",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x63763dbe",
+    "timestamp": "0x63764cfc",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "",
     "gasLimit": "0x400000"

@@ -5,7 +5,7 @@ execution_explorer_container_name: blockscout
 
 explorer_memory: 9000m
 beacon_explorer_image_name: "parithoshj/beacon-explorer:print-chain-id"
-execution_explorer_image_name: "skylenet/blockscout:v4.1.5-beta"
+execution_explorer_image_name: "blockscout/blockscout:latest"
 
 explorer_first_block: 1
 explorer_ip_address: "159.65.113.251"

@@ -14,7 +14,7 @@
     "mergeForkBlock": 0,
     "arrowGlacierBlock": 0,
     "grayGlacierBlock": 0,
-    "shanghaiBlock": 1668695574,
+    "shanghaiBlock": 1668699476,
     "terminalTotalDifficulty": 9
   },
   "alloc": {
@@ -849,5 +849,5 @@
   "nonce": "0x1234",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "timestamp": "1668693438"
+  "timestamp": "1668697340"
 }
