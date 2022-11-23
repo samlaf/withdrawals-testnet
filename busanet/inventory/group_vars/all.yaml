@@ -38,13 +38,13 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-LK4QBjF_p_TpnHEnc6W1VHgfvEIYlzOHyZmwjco_ybJAiUjSq8rEh5aig7cnSd9OVHqq2A_AyI7Rwn9fXTG0LG1yXIGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDT1d9ZQAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQNPlFMUOjKvZt-FV3spF1mO7TV5p5umoW5AwpJhtQqTIIN0Y3CCIyiDdWRwgiMo"
+  - "enr:-LK4QOQbpISsytPcCJ8SGJSFYgeeL0Iyzk9evAnk3K0hztYIcaAMR2BjGDLEVzXzO0X0c5uz0uj53quXB_ekckKyJR8Gh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDT1d9ZQAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQOxbmB4wiZOvrR1HUKUJusOxgYr7FkFWHAEkzDRN7C6KoN0Y3CCIyiDdWRwgiMo"
 multiaddrs:
-  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAmJ1djjvjPvF7G7PWN6djhBACaidN3tGWwAB9qsC6mZ17d"
+  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAmQbc8YqfLaK2LUdkhJv3sjKZ2V58qULmaCaXq2ecdbqQ5"
 el_bootnode_enode:
-  - "enode://949755c7790a56dd084558f7a619858b0bbb91699b0750b9a00e7368da315afc2e978e4eb5e99c22fdfc288fbd37f797cb7ebe992ecbe261ff3bbaaaca32781f@167.71.63.228:30303"
+  - "enode://e5f935a1245a3cc8599939f1415e59ae66b5f1186c8e7a2e69b7d521f33dfbf2893faf0ad56badcc8e29bb81bbcc9a06616a0ea7a8f9dd6e74985cd22bf8730f@167.71.63.228:30303"
 el_static_enodes:
-  - "enode://949755c7790a56dd084558f7a619858b0bbb91699b0750b9a00e7368da315afc2e978e4eb5e99c22fdfc288fbd37f797cb7ebe992ecbe261ff3bbaaaca32781f@167.71.63.228:30303"
+  - "enode://e5f935a1245a3cc8599939f1415e59ae66b5f1186c8e7a2e69b7d521f33dfbf2893faf0ad56badcc8e29bb81bbcc9a06616a0ea7a8f9dd6e74985cd22bf8730f@167.71.63.228:30303"
 ##############################################
 # metric information
 ##############################################

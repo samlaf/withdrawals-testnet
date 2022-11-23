@@ -73,16 +73,31 @@ module "withdrawals-prysm-geth" {
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
 
-module "withdrawals-lodestar-geth" {
+module "withdrawals-lighthouse-geth" {
   droplet_count = 1
 
   size      =  local.size
   region    = local.region
   image     = local.image
-  name      = "withdrawals-lodestar-geth"
+  name      = "withdrawals-lighthouse-geth"
   source    = "../../modules/"
 
-  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","geth","withdrawals"])
+  tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","geth","withdrawals"])
+  ssh_key_name = local.ssh_key_name
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawals-teku-geth" {
+  droplet_count = 1
+
+  size      =  local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawals-teku-geth"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","withdrawals"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
@@ -118,62 +133,31 @@ module "withdrawals-lodestar-nethermind" {
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
 
-
-module "withdrawals-prysm-besu" {
+module "withdrawals-lighthouse-nethermind" {
   droplet_count = 1
 
   size      =  local.size
   region    = local.region
   image     = local.image
-  name      = "withdrawals-prysm-besu"
+  name      = "withdrawals-lighthouse-nethermind"
   source    = "../../modules/"
 
-  tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","besu","withdrawals"])
+  tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","nethermind","withdrawals"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
 
-module "withdrawals-lodestar-besu" {
+module "withdrawals-teku-nethermind" {
   droplet_count = 1
 
   size      =  local.size
   region    = local.region
   image     = local.image
-  name      = "withdrawals-lodestar-besu"
+  name      = "withdrawals-teku-nethermind"
   source    = "../../modules/"
 
-  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","besu","withdrawals"])
-  ssh_key_name = local.ssh_key_name
-  digital_ocean_project_name = local.digital_ocean_project_name
-  #  vpc_uuid = digitalocean_vpc.vpc.id
-}
-
-module "withdrawals-lodestar-ethereumjs" {
-  droplet_count = 1
-
-  size      =  local.size
-  region    = local.region
-  image     = local.image
-  name      = "withdrawals-lodestar-ethereumjs"
-  source    = "../../modules/"
-
-  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","geth","ethereumjs","withdrawals"])
-  ssh_key_name = local.ssh_key_name
-  digital_ocean_project_name = local.digital_ocean_project_name
-  #  vpc_uuid = digitalocean_vpc.vpc.id
-}
-
-module "withdrawals-teku-geth" {
-  droplet_count = 1
-
-  size      =  local.size
-  region    = local.region
-  image     = local.image
-  name      = "withdrawals-teku-geth"
-  source    = "../../modules/"
-
-  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","withdrawals"])
+  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","nethermind","withdrawals"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id

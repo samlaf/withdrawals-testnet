@@ -127,8 +127,7 @@
           "0xbb9bc244d798123fde783fcc1c72d3bb8c189413",
           "0x807640a13483f8ac783c557fcdf27be11ea4ac7a"
         ],
-        "difficultyBombDelays": {
-        }
+        "difficultyBombDelays": {}
       }
     }
   },
@@ -168,7 +167,7 @@
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
     "eip3541Transition": "0x0",
-    "eip4895TransitionTimestamp": "0x63765554",
+    "eip4895TransitionTimestamp": "0x637e07e0",
     "terminalTotalDifficulty": "0x9"
   },
   "genesis": {
@@ -180,7 +179,7 @@
     },
     "difficulty": "0x01",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x63764cfc",
+    "timestamp": "0x637e01e0",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "",
     "gasLimit": "0x400000"
