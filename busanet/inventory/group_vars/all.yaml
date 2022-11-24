@@ -37,14 +37,13 @@ chainID: 1337804
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-LK4QOQbpISsytPcCJ8SGJSFYgeeL0Iyzk9evAnk3K0hztYIcaAMR2BjGDLEVzXzO0X0c5uz0uj53quXB_ekckKyJR8Gh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDT1d9ZQAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQOxbmB4wiZOvrR1HUKUJusOxgYr7FkFWHAEkzDRN7C6KoN0Y3CCIyiDdWRwgiMo"
+  - "enr:-LK4QAoqxGzIsCyla4iME9XiUDUXKmLc0D9_8uKGcUcZtZxoB15sm9eWXEHzG0PCcTdA-ANlK3GcqgrHvoiBiOhdsZAHh2F0dG5ldHOI__________-EZXRoMpAURNa1QAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQKU1RQfN727o-skpvJeC35YaI-7cABoF48pIqqWF72D9IN0Y3CCIyiDdWRwgiMo"
 multiaddrs:
-  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAmQbc8YqfLaK2LUdkhJv3sjKZ2V58qULmaCaXq2ecdbqQ5"
+  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAm5SemSfFYkrVDGEv2vmhxRXoCJEPEENQixXt9Vt8kP8Mq"
 el_bootnode_enode:
-  - "enode://e5f935a1245a3cc8599939f1415e59ae66b5f1186c8e7a2e69b7d521f33dfbf2893faf0ad56badcc8e29bb81bbcc9a06616a0ea7a8f9dd6e74985cd22bf8730f@167.71.63.228:30303"
+  - "enode://86742dfdf0110bd75980dc7d0e5848ec15e276465f9a0ae566cc42cadb0b7e7fe5a71ab689a76b1402b33d80bcbbeec6474efee20e34397a31ddfa3506aed784@167.71.63.228:30303"
 el_static_enodes:
-  - "enode://e5f935a1245a3cc8599939f1415e59ae66b5f1186c8e7a2e69b7d521f33dfbf2893faf0ad56badcc8e29bb81bbcc9a06616a0ea7a8f9dd6e74985cd22bf8730f@167.71.63.228:30303"
+  - "enode://86742dfdf0110bd75980dc7d0e5848ec15e276465f9a0ae566cc42cadb0b7e7fe5a71ab689a76b1402b33d80bcbbeec6474efee20e34397a31ddfa3506aed784@167.71.63.228:30303"
 ##############################################
 # metric information
 ##############################################

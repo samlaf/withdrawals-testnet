@@ -33,16 +33,16 @@ function prep_group {
 
 
 echo "lighthouse-geth keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "busanet-lighthouse-geth" 20 
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "busanet-lighthouse-geth" 1000 
 
 echo "lodestar-nethermind keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "busanet-lodestar-nethermind" 20
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "busanet-lodestar-nethermind" 1000
 
 echo "bootnode"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "busanet-bootnode" 20
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "busanet-bootnode" 1000
 
 echo "lodestar-besu keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "busanet-lodestar-besu" 20
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "busanet-lodestar-besu" 1000
 
 echo "teku-geth keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "busanet-teku-geth" 20
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "busanet-teku-geth" 1000

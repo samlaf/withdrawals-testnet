@@ -167,7 +167,7 @@
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
     "eip3541Transition": "0x0",
-    "eip4895TransitionTimestamp": "0x637ddde0",
+    "eip4895TransitionTimestamp": "0x637f9554",
     "terminalTotalDifficulty": "0x0"
   },
   "genesis": {
@@ -179,7 +179,7 @@
     },
     "difficulty": "0x01",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x637ddc60",
+    "timestamp": "0x637f93d4",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "",
     "gasLimit": "0x400000"

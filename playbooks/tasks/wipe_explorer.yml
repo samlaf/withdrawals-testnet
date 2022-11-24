@@ -12,6 +12,11 @@
       file:
         path: "{{ explorer_host_dir }}"
         state: absent
+    - name: Remove potentially still present custom_config_data dir
+      become: true
+      file:
+        path: "{{ testnet_dir }}"
+        state: absent
     - name: Stop postgres
       shell: "docker rm -f {{explorer_postgres_container_name}}"
       register: stop_result
