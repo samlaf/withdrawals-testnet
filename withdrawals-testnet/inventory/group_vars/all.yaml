@@ -13,6 +13,7 @@ github_user_pubkeys:
   - mariusVanDerWijden
   - MarekM25
   - nisdas
+  - skylenet
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
@@ -40,14 +41,13 @@ chainID: 1337803
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-LK4QMpNdX14cQG2jJQCvah3Y9Fv1u1UJi1knzAvDFDLCTEyJQiFQhP5Jw4EGxTBjVprn8RNKHRnucqqaqT8DvOsFoUGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpB39OJhIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQNRrI7rhO-gKi0E7CR2Jvpm2CzAYUIAm17HmSOV3QoAvoN0Y3CCIyiDdWRwgiMo"
+  - "enr:-LK4QNRkwBq94pldu1dSD59kabjcPBirmHVK_ZxKz-v4JhLeOIWQCJUU5_mTaaaWeP2DHLaHa20ryCEgFgU8V0NusOgGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpB39OJhIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQORzaiwV-ogDNaDpB0S2ptorLxgiyGIw39bH1QCO16iu4N0Y3CCIyiDdWRwgiMo"
 multiaddrs:
-  - "/ip4/159.65.113.251/tcp/9000/p2p/16Uiu2HAmJ9oz7hJ1mmxmUc3DBBrm9Qie1XfsKUy4BEhBzvHDXPeM"
+  - "/ip4/159.65.113.251/tcp/9000/p2p/16Uiu2HAmNU9MQSjFBPZHLMsmpGP9xnJ16mkHsm1x8jUy6q9vDTsG"
 el_bootnode_enode:
-  - "enode://40c22e7bdeefa42f044b46a0f9b986ae6d6fded7fe108fd1f048ae520ed34fd9a39753c0e1745bd779060972562290e1716622dcff5a64e0c2e8547e32934f1a@159.65.113.251:30303"
+  - "enode://ad75313fb9af82a7f79e180d99441246993cd35422ebd04df0e10faab1b33b0c0819a4feba30a5385a95c7796f2fca1ab5b0de5189054fe0625b4f38197ea151@159.65.113.251:30303"
 el_static_enodes:
-  - "enode://40c22e7bdeefa42f044b46a0f9b986ae6d6fded7fe108fd1f048ae520ed34fd9a39753c0e1745bd779060972562290e1716622dcff5a64e0c2e8547e32934f1a@159.65.113.251:30303"
+  - "enode://ad75313fb9af82a7f79e180d99441246993cd35422ebd04df0e10faab1b33b0c0819a4feba30a5385a95c7796f2fca1ab5b0de5189054fe0625b4f38197ea151@159.65.113.251:30303"
 
 ##############################################
 # metric information

@@ -55,3 +55,6 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 6 1 "withdrawals-prysm-geth" 10
 
 echo "lodestar-nethermind keys"
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 7 1 "withdrawals-lodestar-nethermind" 10
+
+echo "teku-besu keys"
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 8 1 "withdrawals-teku-besu" 0

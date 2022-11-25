@@ -51,6 +51,7 @@ beacon_start_args: >
         --logLevel={{ beacon_log_level | lower }}
         --enr.ip={{ansible_host}}
         --metrics
+        --rest.namespace *
         --enr.udp {{ beacon_p2p_port }}
         --metrics.port={{ beacon_metrics_port }}
         --eth1.depositContractDeployBlock=14675001
