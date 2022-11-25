@@ -60,7 +60,7 @@ remote_write_username: "test"
 remote_write_password: "test"
 
 no_validator_keys: false
-ethstats_enabled: false 
+ethstats_enabled: false
 metrics_enabled: false
 snapsync_enabled: false
 ethstats_url: "example.io"
@@ -132,7 +132,7 @@ el_node_dir: "{{home_dir}}/eldata"
 
 ##############################################
 # common log config
-# Possible log levels: 
+# Possible log levels:
 # silent, error, warn, info (default), debug, detail
 ##############################################
 execution_log_level: info
