@@ -14,8 +14,8 @@ roles:
 - name: robertdebock.fail2ban
   version: "4.2.3"
 - name: ansible-haproxy
-  src:  https://github.com/parithosh/ansible-haproxy
-  version: 8b60485f53a1f5b385764d132028c550595abc71
+  src:  https://github.com/ethpandaops/ansible-haproxy
+  version: bc2718275154f9febdf1ee5f9dfbdea5743efecf
   scm: git
 
 collections:
