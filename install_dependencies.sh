@@ -1,3 +1,4 @@
 #!/bin/sh
 
-ansible-galaxy install -r requirements.yml --roles-path=./external_roles
+ansible-galaxy install -r requirements.yml
+ansible-galaxy collection install -r requirements.yml
