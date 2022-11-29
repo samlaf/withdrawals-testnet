@@ -1,0 +1,75 @@
+# All config options can be found in here: https://github.com/gobitfly/eth2-beaconchain-explorer/blob/master/types/config.go
+chain:
+  #name: sepolia
+  network: "busanet"
+  slotsPerEpoch: 32
+  secondsPerSlot: 12
+  genesisTimestamp: 1669308660
+  mainnet: false # hide mainnet staking pool etc. info
+  minGenesisActiveValidatorCount: 80
+  phase0path: "/custom_configs/phase0.yml"
+  altairPath: "/custom_configs/phase0.yml"
+  altairForkEpoch: 0
+  configPath: "/custom_configs/phase0.yml"
+readerDatabase:
+  name: db
+  host: beaconchain_postgres
+  port: "5432"
+  user: postgres
+  password: "pass"
+writerDatabase:
+  name: db
+  host: beaconchain_postgres
+  port: "5432"
+  user: postgres
+  password: "pass"
+bigtable:
+  project: explorer
+  instance: beaconchain_bigtable:9000
+lastAttestationCachePath: "/data/lastAttestationCache"
+eth1ErigonEndpoint: "{{ beaconchain_explorer_aio_url_erigon }}"
+eth1GethEndpoint: "{{ beaconchain_explorer_aio_url_geth }}"
+redisCacheEndpoint: 'beaconchain_redis:6379'
+tieredCacheProvider: 'redis'
+frontend:
+  siteDomain: "localhost:8080"
+  siteName: "Testnet"
+  siteSubtitle: "Testnet Beaconchain Explorer"
+  server:
+    host: '0.0.0.0' # Address to listen on
+    port: '8080' # Port to listen on
+  readerDatabase:
+    name: db
+    host: beaconchain_postgres
+    port: "5432"
+    user: postgres
+    password: "pass"
+  writerDatabase:
+    name: db
+    host: beaconchain_postgres
+    port: "5432"
+    user: postgres
+    password: "pass"
+  sessionSecret: "11111111111111111111111111111111"
+  jwtSigningSecret: "1111111111111111111111111111111111111111111111111111111111111111"
+  jwtIssuer: "localhost"
+  jwtValidityInMinutes: 30
+  maxMailsPerEmailPerDay: 10
+  mail:
+    mailgun:
+      sender: no-reply@localhost
+      domain: mg.localhost
+      privateKey: "key-11111111111111111111111111111111"
+  csrfAuthKey: '1111111111111111111111111111111111111111111111111111111111111111'
+indexer:
+  indexMissingEpochsOnStartup: true # Check for missing epochs and export them after startup
+  #updateAllEpochStatistics: true
+  #fixCanonOnStartup: true
+  #fullIndexOnStartup: true
+  #checkAllBlocksOnStartup: true
+  node:
+    host: "10.19.0.27"
+    port: '4000'
+    type: lighthouse
+  eth1DepositContractAddress: '0x4242424242424242424242424242424242424242'
+  eth1DepositContractFirstBlock: 0

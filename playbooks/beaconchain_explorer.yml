@@ -1,0 +1,14 @@
+- hosts: beaconchain_explorer
+  become: true
+  roles:
+  # Docker. Required dependency
+  - role: geerlingguy.docker
+    tags: [docker]
+  - role: geerlingguy.pip
+    pip_install_packages:
+    - name: docker
+    - name: docker-compose
+    tags: [docker]
+  # Beaconchain explorer
+  - role: beaconchain_explorer_aio
+    tags: [beaconchain_explorer_aio]
