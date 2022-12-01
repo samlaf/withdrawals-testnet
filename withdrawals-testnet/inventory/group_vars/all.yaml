@@ -41,13 +41,18 @@ chainID: 1337803
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-LK4QNRkwBq94pldu1dSD59kabjcPBirmHVK_ZxKz-v4JhLeOIWQCJUU5_mTaaaWeP2DHLaHa20ryCEgFgU8V0NusOgGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpB39OJhIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQORzaiwV-ogDNaDpB0S2ptorLxgiyGIw39bH1QCO16iu4N0Y3CCIyiDdWRwgiMo"
+  - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
+  - "enr:-Ly4QP0Q3p6Cf5ZXvpXhD0yVA2kQ8hArL6QQabjw2nHAGWUMFyArfcKtcsEY3ARIYECygDa3s6UGwZGOfizLbkNOwwABh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDW50fuIAAAOQEAAAAAAAAAgmlkgnY0gmlwhKUWU3eJc2VjcDI1NmsxoQOLgg2lRqwuLqH437s8_euX-zzZ0C_2wm4VVcUEPHPkjohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
+
 multiaddrs:
-  - "/ip4/159.65.113.251/tcp/9000/p2p/16Uiu2HAmNU9MQSjFBPZHLMsmpGP9xnJ16mkHsm1x8jUy6q9vDTsG"
+  - "/ip4/165.22.83.119/tcp/9000/p2p/16Uiu2HAmN3a3JDbDfStyge7BUXN4EYMPiQ1SBmK3aLv77dTqPoZf"
+
 el_bootnode_enode:
-  - "enode://ad75313fb9af82a7f79e180d99441246993cd35422ebd04df0e10faab1b33b0c0819a4feba30a5385a95c7796f2fca1ab5b0de5189054fe0625b4f38197ea151@159.65.113.251:30303"
+  - "enode://7c786dbf95b9298a40c2e6b4238594d2e01183a24607e0124e9db569d4cd7d5c9329b3448ba3e570cc31d2f53f0d12976300c84a9dca4797ee8bfaf4252ad8a4@165.22.83.119:30303"
+
 el_static_enodes:
-  - "enode://ad75313fb9af82a7f79e180d99441246993cd35422ebd04df0e10faab1b33b0c0819a4feba30a5385a95c7796f2fca1ab5b0de5189054fe0625b4f38197ea151@159.65.113.251:30303"
+  - "enode://7c786dbf95b9298a40c2e6b4238594d2e01183a24607e0124e9db569d4cd7d5c9329b3448ba3e570cc31d2f53f0d12976300c84a9dca4797ee8bfaf4252ad8a4@165.22.83.119:30303"
+
 
 ##############################################
 # metric information
@@ -64,7 +69,7 @@ eth_metrics_exporter_image: "samcm/ethereum-metrics-exporter:0.16.5"
 remote_write_username: "test"
 remote_write_password: "test"
 
-no_validator_keys: true
+no_validator_keys: false
 ethstats_enabled: false 
 metrics_enabled: false
 snapsync_enabled: false

@@ -67,3 +67,10 @@
       ansible.builtin.service:
         name: docker
         state: restarted
+
+- name: Unconditionally reboot the machine with all defaults
+  hosts:
+    - all
+  become: true
+  tasks:
+    - reboot:

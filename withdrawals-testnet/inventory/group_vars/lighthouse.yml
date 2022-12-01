@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: lighthouse
 
-beacon_image_name: bbusa/lighthouse-withdrawals:latest
-validator_image_name: bbusa/lighthouse-withdrawals:latest
+beacon_image_name: bbusa/lighthouse-withdrawals
+validator_image_name: bbusa/lighthouse-withdrawals
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:

@@ -60,6 +60,7 @@ beacon_start_args: >
   --grpc-gateway-port={{beacon_api_port}}
   --enable-debug-rpc-endpoints
   --jwt-secret=/jwtsecret
+  --disable-staking-contract-check
   --suggested-fee-recipient={{ fee_recipient }}
   --contract-deployment-block=14675001
   {% if mev_boost == 'true' %}
