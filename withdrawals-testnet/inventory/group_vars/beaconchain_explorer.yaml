@@ -6,7 +6,7 @@ beaconchain_explorer_aio_url_erigon: http://10.19.0.27:8545
 beaconchain_explorer_aio_url_erigon_ws: ws://10.19.0.27:8546
 beaconchain_explorer_aio_url_geth: http://10.19.0.27:8545
 
-beaconchain_explorer_aio_config_file: templates/beaconchain_testnet_config.yml.j2
+beaconchain_explorer_aio_config_file: ../withdrawals-testnet/inventory/templates/beaconchain_testnet_config.yml.j2
 
 beaconchain_explorer_cleanup_all: false
 
@@ -37,10 +37,10 @@ beaconchain_explorer_aio_extra_config_files:
     # Genesis
     # ---------------------------------------------------------------
     # `2**14` (= 16,384)
-    MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 80
+    MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 1050
     # Mar-01-2021 08:53:32 AM +UTC
     # This is an invalid valid and should be updated when you create the genesis
-    MIN_GENESIS_TIME: 1669308660
+    MIN_GENESIS_TIME: 1669897500
     GENESIS_FORK_VERSION: 0x10000039
     GENESIS_DELAY: 0
 

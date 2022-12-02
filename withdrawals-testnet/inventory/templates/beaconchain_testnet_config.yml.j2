@@ -1,12 +1,12 @@
 # All config options can be found in here: https://github.com/gobitfly/eth2-beaconchain-explorer/blob/master/types/config.go
 chain:
   #name: sepolia
-  network: "busanet"
+  network: "withdrawal-test"
   slotsPerEpoch: 32
   secondsPerSlot: 12
-  genesisTimestamp: 1669308660
+  genesisTimestamp: 1669897500
   mainnet: false # hide mainnet staking pool etc. info
-  minGenesisActiveValidatorCount: 80
+  minGenesisActiveValidatorCount: 1050
   phase0path: "/custom_configs/phase0.yml"
   altairPath: "/custom_configs/phase0.yml"
   altairForkEpoch: 0
@@ -33,8 +33,8 @@ redisCacheEndpoint: 'beaconchain_redis:6379'
 tieredCacheProvider: 'redis'
 frontend:
   siteDomain: "localhost:8080"
-  siteName: "Testnet"
-  siteSubtitle: "Testnet Beaconchain Explorer"
+  siteName: "Beaconchain Explorer"
+  siteSubtitle: "Testnet"
   server:
     host: '0.0.0.0' # Address to listen on
     port: '8080' # Port to listen on
