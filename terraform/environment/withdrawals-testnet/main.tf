@@ -52,7 +52,7 @@ module "withdrawals_bootnode" {
   name      = "withdrawals-bootnode"
   source    = "../../modules/"
 
-  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","geth","explorer","bootnode","faucet", "ethstats_server","landing_page","reverse_proxy","withdrawals"])
+  tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","geth","explorer","bootnode","faucet", "ethstats_server","landing_page","reverse_proxy","withdrawals"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
 #  vpc_uuid = digitalocean_vpc.vpc.id
@@ -113,21 +113,6 @@ module "withdrawals-prysm-nethermind" {
   source    = "../../modules/"
 
   tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","nethermind","withdrawals"])
-  ssh_key_name = local.ssh_key_name
-  digital_ocean_project_name = local.digital_ocean_project_name
-  #  vpc_uuid = digitalocean_vpc.vpc.id
-}
-
-module "withdrawals-lodestar-nethermind" {
-  droplet_count = 1
-
-  size      =  local.size
-  region    = local.region
-  image     = local.image
-  name      = "withdrawals-lodestar-nethermind"
-  source    = "../../modules/"
-
-  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","nethermind","withdrawals"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
