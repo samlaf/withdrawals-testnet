@@ -8,7 +8,7 @@ beacon_explorer_image_name: "parithoshj/beacon-explorer:print-chain-id"
 execution_explorer_image_name: "blockscout/blockscout:latest"
 
 explorer_first_block: 1
-explorer_ip_address: "159.65.113.251"
+explorer_ip_address: "165.22.83.119"
 el_deposit_contract_first_block: 1
 
 explorer_postgres_container_name: postgres

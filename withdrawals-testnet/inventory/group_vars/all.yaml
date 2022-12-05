@@ -14,6 +14,7 @@ github_user_pubkeys:
   - MarekM25
   - nisdas
   - skylenet
+  - samcm
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
@@ -43,9 +44,11 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
   - "enr:-Ly4QP0Q3p6Cf5ZXvpXhD0yVA2kQ8hArL6QQabjw2nHAGWUMFyArfcKtcsEY3ARIYECygDa3s6UGwZGOfizLbkNOwwABh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDW50fuIAAAOQEAAAAAAAAAgmlkgnY0gmlwhKUWU3eJc2VjcDI1NmsxoQOLgg2lRqwuLqH437s8_euX-zzZ0C_2wm4VVcUEPHPkjohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
+  - "enr:-Ly4QPMgPwoPGUJ5FhEEp98LbrGef2ms0XhxNCQfhwpI3BE8SL8FmhjR6oSkJavJGP7bfI11ubLV_ePpeqwrZnJQBQEJh2F0dG5ldHOI__________-EZXRoMpDvSZgFMAAAOQIAAAAAAAAAgmlkgnY0gmlwhKUWXf-Jc2VjcDI1NmsxoQITERf7jaE44symFqjAcACy-fmoGAqerKiZufk94X_DYYhzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
 
 multiaddrs:
   - "/ip4/165.22.83.119/tcp/9000/p2p/16Uiu2HAmN3a3JDbDfStyge7BUXN4EYMPiQ1SBmK3aLv77dTqPoZf"
+  - "/ip4/165.22.93.255/tcp/9000/p2p/16Uiu2HAkvi6quTkakSnicYWuNZkbD8q1jBJvLjBrSxpvUENiXQqe"
 
 el_bootnode_enode:
   - "enode://7c786dbf95b9298a40c2e6b4238594d2e01183a24607e0124e9db569d4cd7d5c9329b3448ba3e570cc31d2f53f0d12976300c84a9dca4797ee8bfaf4252ad8a4@165.22.83.119:30303"

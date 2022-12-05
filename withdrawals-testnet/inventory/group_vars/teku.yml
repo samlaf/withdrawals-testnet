@@ -11,6 +11,7 @@ cl_github_external_user_pubkeys:
   - ajsutton
   - rolfyone
   - siladu
+  - lucassaldanha
 
 ##############################################
 # volume mappings on remote host

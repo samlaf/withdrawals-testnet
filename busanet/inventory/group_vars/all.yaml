@@ -9,7 +9,7 @@ github_user_pubkeys:
   - parithosh
   - barnabasbusa
   - skylenet
-
+  - samcm
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
