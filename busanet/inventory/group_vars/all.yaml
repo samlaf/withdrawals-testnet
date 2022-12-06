@@ -37,13 +37,16 @@ chainID: 1337804
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-LK4QAoqxGzIsCyla4iME9XiUDUXKmLc0D9_8uKGcUcZtZxoB15sm9eWXEHzG0PCcTdA-ANlK3GcqgrHvoiBiOhdsZAHh2F0dG5ldHOI__________-EZXRoMpAURNa1QAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQKU1RQfN727o-skpvJeC35YaI-7cABoF48pIqqWF72D9IN0Y3CCIyiDdWRwgiMo"
+  - "enr:-LK4QCqe9mITBOVJrNIy_9l0IuZB1G3FrjTSedJpe5MxGYk3eJPISv-s_-jyvtZKw5gucEJRc5-7COdjmrHC8LQ2dJEGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpChX6BQQAAAQAEAAAAAAAAAgmlkgnY0gmlwhKdHP-SJc2VjcDI1NmsxoQIdR1J5pOZTRp5AofnVGPgW4y9bNzqo6g9FAR4oSWbVkYN0Y3CCIyiDdWRwgiMo"
+  - "enr:-Ly4QDj-n8J7c8HTO4mS1DBAtSZ5jH9mqKtVvB8yNBLhSdqfRD6my8W6cy7g61DkEa8jAvyR00WqW4JWRDwOzlT7waYJh2F0dG5ldHOI__________-EZXRoMpBUbCOVQAAAQP__________gmlkgnY0gmlwhKXjqgeJc2VjcDI1NmsxoQIEBdXqfTB-PQDW7kyFV1bmDt6BkpwV0LY7HYIef22mi4hzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
 multiaddrs:
-  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAm5SemSfFYkrVDGEv2vmhxRXoCJEPEENQixXt9Vt8kP8Mq"
+  - "/ip4/167.71.63.228/tcp/9000/p2p/16Uiu2HAkwPxt3gTD1L5u7EJRs3beugbX7AzDGRxpw1XFdJ15EBtL"
 el_bootnode_enode:
-  - "enode://86742dfdf0110bd75980dc7d0e5848ec15e276465f9a0ae566cc42cadb0b7e7fe5a71ab689a76b1402b33d80bcbbeec6474efee20e34397a31ddfa3506aed784@167.71.63.228:30303"
+  - "enode://f04815ab797f8efc222d7625e5bfa5a0bd237b47eb36bb3e2cff9e2f173d884098e175521ed9e9e3f4c3351e5b7a7c78533f89537c23f8d0b34b79fa5bfdc881@167.71.63.228:30303"
+  - "enode://a3f380d4aa92428d7d9cc03ac851b85d9a4ce1d0c0491006aa9f0fd986071ee382cc64843db1b8f40581ba5ac6aa41ccce4da5b56f4897b3218e904adf603264@164.90.190.165:30303"
 el_static_enodes:
-  - "enode://86742dfdf0110bd75980dc7d0e5848ec15e276465f9a0ae566cc42cadb0b7e7fe5a71ab689a76b1402b33d80bcbbeec6474efee20e34397a31ddfa3506aed784@167.71.63.228:30303"
+  - "enode://f04815ab797f8efc222d7625e5bfa5a0bd237b47eb36bb3e2cff9e2f173d884098e175521ed9e9e3f4c3351e5b7a7c78533f89537c23f8d0b34b79fa5bfdc881@167.71.63.228:30303"
+  - "enode://a3f380d4aa92428d7d9cc03ac851b85d9a4ce1d0c0491006aa9f0fd986071ee382cc64843db1b8f40581ba5ac6aa41ccce4da5b56f4897b3218e904adf603264@164.90.190.165:30303"
 ##############################################
 # metric information
 ##############################################
