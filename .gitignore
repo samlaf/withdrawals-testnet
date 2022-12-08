@@ -15,7 +15,7 @@ reverse_proxy.yml
 dshackle.yml
 .vscode/settings.json
 enrs.json
-
+external_roles
 
 # Vendored ansible roles and collections defined in 'requirements.yaml'
 vendor/*

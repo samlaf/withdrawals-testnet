@@ -22,7 +22,7 @@ terraform {
 
 locals {
   ssh_key_name = "barnabasbusa"
-  digital_ocean_project_name = "Consensus Infra"
+  digital_ocean_project_name = "Withdrawals"
   size = "s-4vcpu-8gb-amd"
   region = "fra1"
   image = "ubuntu-22-04-x64"
