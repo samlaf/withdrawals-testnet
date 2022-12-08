@@ -1,0 +1,13 @@
+- name: Upload static_nodes data
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Creates static_nodes dir
+      file:
+        path: "{{home_dir}}/static_nodes/"
+        state: directory
+    - name: Template config
+      template:
+        src: "./templates/static_nodes/static-nodes.j2"
+        dest: "{{home_dir}}/static_nodes/static-nodes.json"
+        mode: '755'

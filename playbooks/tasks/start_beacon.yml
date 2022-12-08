@@ -23,3 +23,15 @@
         command: "{{ beacon_start_args }}"
         env: "{{ beacon_env | default({}) }}"
         user: "{{ beacon_user_id }}"
+    - name: Get info on beacon container
+      docker_container_info:
+        name: "{{ beacon_container_name }}"
+      register: container_result
+    - name: Does container exist?
+      debug:
+        msg: "The container {{ 'exists' if container_result.exists else 'does not exist' }}"
+    - name: Print information about container
+      debug:
+        var: result.container
+      when: container_result.exists
+

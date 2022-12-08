@@ -1,0 +1,36 @@
+- name: wipe expolorer
+  hosts: explorer
+  gather_facts: true
+  serial: 20
+  tasks:    
+    - name: Stop el explorer
+      shell: "docker rm -f {{execution_explorer_container_name}}"
+      register: stop_result
+      failed_when: "(stop_result.rc >= 1) and not ('No such container' or 'undefined variable' in stop_result.stderr)"
+    - name: Remove el explorer data
+      become: true
+      file:
+        path: "{{ explorer_host_dir }}"
+        state: absent
+    - name: Remove potentially still present custom_config_data dir
+      become: true
+      file:
+        path: "{{ testnet_dir }}"
+        state: absent
+    - name: Stop postgres
+      shell: "docker rm -f {{explorer_postgres_container_name}}"
+      register: stop_result
+      failed_when: "(stop_result.rc >= 1) and not ('No such container' or 'undefined variable' in stop_result.stderr)"
+    - name: Remove postgres data
+      become: true
+      file:
+        path: "{{ explorer_postgres_host_dir }}"
+        state: absent
+    - name: Stop cl explorer
+      shell: "docker rm -f {{beacon_explorer_container_name}}"
+      register: stop_result
+      failed_when: "(stop_result.rc >= 1) and not ('No such container' or 'undefined variable' in stop_result.stderr)"
+    - name: Remove docker network
+      shell: "docker network rm {{explorer_docker_network_name}}"
+      register: stop_result
+      failed_when: "(stop_result.rc >= 1) and not ('No such network' or 'undefined variable' in stop_result.stderr)"

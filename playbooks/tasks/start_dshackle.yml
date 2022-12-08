@@ -13,7 +13,7 @@
         network_mode: bridge
         networks:
           - name: "{{explorer_docker_network_name}}"
-            ipv4_address: "172.1.1.106"
+            ipv4_address: "172.28.0.106"
         ports:
           - "{{dshackle_port}}:2450"
         restart: "{{ dshackle_require_restart | default(false) }}"

@@ -18,7 +18,7 @@
         network_mode: bridge
         networks:
           - name: "{{explorer_docker_network_name}}"
-            ipv4_address: "172.1.1.100"
+            ipv4_address: "172.28.0.100"
         expose:
           - "5432"
         restart: "{{ explorer_postgres_require_restart | default(false) }}"
