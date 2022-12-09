@@ -32,10 +32,10 @@ function prep_group {
 }
 
 
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-devnet-0-lighthouse-geth" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-devnet-0-lodestar-geth" 2000
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 100 1 "withdrawal-devnet-0-bootnode" 20
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 101 1 "withdrawal-devnet-0-teku-geth" 20
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 102 1 "withdrawal-devnet-0-lodestar-geth" 20
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 102 1 "withdrawal-devnet-0-lighthouse-geth" 20
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 103 1 "withdrawal-devnet-0-prysm-geth" 20
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 208 1 "withdrawal-devnet-0-lighthouse-nethermind" 10
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 209 1 "withdrawal-devnet-0-teku-nethermind" 10

@@ -37,13 +37,13 @@ chainID: 1337804
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-KG4QFO4GgxcTC0Kg59x55cDqm9EyWuyJ6bmECo8bhvSri7QdS-30rBE2CyJlNgOJAHgnqE-u512SuHzVQInb5fdNk0DhGV0aDKQpYJq2EAAAEABAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDwcOIdvfDWJRnjV3SG9wYOxKuqfTrnnm4oJOK557E_cWDdGNwgiMog3VkcIIjKA"
+  - "enr:-KG4QFNHeFqUF8RoMbIARfUxv36HI1m-AwmX-MdchFER5r-saS6leVtSex0PQES2iYcTL0_JVEXVd8LCvbCwuq7mQJMDhGV0aDKQpYJq2EAAAEABAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDJWh4zcZZVmdJl4svHX1DD_WJ03xbE_vtB1XOktcp0jiDdGNwgiMog3VkcIIjKA"
 multiaddrs:
-  - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmRhMy2LK3dZZ4XbgnfeFaXWtEh3UjgaLKv9hvZtXc9b1E"
+  - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmFB1q9SzdEnnsdVAY3R2esrbQ8VU8NGybn8cNRb3YothV"
 el_bootnode_enode:
-  - "enode://dab250a8039e8dc7dfe74149a81cb5f16ec6caa1fad38a083faf43930d711e8e9064c69f841c3073fd763a52abf4d3f5e294409abe617dd00583ea456622238a@167.71.60.16:30303"
+  - "enode://de44249b52661c3161efdf77ebcde8930a083b92803e51911198f8baaaa173377898ad31116d8b2ecadb5940fa5c50c5adde8376614a8901412dd4077807f1d7@167.71.60.16:30303"
 el_static_enodes:
-  - "enode://dab250a8039e8dc7dfe74149a81cb5f16ec6caa1fad38a083faf43930d711e8e9064c69f841c3073fd763a52abf4d3f5e294409abe617dd00583ea456622238a@167.71.60.16:30303"
+  - "enode://de44249b52661c3161efdf77ebcde8930a083b92803e51911198f8baaaa173377898ad31116d8b2ecadb5940fa5c50c5adde8376614a8901412dd4077807f1d7@167.71.60.16:30303"
 ##############################################
 # metric information
 ##############################################
