@@ -48,7 +48,7 @@ haproxy_backend_servers:
     address: 127.0.0.1:8010
     options: 'check fall 3 rise 2'
   - name: host_withdrawalsdevnet0_explorer
-    address: 127.0.0.1:4567
+    address: 127.0.0.1:3334
     options: 'check fall 3 rise 2'
   - name: host_withdrawalsdevnet0_ethstats
     address: 127.0.0.1:3000
