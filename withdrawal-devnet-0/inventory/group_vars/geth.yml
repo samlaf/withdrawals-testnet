@@ -30,6 +30,7 @@ el_start_args: >
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
   --http.corsdomain "*"
+  --http.vhosts=*
   --ws --ws.api "net,eth,engine"
   --ws.port={{el_ws_rpc_port}}
   --ws.addr 0.0.0.0
