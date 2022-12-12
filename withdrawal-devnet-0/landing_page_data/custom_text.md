@@ -6,7 +6,7 @@ enode for execution clients:
 
 enr for consensus clients:
 ```sh
-- "enr:-KG4QJNJi8qEMdXvRyYgc9etVB0L-gYQ9OS4z71oPT9UbhG3VETbqcMl-1wCx65gVF6LCgZP45bz1myR0Bkp1U1oCMkDhGV0aDKQZsO-T0AAAEABAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEC-2J33WTPKobOszm-kEpNx7BaVmK-3eFULs-76HEy7eKDdGNwgiMog3VkcIIjKA"
+- "enr:-Ly4QBRPr1astggYnhsAYwvePlfTKNPMXzD4uRvsXO6OsbKsNm767Xg0i1ywd2rEq5sUTkhpYrl4wSCjVPhPiZm2LuRHh2F0dG5ldHOIeGEMBeQsAhCEZXRoMpB6izmDQAAAQP__________gmlkgnY0gmlwhKdHPBCJc2VjcDI1NmsxoQL7YnfdZM8qhs6zOb6QSk3HsFpWYr7d4VQuz7vocTLt4ohzeW5jbmV0cweDdGNwgiMog3VkcIIjKA"
 ```
 
 ## Genesis configuration
