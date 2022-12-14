@@ -1,0 +1,73 @@
+certificates:
+  rpc.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  faucet.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  explorer.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  ethstats.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  beaconchain.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+  forkmon.withdrawalsdevnet0.ethpandaops.io:
+    mode: http
+
+haproxy_frontends:
+  - name: host_withdrawalsdevnet0_rpc
+    address: rpc.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_rpc
+  - name: host_withdrawalsdevnet0
+    address: withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0
+  - name: host_withdrawalsdevnet0_faucet
+    address: faucet.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_faucet
+  - name: host_withdrawalsdevnet0_explorer
+    address: explorer.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_explorer
+  - name: host_withdrawalsdevnet0_ethstats
+    address: ethstats.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_ethstats
+  - name: host_withdrawalsdevnet0_beaconchain
+    address: beaconchain.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_beaconchain
+  - name: host_withdrawalsdevnet0_forkmon
+    address: forkmon.withdrawalsdevnet0.ethpandaops.io
+    backend: host_withdrawalsdevnet0_forkmon
+
+haproxy_backend_servers:
+  - name: host_withdrawalsdevnet0_rpc
+    address: 127.0.0.1:8545
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0
+    address: 127.0.0.1:1313
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0_faucet
+    address: 127.0.0.1:8010
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0_explorer
+    address: 127.0.0.1:3334
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0_ethstats
+    address: 127.0.0.1:3000
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0_beaconchain
+    address: 127.0.0.1:3333
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawalsdevnet0_forkmon
+    address: 127.0.0.1:8080
+    options: 'check fall 3 rise 2'
+
+haproxy_stats_port: 8404
+haproxy_user: devops
+haproxy_group: devops
+haproxy_stats_user: devops
+haproxy_stats_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/verkle/verkle-haproxy-key') }}"
+
+haproxy_default_backend_name: host_withdrawalsdevnet0
+grafana_prometheus_network_name: explorernet
+
+le_email: bbusa@ethereum.org
+debian_certbot: false

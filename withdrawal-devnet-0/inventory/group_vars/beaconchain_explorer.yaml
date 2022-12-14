@@ -1,0 +1,111 @@
+ansible_user: root
+
+beaconchain_explorer_aio_docker_image_default: skylenet/eth2-beaconchain-explorer:fix-frontend@sha256:1f3d059a74d691b06bb73a29f27786e2807d315d2d82093c81525ca18959f263
+
+beaconchain_explorer_aio_url_erigon: http://10.19.0.27:8545
+beaconchain_explorer_aio_url_erigon_ws: ws://10.19.0.27:8546
+beaconchain_explorer_aio_url_geth: http://10.19.0.27:8545
+
+beaconchain_explorer_aio_config_file: ../withdrawals-testnet/inventory/templates/beaconchain_testnet_config.yml.j2
+
+beaconchain_explorer_cleanup_all: false
+
+beaconchain_explorer_aio_cmd_eth1indexer:
+  - /app/eth1indexer
+  - -config=/config.yml
+  - -bigtable.project=explorer
+  - -bigtable.instance=beaconchain_bigtable:9000
+  - "-erigon={{ beaconchain_explorer_aio_url_erigon_ws }}"
+  - -data.concurrency=2
+  - -data.offset=0
+  - -data.start=0
+  - -data.end=0
+  - -blocks.concurrency=2
+  - -blocks.offset=0
+  - -blocks.start=0
+  - -blocks.end=0
+  - -balances.enabled
+  - -balances.batch=100
+
+beaconchain_explorer_aio_extra_config_files:
+  phase0.yml: |
+    # Extends the mainnet preset
+    PRESET_BASE: 'mainnet'
+    CONFIG_NAME: 'withdrawal-test' # needs to exist because of Prysm. Otherwise it conflicts with mainnet genesis
+
+    # Genesis
+    # ---------------------------------------------------------------
+    # `2**14` (= 16,384)
+    MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 1050
+    # Mar-01-2021 08:53:32 AM +UTC
+    # This is an invalid valid and should be updated when you create the genesis
+    MIN_GENESIS_TIME: 1669897500
+    GENESIS_FORK_VERSION: 0x10000039
+    GENESIS_DELAY: 0
+
+
+    # Forking
+    # ---------------------------------------------------------------
+    # Some forks are disabled for now:
+    #  - These may be re-assigned to another fork-version later
+    #  - Temporarily set to max uint64 value: 2**64 - 1
+
+    # Altair
+    ALTAIR_FORK_VERSION: 0x20000039
+    ALTAIR_FORK_EPOCH: 1
+    # Merge
+    BELLATRIX_FORK_VERSION: 0x30000039
+    BELLATRIX_FORK_EPOCH: 2
+    TERMINAL_TOTAL_DIFFICULTY: 9
+    TERMINAL_BLOCK_HASH: 0x0000000000000000000000000000000000000000000000000000000000000000
+    TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH: 18446744073709551615
+
+    # Capella
+    CAPELLA_FORK_VERSION: 0x40000039
+    CAPELLA_FORK_EPOCH: 4
+
+    # LH flag needs to be set
+    EIP4844_FORK_EPOCH: 99999999
+
+    # Sharding
+    SHARDING_FORK_VERSION: 0x03001020
+    SHARDING_FORK_EPOCH: 18446744073709551615
+
+    # Time parameters
+    # ---------------------------------------------------------------
+    # 12 seconds
+    SECONDS_PER_SLOT: 12
+    # 14 (estimate from Eth1 mainnet)
+    SECONDS_PER_ETH1_BLOCK: 14
+    # 2**8 (= 256) epochs ~27 hours
+    MIN_VALIDATOR_WITHDRAWABILITY_DELAY: 1
+    # 2**8 (= 256) epochs ~27 hours
+    SHARD_COMMITTEE_PERIOD: 1
+    # 2**11 (= 2,048) Eth1 blocks ~8 hours
+    ETH1_FOLLOW_DISTANCE: 12
+
+
+    # Validator cycle
+    # ---------------------------------------------------------------
+    # 2**2 (= 4)
+    INACTIVITY_SCORE_BIAS: 4
+    # 2**4 (= 16)
+    INACTIVITY_SCORE_RECOVERY_RATE: 16
+    # 2**4 * 10**9 (= 16,000,000,000) Gwei
+    EJECTION_BALANCE: 16000000000
+    # 2**2 (= 4)
+    MIN_PER_EPOCH_CHURN_LIMIT: 4
+    # 2**16 (= 65,536)
+    CHURN_LIMIT_QUOTIENT: 65536
+
+
+    # Deposit contract
+    # ---------------------------------------------------------------
+    DEPOSIT_CHAIN_ID: 1337803
+    DEPOSIT_NETWORK_ID: 1337803
+    DEPOSIT_CONTRACT_ADDRESS: 0x4242424242424242424242424242424242424242
+
+    # Needed by beaconchain explorer
+    SLOTS_PER_EPOCH: 32
+    EPOCHS_PER_SYNC_COMMITTEE_PERIOD: 256
+    SYNC_COMMITTEE_SIZE: 512
