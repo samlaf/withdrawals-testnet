@@ -79,7 +79,7 @@ beaconchain_explorer_aio_config: |
     #fullIndexOnStartup: true
     #checkAllBlocksOnStartup: true
     node:
-      host: "10.19.0.27"
+      host: "167.71.56.106"
       port: '4000'
       type: lighthouse
     eth1DepositContractAddress: '0x4242424242424242424242424242424242424242'
