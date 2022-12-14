@@ -33,7 +33,7 @@ el_start_args: >
   --Init.ChainSpecPath="/networkdata/chainspec.json"
   --Init.WebSocketsEnabled=true
   --JsonRpc.Enabled=true
-  --JsonRpc.EnabledModules="net,eth,consensus,subscribe,web3,admin"
+  --JsonRpc.EnabledModules="net,eth,consensus,subscribe,web3,admin,txpool,debug,trace"
   --JsonRpc.Port={{el_rpc_port}}
   --JsonRpc.WebSocketsPort={{el_ws_rpc_port}}
   --JsonRpc.Host=0.0.0.0

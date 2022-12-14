@@ -13,6 +13,7 @@ github_user_pubkeys:
   - mariusVanDerWijden
   - MarekM25
   - nisdas
+  - skylenet
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
@@ -41,13 +42,17 @@ fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-LK4QMpNdX14cQG2jJQCvah3Y9Fv1u1UJi1knzAvDFDLCTEyJQiFQhP5Jw4EGxTBjVprn8RNKHRnucqqaqT8DvOsFoUGh2F0dG5ldHOIAAAAAAAAAACEZXRoMpB39OJhIAAAOQEAAAAAAAAAgmlkgnY0gmlwhJ9BcfuJc2VjcDI1NmsxoQNRrI7rhO-gKi0E7CR2Jvpm2CzAYUIAm17HmSOV3QoAvoN0Y3CCIyiDdWRwgiMo"
+  - "enr:-Ly4QP0Q3p6Cf5ZXvpXhD0yVA2kQ8hArL6QQabjw2nHAGWUMFyArfcKtcsEY3ARIYECygDa3s6UGwZGOfizLbkNOwwABh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDW50fuIAAAOQEAAAAAAAAAgmlkgnY0gmlwhKUWU3eJc2VjcDI1NmsxoQOLgg2lRqwuLqH437s8_euX-zzZ0C_2wm4VVcUEPHPkjohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
+
 multiaddrs:
-  - "/ip4/159.65.113.251/tcp/9000/p2p/16Uiu2HAmJ9oz7hJ1mmxmUc3DBBrm9Qie1XfsKUy4BEhBzvHDXPeM"
+  - "/ip4/165.22.83.119/tcp/9000/p2p/16Uiu2HAmN3a3JDbDfStyge7BUXN4EYMPiQ1SBmK3aLv77dTqPoZf"
+
 el_bootnode_enode:
-  - "enode://40c22e7bdeefa42f044b46a0f9b986ae6d6fded7fe108fd1f048ae520ed34fd9a39753c0e1745bd779060972562290e1716622dcff5a64e0c2e8547e32934f1a@159.65.113.251:30303"
+  - "enode://7c786dbf95b9298a40c2e6b4238594d2e01183a24607e0124e9db569d4cd7d5c9329b3448ba3e570cc31d2f53f0d12976300c84a9dca4797ee8bfaf4252ad8a4@165.22.83.119:30303"
+
 el_static_enodes:
-  - "enode://40c22e7bdeefa42f044b46a0f9b986ae6d6fded7fe108fd1f048ae520ed34fd9a39753c0e1745bd779060972562290e1716622dcff5a64e0c2e8547e32934f1a@159.65.113.251:30303"
+  - "enode://7c786dbf95b9298a40c2e6b4238594d2e01183a24607e0124e9db569d4cd7d5c9329b3448ba3e570cc31d2f53f0d12976300c84a9dca4797ee8bfaf4252ad8a4@165.22.83.119:30303"
+
 
 ##############################################
 # metric information
@@ -64,7 +69,7 @@ eth_metrics_exporter_image: "samcm/ethereum-metrics-exporter:0.16.5"
 remote_write_username: "test"
 remote_write_password: "test"
 
-no_validator_keys: true
+no_validator_keys: false
 ethstats_enabled: false 
 metrics_enabled: false
 snapsync_enabled: false

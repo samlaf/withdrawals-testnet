@@ -61,6 +61,7 @@ beacon_start_args: >
   --enable-debug-rpc-endpoints
   --terminal-total-difficulty-override={{ttd}}
   --jwt-secret=/jwtsecret
+  --disable-staking-contract-check
   --suggested-fee-recipient={{ fee_recipient }}
   --contract-deployment-block=0
   {% if mev_boost == 'true' %}

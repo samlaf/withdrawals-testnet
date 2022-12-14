@@ -33,25 +33,25 @@ function prep_group {
 
 
 echo "bootnode"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawals-bootnode" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawals-bootnode" 150
 
 echo "lighthouse-nethermind keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "withdrawals-lighthouse-nethermind" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "withdrawals-lighthouse-nethermind" 150
 
 echo "lighthouse-geth keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "withdrawals-lighthouse-geth" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "withdrawals-lighthouse-geth" 150
 
 echo "teku-nethermind keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "withdrawals-teku-nethermind" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "withdrawals-teku-nethermind" 150
 
 echo "teku-geth keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "withdrawals-teku-geth" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "withdrawals-teku-geth" 150
 
 echo "prysm-nethermind keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 5 1 "withdrawals-prysm-nethermind" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 5 1 "withdrawals-prysm-nethermind" 150
 
 echo "prysm-geth keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 6 1 "withdrawals-prysm-geth" 10
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 6 1 "withdrawals-prysm-geth" 150
 
-echo "lodestar-nethermind keys"
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 7 1 "withdrawals-lodestar-nethermind" 10
+
+

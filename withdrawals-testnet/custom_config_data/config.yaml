@@ -5,12 +5,12 @@ CONFIG_NAME: 'withdrawal-test' # needs to exist because of Prysm. Otherwise it c
 # Genesis
 # ---------------------------------------------------------------
 # `2**14` (= 16,384)
-MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 80
+MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 1050
 # Mar-01-2021 08:53:32 AM +UTC
 # This is an invalid valid and should be updated when you create the genesis
-MIN_GENESIS_TIME: 1669202400
+MIN_GENESIS_TIME: 1669897500
 GENESIS_FORK_VERSION: 0x10000039
-GENESIS_DELAY: 600
+GENESIS_DELAY: 0
 
 
 # Forking
