@@ -15,14 +15,13 @@ beaconchain_explorer_aio_cmd_eth1indexer:
   - -config=/config.yml
   - -bigtable.project=explorer
   - -bigtable.instance=beaconchain_bigtable:9000
-  - -network=1337803
   - "-erigon={{ beaconchain_explorer_aio_url_erigon_ws }}"
   - -data.concurrency=2
-  - -data.offset=100
+  - -data.offset=0
   - -data.start=0
   - -data.end=0
   - -blocks.concurrency=2
-  - -blocks.offset=100
+  - -blocks.offset=0
   - -blocks.start=0
   - -blocks.end=0
   - -balances.enabled
