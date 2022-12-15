@@ -19,3 +19,17 @@ This repository uses ansible galaxy for some dependencies. You can fetch them us
 - Modify the `testnets/<name>/inventory/group_vars/eth2client_<client_name>.yml` if required
 - Check the inventory with `ansible-inventory -i testnets/<name>/inventory/dynamic.py --list`
 - Run the playbook to run all beacon nodes and validators with ` ansible-playbook -i testnets/<name>/inventory/dynamic.py playbooks/setup_beacon_and_validators_full.yml`
+
+
+## Examples on how to run the playbooks
+
+### Installing the beaconchain explorer
+
+```sh
+# Running the whole playbook
+ansible-playbook playbooks/beaconchain_explorer.yml -i withdrawal-devnet-0/inventory/inventory.ini
+# Just targeting the beaconchain explorer tag
+ansible-playbook playbooks/beaconchain_explorer.yml -i withdrawal-devnet-0/inventory/inventory.ini -t beaconchain_explorer_aio
+# Wiping the beaconchain explorer via an extra var
+ansible-playbook playbooks/beaconchain_explorer.yml -i withdrawal-devnet-0/inventory/inventory.ini -t beaconchain_explorer_aio -e "beaconchain_explorer_aio_cleanup_all=true"
+```
