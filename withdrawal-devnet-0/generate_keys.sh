@@ -31,18 +31,17 @@ function prep_group {
   done
 }
 
-
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-devnet-0-lodestar-geth" 2000
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 100 1 "withdrawal-devnet-0-bootnode" 20
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 101 1 "withdrawal-devnet-0-teku-geth" 20
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 102 1 "withdrawal-devnet-0-lighthouse-geth" 20
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 103 1 "withdrawal-devnet-0-prysm-geth" 20
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 208 1 "withdrawal-devnet-0-lighthouse-nethermind" 10
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 209 1 "withdrawal-devnet-0-teku-nethermind" 10
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 210 1 "withdrawal-devnet-0-lodestar-nethermind" 10
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 211 1 "withdrawal-devnet-0-prysm-nethermind" 10
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 424 1 "withdrawal-devnet-0-lighthouse-besu" 5
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 425 1 "withdrawal-devnet-0-teku-besu" 5
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 426 1 "withdrawal-devnet-0-lodestar-besu" 5
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 427 1 "withdrawal-devnet-0-prysm-besu" 5
-
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-devnet-0-bootnode" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "withdrawal-devnet-0-lodestar-geth" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "withdrawal-devnet-0-teku-geth" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "withdrawal-devnet-0-lighthouse-geth" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "withdrawal-devnet-0-prysm-geth" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 5 1 "withdrawal-devnet-0-lighthouse-nethermind" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 6 1 "withdrawal-devnet-0-teku-nethermind" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 7 1 "withdrawal-devnet-0-lodestar-nethermind" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 8 1 "withdrawal-devnet-0-prysm-nethermind" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 9 1 "withdrawal-devnet-0-lighthouse-besu" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 10 1 "withdrawal-devnet-0-teku-besu" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 11 1 "withdrawal-devnet-0-lodestar-besu" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 12 1 "withdrawal-devnet-0-prysm-besu" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 13 1 "withdrawal-devnet-0-lodestar-ethereumjs" 2000

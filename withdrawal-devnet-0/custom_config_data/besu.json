@@ -12,7 +12,7 @@
     "berlinBlock": 0,
     "londonBlock": 0,
     "preMergeForkBlock": 0,
-    "shanghaiTime": 1670599284,
+    "shanghaiTime": 1671121320,
     "terminalTotalDifficulty": 0,
     "ethash": {}
   },
@@ -849,5 +849,5 @@
   "nonce": "0x1234",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "timestamp": "1670598900"
+  "timestamp": "1671119400"
 }
