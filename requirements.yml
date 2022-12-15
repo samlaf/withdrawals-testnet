@@ -21,6 +21,6 @@ roles:
   scm: git
 
 collections:
-  - name: ethpandaops.ethereum
-    source: https://github.com/ethpandaops/ethereum-ansible.git,master
+  - name: ethpandaops.general
+    source: https://github.com/ethpandaops/ansible-collection-general.git,master
     type: git
