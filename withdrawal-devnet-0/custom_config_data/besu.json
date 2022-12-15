@@ -12,7 +12,7 @@
     "berlinBlock": 0,
     "londonBlock": 0,
     "preMergeForkBlock": 0,
-    "shanghaiBlock": 32,
+    "shanghaiTime": 1670599284,
     "terminalTotalDifficulty": 0,
     "ethash": {}
   },
