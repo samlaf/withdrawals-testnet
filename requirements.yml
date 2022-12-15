@@ -22,5 +22,5 @@ roles:
 
 collections:
   - name: ethpandaops.ethereum
-    source: https://github.com/ethpandaops/ethereum-ansible.git,skylenet/beaconchain-explorer-aio
+    source: https://github.com/ethpandaops/ethereum-ansible.git,master
     type: git
