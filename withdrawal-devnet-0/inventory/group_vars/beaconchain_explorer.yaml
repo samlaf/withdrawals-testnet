@@ -11,16 +11,15 @@ beaconchain_explorer_aio_cleanup_all: false
 beaconchain_explorer_aio_config: |
   # All config options can be found in here: https://github.com/gobitfly/eth2-beaconchain-explorer/blob/master/types/config.go
   chain:
-    #name: sepolia
-    network: "withdrawal-test"
-    slotsPerEpoch: 32
-    secondsPerSlot: 12
-    genesisTimestamp: 1669897500
+    network: "{{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["CONFIG_NAME"] }}"
+    slotsPerEpoch: {{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["SLOTS_PER_EPOCH"] }}
+    secondsPerSlot: {{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["SECONDS_PER_SLOT"] }}
+    genesisTimestamp: {{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["MIN_GENESIS_TIME"] }}
     mainnet: false # hide mainnet staking pool etc. info
-    minGenesisActiveValidatorCount: 1050
+    minGenesisActiveValidatorCount: {{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["MIN_GENESIS_ACTIVE_VALIDATOR_COUNT"] }}
     phase0path: "/custom_configs/phase0.yml"
     altairPath: "/custom_configs/phase0.yml"
-    altairForkEpoch: 0
+    altairForkEpoch: {{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["ALTAIR_FORK_EPOCH"] }}
     configPath: "/custom_configs/phase0.yml"
   readerDatabase:
     name: db
@@ -82,7 +81,7 @@ beaconchain_explorer_aio_config: |
       host: "167.71.56.106"
       port: '4000'
       type: lighthouse
-    eth1DepositContractAddress: '0x4242424242424242424242424242424242424242'
+    eth1DepositContractAddress: '{{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
     eth1DepositContractFirstBlock: 0
 
 
