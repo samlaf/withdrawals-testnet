@@ -37,15 +37,15 @@ chainID: 1337804
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
+  - "enr:-KG4QNsRG7g9M4vsGtcnrFy8tXkazUzhYkmmr2w_wbAyEQn5YyXdNjkOPGURMRVWiicrB9Pd6Ly4LHz9bXDev1yV-RcDhGV0aDKQ7dYNrkAAAEAFAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDeTxTuoRuu_-EoUYDtkwZEOh3g-pyug44ZY2oJiMtUEODdGNwgiMog3VkcIIjKA"
   - "enr:-Iq4QJk4WqRkjsX5c2CXtOra6HnxN-BMXnWhmhEQO9Bn9iABTJGdjUOurM7Btj1ouKaFkvTRoju5vz2GPmVON2dffQKGAX53x8JigmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-KG4QNcivBQp-s5_jYYWBvoBnYe02ILiBUynI29WM01F42_Bb9ftyd6xF0jR21FtVyqDod8ZsWP2Gvq-hsX56YR-UX0DhGV0aDKQ7dYNrkAAAEAFAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDo6fSkDOJkZMQEGmzu6taL3LdfxKH-p-bkWWImEVW35yDdGNwgiMog3VkcIIjKA"
-  - "enr:-Ly4QIn6YhCOBDXtn6ToRaWWPhObc341BWYmzrogJZN-BTTLPT6ksUs46baUNUxEAlfnEdSFBtDXeqZ017cdesmf-p1Fh2F0dG5ldHOI__________-EZXRoMpDt1g2uQAAAQAUAAAAAAAAAgmlkgnY0gmlwhJ9ZBKCJc2VjcDI1NmsxoQNy4JjxGxcWxX7Gwh3sGeeheeJeIZHjoUdH9GInRkTT4IhzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
 multiaddrs:
-  - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmPfqECjsScqnC3Knm2cMFni3tK3xNSpVTPKaWaK5RVqBy"
+  - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmLpF325NAUMXmP9wywatq9B11jWiBjasLmXgZ344sEeB4"
 el_bootnode_enode:
-  - "enode://d06bcc22a37499deae9776a0a870269d8ba34a7d4e40757915df64135388fd4f2eb55abd025ad93cd195adfbad1bd91f8568f73d2682948bd94a38c878a9d704@167.71.60.16:30303"
+  - "enode://be6ee0d4b39659dbd6f2753edc8dd491bb327a744cd6f3c75f26896fd3765c5ff620f27826d117ad281ceb93f037a7ccb0b12ab73acd494460fd3ea315cc1585@167.71.60.16:30303"
 el_static_enodes:
-  - "enode://d06bcc22a37499deae9776a0a870269d8ba34a7d4e40757915df64135388fd4f2eb55abd025ad93cd195adfbad1bd91f8568f73d2682948bd94a38c878a9d704@167.71.60.16:30303"
+  - "enode://be6ee0d4b39659dbd6f2753edc8dd491bb327a744cd6f3c75f26896fd3765c5ff620f27826d117ad281ceb93f037a7ccb0b12ab73acd494460fd3ea315cc1585@167.71.60.16:30303"
+
 ##############################################
 # metric information
 ##############################################

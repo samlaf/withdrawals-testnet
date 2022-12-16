@@ -8,7 +8,7 @@ CONFIG_NAME: 'withdrawal-devnet-0' # needs to exist because of Prysm. Otherwise 
 MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 28000
 # Mar-01-2021 08:53:32 AM +UTC
 # This is an invalid valid and should be updated when you create the genesis
-MIN_GENESIS_TIME: 1671124200
+MIN_GENESIS_TIME: 1671180300
 GENESIS_FORK_VERSION: 0x10000040
 GENESIS_DELAY: 0
 
@@ -33,7 +33,7 @@ TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH: 18446744073709551615
 CAPELLA_FORK_VERSION: 0x40000040
 CAPELLA_FORK_EPOCH: 5
 
-# LH flag needs to be set
+# LH flag needs to be set 
 EIP4844_FORK_EPOCH: 18446744073709551615
 
 # Sharding
