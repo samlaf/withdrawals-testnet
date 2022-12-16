@@ -45,3 +45,6 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 10 1 "withdrawal-devnet-0-teku-besu" 2000
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 11 1 "withdrawal-devnet-0-lodestar-besu" 2000
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 12 1 "withdrawal-devnet-0-prysm-besu" 2000
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 13 1 "withdrawal-devnet-0-lodestar-ethereumjs" 2000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 28000 1 "withdrawal-devnet-0-nimbus-besu" 1
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 28001 1 "withdrawal-devnet-0-nimbus-geth" 1
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 28002 1 "withdrawal-devnet-0-nimbus-nethermind" 1

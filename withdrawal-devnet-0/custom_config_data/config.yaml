@@ -5,12 +5,12 @@ CONFIG_NAME: 'withdrawal-devnet-0' # needs to exist because of Prysm. Otherwise 
 # Genesis
 # ---------------------------------------------------------------
 # `2**14` (= 16,384)
-MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 28000
+MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 28003
 # Mar-01-2021 08:53:32 AM +UTC
 # This is an invalid valid and should be updated when you create the genesis
-MIN_GENESIS_TIME: 1671182100
+MIN_GENESIS_TIME: 1671187200
 GENESIS_FORK_VERSION: 0x10000040
-GENESIS_DELAY: 0
+GENESIS_DELAY: 120
 
 
 # Forking
@@ -31,7 +31,7 @@ TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH: 18446744073709551615
 
 # Capella
 CAPELLA_FORK_VERSION: 0x40000040
-CAPELLA_FORK_EPOCH: 5
+CAPELLA_FORK_EPOCH: 8
 
 # EIP4844
 EIP4844_FORK_VERSION: 0x50000040

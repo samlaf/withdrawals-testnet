@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: nimbus
 
-beacon_image_name: statusim/nimbus-cl:amd64-v22.9.0
-validator_image_name: statusim/nimbus-cl:amd64-v22.9.0
+beacon_image_name: ethpandaops/nimbus:merge-1104013
+validator_image_name: ethpandaops/nimbus:merge-1104013
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
@@ -26,6 +26,7 @@ beacon_log_level: debug
 # arguments to run the containers with
 ##############################################
 beacon_start_args: >
+  nimbus_beacon_node
   --non-interactive=true
   --network="/custom_config_data"
   --max-peers="{{hi_peer_count}}"
@@ -36,6 +37,7 @@ beacon_start_args: >
   {% endif %}
   --udp-port={{beacon_p2p_port}}
   --tcp-port={{beacon_p2p_port}}
+  --optimistic
   --listen-address=0.0.0.0
   --graffiti="{{graffiti}}"
   --nat="extip:{{ansible_host}}"
