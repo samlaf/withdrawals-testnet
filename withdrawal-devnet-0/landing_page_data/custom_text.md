@@ -6,7 +6,7 @@ enode for execution clients:
 
 enr for consensus clients:
 ```sh
-- "enr:-KG4QAD98_BWSg7VH4iRNBc5sjs_Thof8Nts4Gv7cTIH7umdBcIFtVFOX7s6-UUFnUAB5wYctkJxcjOOZDsi9ZfA9GEDhGV0aDKQ7dYNrkAAAEAFAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDQnpkPwIu8vEv3GawODji50U-m9X-8tO_ClUlt6CrfDuDdGNwgiMog3VkcIIjKA"
+- "enr:-Ly4QEp12AiXK-JjrXJ0zpIqKdT7sm0R2GCi3NU3L5iWUfnyejmFngK9AZDsY-gMJ8lDAb5vtiXAC6MISS00Jv17iz0Ih2F0dG5ldHOI__________-EZXRoMpDt1g2uQAAAQAUAAAAAAAAAgmlkgnY0gmlwhKdHPBCJc2VjcDI1NmsxoQNCemQ_Ai7y8S_cZrA4OOLnRT6b1f7y078KVSW3oKt8O4hzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
 ```
 or multiaddrs for consensus client:
 ```sh
