@@ -54,7 +54,7 @@ haproxy_backend_servers:
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
   - name: host_withdrawalsdevnet0_beaconchain
-    address: 127.0.0.1:3333
+    address: 164.92.243.41:8080
     options: 'check fall 3 rise 2'
   - name: host_withdrawalsdevnet0_forkmon
     address: 127.0.0.1:8080
