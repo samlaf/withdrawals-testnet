@@ -4,7 +4,7 @@ reload_interval = "10s"
 server_address = "0.0.0.0:{{forkmon_http_listen_port}}"
 
 # Shown in the document title, if specified
-chain_name="MSF7"
+chain_name="{{ cl_network_name }}"
 
 {% for host in groups['execution'] %}
 [[clients]]
