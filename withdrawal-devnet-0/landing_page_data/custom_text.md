@@ -1,16 +1,16 @@
 ## General information
 enode for execution clients:
 ```sh
-- "enode://be6ee0d4b39659dbd6f2753edc8dd491bb327a744cd6f3c75f26896fd3765c5ff620f27826d117ad281ceb93f037a7ccb0b12ab73acd494460fd3ea315cc1585@167.71.60.16:30303"
+- "enode://43ef6a10b4ee205da2128cfdf677d090cfca855110cb5780ad51c4dea0d5c75d8b9f34b07d04fc7672600dc543abc5814d8a33936fabfd428e606acea824b822@167.71.60.16:30303"
 ```
 
 enr for consensus clients:
 ```sh
-- "enr:-KG4QNsRG7g9M4vsGtcnrFy8tXkazUzhYkmmr2w_wbAyEQn5YyXdNjkOPGURMRVWiicrB9Pd6Ly4LHz9bXDev1yV-RcDhGV0aDKQ7dYNrkAAAEAFAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDeTxTuoRuu_-EoUYDtkwZEOh3g-pyug44ZY2oJiMtUEODdGNwgiMog3VkcIIjKA"
+- "enr:-KG4QAD98_BWSg7VH4iRNBc5sjs_Thof8Nts4Gv7cTIH7umdBcIFtVFOX7s6-UUFnUAB5wYctkJxcjOOZDsi9ZfA9GEDhGV0aDKQ7dYNrkAAAEAFAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDQnpkPwIu8vEv3GawODji50U-m9X-8tO_ClUlt6CrfDuDdGNwgiMog3VkcIIjKA"
 ```
 or multiaddrs for consensus client:
 ```sh
-- "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmLpF325NAUMXmP9wywatq9B11jWiBjasLmXgZ344sEeB4"
+-  "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmH8VW6PnZAc2mHDQEKEdgLpsCVzYyrTEu5ZEEoA93Vkie"
 ```
 
 ## Genesis configuration
