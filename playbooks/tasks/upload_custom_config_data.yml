@@ -27,3 +27,9 @@
       regexp: "EIP4844_FORK_EPOCH" 
       state: absent
     when: cl_client_name == 'teku' or cl_client_name == 'prysm'
+  - name: "Temp hack fix for teku not taking EIP4844 flag"
+    lineinfile:
+      path: "{{ testnet_dir }}/config.yaml"
+      regexp: "EIP4844_FORK_VERSION" 
+      state: absent
+    when: cl_client_name == 'teku' or cl_client_name == 'prysm'

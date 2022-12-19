@@ -3,14 +3,15 @@
 ##############################################
 cl_client_name: nimbus
 
-beacon_image_name: ethpandaops/nimbus:merge-1104013
-validator_image_name: ethpandaops/nimbus:merge-1104013
+beacon_image_name: ethpandaops/nimbus:merge-38d3c07
+validator_image_name: ethpandaops/nimbus:merge-38d3c07
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
   - zah
   - tersec
   - etan-status
+  - arnetheduck
 
 ##############################################
 # volume mappings on remote host
@@ -31,7 +32,6 @@ beacon_start_args: >
   --network="/custom_config_data"
   --max-peers="{{hi_peer_count}}"
   --data-dir="/beacondata"
-  --web3-url="{{execution_endpoint}}"
   {% if (bootnode_enrs is defined) and bootnode_enrs %}
   --bootstrap-node="{{ bootnode_enrs | join(',') }}"
   {% endif %}
