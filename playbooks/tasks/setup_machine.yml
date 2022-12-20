@@ -68,6 +68,15 @@
         name: docker
         state: restarted
 
+- name: install jq
+  hosts:
+    - all
+  become: true
+  tasks:
+    - ansible.builtin.package:
+      name: jq
+      state: present
+
 - name: Unconditionally reboot the machine with all defaults
   hosts:
     - all
