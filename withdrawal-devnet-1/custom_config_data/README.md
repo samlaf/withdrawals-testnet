@@ -8,7 +8,7 @@ enode for execution clients:
 ```yaml
 ```
 
-
+```
 withdrawal-devnet-1-teku-geth-1: 0 - 2000
 withdrawal-devnet-1-teku-geth-2: 2000 - 4000
 withdrawal-devnet-1-teku-geth-3: 4000 - 6000
@@ -37,3 +37,4 @@ withdrawal-devnet-1-prysm-besu-1: 43100 - 43200
 withdrawal-devnet-1-lodestar-besu-1: 43200 - 43300
 withdrawal-devnet-1-nimbus-besu-1: 43300 - 43400
 withdrawal-devnet-1-teku-besu-1: 43400 - 43500
+```
