@@ -37,7 +37,7 @@ chainID: 1337804
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-KG4QPfuW3ZovOxbVpIWHao1z80Xc3VZWKKgrRwlk4fhe2XNDl2aSEfVHmWpnFwN-s9hXLcUSVGK-3TJo9qHlKmhdMoDhGV0aDKQ2q4J4EAAAEAIAAAAAAAAAIJpZIJ2NIJpcISnRzwQiXNlY3AyNTZrMaEDpxEBO9BJZkT0yAhtuF73NBHJMHIfCCbw7IYQXcBI00qDdGNwgiMog3VkcIIjKA"
+  - "enr:-Ly4QGFMq0MRD-siQNaCIqV1Dzs2FdI_WYQtidD-2hX5Mw7SaZbmLCQVH_LEYU55aKGx_29wPdtJiOgxRN-PclZG4Bsph2F0dG5ldHOI__________-EZXRoMpDThdgCQAAAQP__________gmlkgnY0gmlwhKdHPBCJc2VjcDI1NmsxoQOnEQE70ElmRPTICG24Xvc0Eckwch8IJvDshhBdwEjTSohzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
 multiaddrs:
   - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmPu9UXAq4JhCnz4QKZCsattzEbT6wZBg1PXscgtr1aTGu"
 el_bootnode_enode:

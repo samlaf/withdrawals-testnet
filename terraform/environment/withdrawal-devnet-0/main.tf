@@ -52,7 +52,7 @@ module "withdrawal-devnet-0_bootnode" {
   name      = "withdrawal-devnet-0-bootnode"
   source    = "../../modules/"
 
-  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","explorer","bootnode","faucet","forkmon","ethstats_server","landing_page","reverse_proxy","withdrawal-devnet-0"])
+  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","explorer","bootnode","faucet","forkmon","ethstats_server","txfuzz","landing_page","reverse_proxy","withdrawal-devnet-0"])
   ssh_key_name = local.ssh_key_name
   digital_ocean_project_name = local.digital_ocean_project_name
 #  vpc_uuid = digitalocean_vpc.vpc.id
