@@ -10,7 +10,6 @@ scripts/venv
 backups
 explorerdata
 mergenet.yaml
-faucet.yml
 dshackle.yml
 .vscode/settings.json
 enrs.json
