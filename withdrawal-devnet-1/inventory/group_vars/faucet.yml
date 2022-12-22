@@ -16,7 +16,7 @@ hcaptcha_secret: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devo
 ##############################################
 ether_to_transfer: 50000000000000000000
 faucet_rpc_url: https://rpc.withdrawalsdevnet1.ethpandaops.io
-faucet_private_key: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/withdrawals/devnet0/withdrawals-faucet-key') }}"
+faucet_private_key: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/withdrawals/devnet1/withdrawals-faucet-key') }}"
 unit_name: "wheeETH"
 
 ##############################################

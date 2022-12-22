@@ -1,8 +1,8 @@
 txfuzz_container_name: tx-fuzz
-txfuzz_image_name: parithoshj/tx-fuzz:v0.0.11
+txfuzz_image_name: ethpandaops/tx-fuzz:pr-12
 
 rpc_url: https://rpc.withdrawalsdevnet1.ethpandaops.io
-txfuzz_private_key: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/verkle/verkle-txfuzz-key') }}"
+txfuzz_private_key: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/withdrawals/devnet1/tx-fuzz-key') }}"
 txfuzz_public_key: "0x2cA5F489CC1Fd1CEC24747B64E8dE0F4A6A850E1"
 
-txfuzz_start_args: "{{rpc_url}} spam {{txfuzz_private_key}} {{txfuzz_public_key}}"
+txfuzz_start_args: "spam no-al {{cl_network_name}} {{txfuzz_private_key}} {{rpc_url}}"
