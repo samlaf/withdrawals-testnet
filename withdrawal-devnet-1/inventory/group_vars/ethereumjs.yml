@@ -16,6 +16,9 @@ el_volumes:
   - "{{testnet_dir}}:/networkdata"
   - "{{home_dir}}/jwtsecret:/jwtsecret"
 
+el_env:
+  DEBUG: vm:*
+
 el_start_args: >
   --datadir=/eldata
   --gethGenesis=/networkdata/genesis.json
@@ -28,5 +31,6 @@ el_start_args: >
   --bootnodes="{{ el_bootnode_enode | join(',') }}"
   {% endif %}
   --ws --wsPort={{el_ws_rpc_port}} --wsAddr=0.0.0.0 --wsEnginePort=8552
+  --loglevel=debug
 
 el_user_id: "1000:1000"
