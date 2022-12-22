@@ -37,7 +37,6 @@ beacon_start_args: >
   {% endif %}
   --udp-port={{beacon_p2p_port}}
   --tcp-port={{beacon_p2p_port}}
-  --optimistic
   --listen-address=0.0.0.0
   --graffiti="{{graffiti}}"
   --nat="extip:{{ansible_host}}"
@@ -53,6 +52,8 @@ beacon_start_args: >
   {% endif %}
   --jwt-secret=/jwtsecret
   --dump:on
+  --optimistic
+
 
 ##############################################
 # file permissions and user ids
