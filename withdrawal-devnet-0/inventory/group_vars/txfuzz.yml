@@ -1,5 +1,5 @@
 txfuzz_container_name: tx-fuzz
-txfuzz_image_name: parithoshj/tx-fuzz:v0.0.11
+txfuzz_image_name: kurtosistech/tx-fuzz:0.2.0
 
 rpc_url: https://rpc.withdrawalsdevnet0.ethpandaops.io
 txfuzz_private_key: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/verkle/verkle-txfuzz-key') }}"
