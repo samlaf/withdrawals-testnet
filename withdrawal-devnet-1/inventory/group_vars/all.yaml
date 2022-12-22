@@ -45,6 +45,7 @@ multiaddrs:
 
 el_bootnode_enode:
  - "enode://d0411c2d31fdae12a532a8ab62f63670ca6d9cfdc3d56b9540c5d56ce6e0a63df36521bd824ced629ff4658ad081ac3bb000d4a58de6ac347b308aeb25294151@134.122.93.43:30303"
+ - "enode://b3d5a13f72271bccacfd9e9d42c19e9bfb2e5e6aec892cb74e99457047b3aa0c5922b301a7f597f7ca9de117c02ac08580256797db671d8b2f4c86d1e1bf6772@46.101.129.227:30303"
 
 el_static_enodes: "{{el_bootnode_enode}}"
 ##############################################
