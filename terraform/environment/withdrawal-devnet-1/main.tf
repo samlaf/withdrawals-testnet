@@ -61,7 +61,7 @@ module "withdrawal-devnet-1_bootnode" {
 module "withdrawal-devnet-1_explorer" {
   droplet_count = 1
 
-  size      =  local.size
+  size      = "s-8vcpu-16gb-amd"
   region    = local.region
   image     = local.image
   name      = "withdrawal-devnet-1-explorer"
