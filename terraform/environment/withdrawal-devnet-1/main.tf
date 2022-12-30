@@ -314,3 +314,18 @@ module "withdrawal-devnet-1-lodestar-ethereumjs" {
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
+
+module "withdrawal-devnet-1-lighthouse-erigon" {
+  droplet_count = 1
+
+  size      = local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawal-devnet-1-lighthouse-erigon"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","erigon","withdrawal-devnet-1"])
+  ssh_key_name = "barnabasbusa"
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
