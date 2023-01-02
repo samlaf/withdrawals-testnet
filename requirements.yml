@@ -21,6 +21,7 @@ roles:
   scm: git
 
 collections:
+  - name: ansible.posix
   - name: ethpandaops.general
     source: https://github.com/ethpandaops/ansible-collection-general.git,master
     type: git

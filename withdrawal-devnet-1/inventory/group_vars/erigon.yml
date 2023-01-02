@@ -1,5 +1,5 @@
 el_client_name: erigon
-el_image_name: thorax/erigon:v2022.09.01
+el_image_name: thorax/erigon:devel
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -28,6 +28,7 @@ el_start_args: >
   --http.addr 0.0.0.0
   --http.corsdomain "*"
   --ws
+  --externalcl
   --authrpc.port={{el_engine_port}}
   --authrpc.addr=0.0.0.0
   --authrpc.jwtsecret=/jwtsecret
@@ -44,7 +45,3 @@ el_start_args: >
 #  --staticpeers="{{ el_bootnode_enode | join(',') }}"
 
 el_user_id: "1000:1000"
-
-# ./go-ethereum/build/bin/geth --datadir=./goerli-shadow-fork init genesis.json
-# ./go-ethereum/build/bin/geth --authrpc.jwtsecret=/home/devops/jwtsecret --datadir=./goerli-shadow-fork --ethash.dagdir=./goerli-shadow-fork/ethash --mine --miner.threads=1 --miner.etherbase=0xfb969eb20eca70c2800103bbb0d3757bc60f918a --http --http.corsdomain='*' --http.addr="0.0.0.0" --http.api="engine,net,eth,debug,txpool"  --nat extip:164.90.177.4 --networkid=5 console
-# ./go-ethereum/build/bin/geth --datadir=./goerli-shadow-fork --ethash.dagdir=./goerli-shadow-fork/ethash  --http --http.corsdomain='*' --http.addr="0.0.0.0" --http.vhosts="*" --http.api="engine,net,eth,debug,txpool" --ws --ws.api="eth,net,engine" --ws.port=8546 --ws.addr="0.0.0.0" --rpc.allow-unprotected-txs  --nat extip:164.90.177.4 --networkid=5 console
