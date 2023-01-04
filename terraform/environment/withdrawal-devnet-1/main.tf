@@ -329,3 +329,63 @@ module "withdrawal-devnet-1-lighthouse-erigon" {
   digital_ocean_project_name = local.digital_ocean_project_name
   #  vpc_uuid = digitalocean_vpc.vpc.id
 }
+
+module "withdrawal-devnet-1-nimbus-erigon" {
+  droplet_count = 1
+
+  size      = local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawal-devnet-1-nimbus-erigon"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","nimbus","execution","erigon","withdrawal-devnet-1"])
+  ssh_key_name = "barnabasbusa"
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawal-devnet-1-prysm-erigon" {
+  droplet_count = 1
+
+  size      = local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawal-devnet-1-prysm-erigon"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","erigon","withdrawal-devnet-1"])
+  ssh_key_name = "barnabasbusa"
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawal-devnet-1-teku-erigon" {
+  droplet_count = 1
+
+  size      = local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawal-devnet-1-teku-erigon"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","erigon","withdrawal-devnet-1"])
+  ssh_key_name = "barnabasbusa"
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}
+
+module "withdrawal-devnet-1-lodestar-erigon" {
+  droplet_count = 1
+
+  size      = local.size
+  region    = local.region
+  image     = local.image
+  name      = "withdrawal-devnet-1-lodestar-erigon"
+  source    = "../../modules/"
+
+  tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","erigon","withdrawal-devnet-1"])
+  ssh_key_name = "barnabasbusa"
+  digital_ocean_project_name = local.digital_ocean_project_name
+  #  vpc_uuid = digitalocean_vpc.vpc.id
+}

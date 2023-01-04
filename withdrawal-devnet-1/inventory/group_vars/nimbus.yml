@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: nimbus
 
-beacon_image_name: ethpandaops/nimbus:merge-38d3c07
-validator_image_name: ethpandaops/nimbus:merge-38d3c07
+beacon_image_name: ethpandaops/nimbus:merge-aff0505
+validator_image_name: ethpandaops/nimbus:merge-aff0505
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
@@ -32,6 +32,7 @@ beacon_start_args: >
   --network="/custom_config_data"
   --max-peers="{{hi_peer_count}}"
   --data-dir="/beacondata"
+  --web3-url={{execution_endpoint}}
   {% if (bootnode_enrs is defined) and bootnode_enrs %}
   --bootstrap-node="{{ bootnode_enrs | join(',') }}"
   {% endif %}
@@ -52,7 +53,6 @@ beacon_start_args: >
   {% endif %}
   --jwt-secret=/jwtsecret
   --dump:on
-  --optimistic
 
 
 ##############################################
