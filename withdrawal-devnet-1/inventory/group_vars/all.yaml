@@ -186,3 +186,4 @@ firewall_additional_rules:
   - "iptables -A INPUT -p tcp --dport 8545 -s 134.122.93.43 -j ACCEPT"
   - "iptables -A INPUT -p tcp --dport 8545 -s 134.122.93.21 -j ACCEPT"
   - "iptables -A INPUT -p tcp --dport 4000 -s 134.122.93.21 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 4000 -s 46.101.192.77 -j ACCEPT"

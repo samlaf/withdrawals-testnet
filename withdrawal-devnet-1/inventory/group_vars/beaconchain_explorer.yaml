@@ -2,9 +2,9 @@
 
 beaconchain_explorer_remote_ethereum_node: "178.128.203.61"
 
-beaconchain_explorer_aio_url_erigon: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
-beaconchain_explorer_aio_url_erigon_ws: ws://{{ beaconchain_explorer_remote_ethereum_node }}:8546
-beaconchain_explorer_aio_url_geth: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
+beaconchain_explorer_aio_url_erigon: http://46.101.192.77:8545
+beaconchain_explorer_aio_url_erigon_ws: ws://46.101.192.77:8546
+beaconchain_explorer_aio_url_geth: http://46.101.192.77:8545
 
 beaconchain_explorer_aio_cleanup_all: false
 
