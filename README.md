@@ -12,13 +12,18 @@ This repository uses ansible galaxy for some dependencies. You can fetch them us
 ```
 
 # Usage
+To create/remove additional vms add "sequenceNumber" in the group that you would like to have ("01", "02" ...). ID field is used to to name and tag the different machines. 
+
+The script automatically generates inventory file using the "local_file" terraform resource. This uses an ansible_inventory.tmpl file to create the format we usually use. An example of this template file can be found [here](terraform/withdrawals-devnet-2/ansible_inventory.tmpl).
+
+Note: This new terraform module is creating a DNS record in cloudflare (for ethpandaops.com domain by default). 
+
 - Fork this repository for your required devnet (Ideally it is a throwaway devnet)
 - Modify the `testnets/<name>/inventory/inventory.ini` file with the correct tags and client distribution
 - Generate the keys from the mnemonic by running the `generate_keys.sh` file (after exporting the mnemonic)
 - If needed, modify the `testnets/<name>/custom_config_data/` folder with the `genesis.ssz` and `eth2_config.yaml`
 - Modify the `testnets/<name>/inventory/group_vars/eth2client_<client_name>.yml` if required
-- Check the inventory with `ansible-inventory -i testnets/<name>/inventory/dynamic.py --list`
-- Run the playbook to run all beacon nodes and validators with ` ansible-playbook -i testnets/<name>/inventory/dynamic.py playbooks/setup_beacon_and_validators_full.yml`
+- Run the playbook to run all beacon nodes and validators with ` ansible-playbook -i testnets/<name>/inventory/inventory.ini playbooks/setup_beacon_and_validators_full.yml`
 
 
 ## Examples on how to run the playbooks
@@ -33,3 +38,4 @@ ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-1
 # Wiping the beaconchain explorer via an extra var
 ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-1/inventory/inventory.ini -t beaconchain_explorer_aio -e "beaconchain_explorer_aio_cleanup_all=true"
 ```
+
