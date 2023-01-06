@@ -12,32 +12,11 @@ This repository uses ansible galaxy for some dependencies. You can fetch them us
 ```
 
 # Usage
-We are using terraform to create the nodes for the different testnets. The format we are using are as follows:
-```
-variable "digitalocean_vm_groups" {
-  type = list
-  default = [
-    {
-      id = "lighthouse-geth"
-      vms = {
-        "01" = {}
-        "02" = {}
-      },
-    },
-    {
-      id = "lighthouse-nethermind"
-      vms = {
-        "01" = {}
-      }
-    },
-    ...
-  ]
-}
-```
-To create/remove additional vms add "sequenceNumber" in the group that you would like to have. ID field is used to to name and tag the different machines.
+To create/remove additional vms add "sequenceNumber" in the group that you would like to have ("01", "02" ...). ID field is used to to name and tag the different machines. 
 
-The script automatically generates inventory file using the "local_file" terraform resource. 
-Note: This new terraform module is creating a DNS record in cloudflare. 
+The script automatically generates inventory file using the "local_file" terraform resource. This uses an ansible_inventory.tmpl file to create the format we usually use. An example of this template file can be found [here](terraform/withdrawals-devnet-2/ansible_inventory.tmpl).
+
+Note: This new terraform module is creating a DNS record in cloudflare (for ethpandaops.com domain by default). 
 
 - Fork this repository for your required devnet (Ideally it is a throwaway devnet)
 - Modify the `testnets/<name>/inventory/inventory.ini` file with the correct tags and client distribution
