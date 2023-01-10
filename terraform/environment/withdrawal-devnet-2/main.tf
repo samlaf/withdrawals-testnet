@@ -58,19 +58,144 @@ variable "digitalocean_vpcs" {
 variable "digitalocean_vm_groups" {
   type = list
   default = [
-    # {
-    #   id = "lighthouse-geth"
-    #   vms = {
-    #     "01" = {}
-    #     "02" = {}
-    #   },
-    # },
-    # {
-    #   id = "lighthouse-nethermind"
-    #   vms = {
-    #     "01" = {}
-    #   }
-    # },
+    {
+      id = "bootnode"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lodestar-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lodestar-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lodestar-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "lodestar-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "teku-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "teku-geth"
+      vms = {
+        "01" = {}
+        "02" = {}
+        "03" = {}
+        "04" = {}
+        "05" = {}
+        "06" = {}
+        "07" = {}
+      },
+    },
+    {
+      id = "teku-nethermind"
+      vms = {
+        "01" = {}
+        "02" = {}
+        "03" = {}
+        "04" = {}
+        "05" = {}
+        "06" = {}
+        "07" = {}
+      }
+    },
+    {
+      id = "teku-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "nimbus-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "nimbus-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "nimbus-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "nimbus-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "prysm-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "prysm-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "prysm-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "prysm-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "lighthouse-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lighthouse-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lighthouse-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "lighthouse-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
   ]
 }
 
