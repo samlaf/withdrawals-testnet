@@ -8,3 +8,11 @@ resource "cloudflare_record" "dns-entry" {
   value   = "${digitalocean_droplet.main[each.value.id].ipv4_address}"
   proxied = false
 }
+
+resource "cloudflare_record" "dns-entry-bootnode" {
+  zone_id = data.sops_file.cloudflare.data["zones.ethpandaops-com.zone_id"]
+  name    = "withdrawaldevnet2.${data.sops_file.cloudflare.data["zones.ethpandaops-com.domain"]}"
+  type    = "A"
+  value   = "${digitalocean_droplet.main["bootnode.1"].ipv4_address}"
+  proxied = false
+}

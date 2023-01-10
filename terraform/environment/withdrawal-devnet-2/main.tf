@@ -33,7 +33,7 @@ terraform {
 ////////////////////////////////////////////////////////////////////////////////////////
 variable "ethereum_network" {
   type = string
-  default = "withdrawals-devnet-2"
+  default = "withdrawal-devnet-2"
 }
 
 variable "digitalocean_project_name" {
@@ -43,7 +43,7 @@ variable "digitalocean_project_name" {
 
 variable "digitalocean_ssh_key_name" {
   type = string
-  default = "shared-devops-eth2"
+  default = "barnabasbusa"
 }
 
 variable "digitalocean_vpcs" {
@@ -61,139 +61,145 @@ variable "digitalocean_vm_groups" {
     {
       id = "bootnode"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "lodestar-besu"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "lodestar-geth"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "lodestar-nethermind"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "lodestar-erigon"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "teku-besu"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "teku-geth"
       vms = {
-        "01" = {}
-        "02" = {}
-        "03" = {}
-        "04" = {}
-        "05" = {}
-        "06" = {}
-        "07" = {}
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
       },
     },
     {
       id = "teku-nethermind"
       vms = {
-        "01" = {}
-        "02" = {}
-        "03" = {}
-        "04" = {}
-        "05" = {}
-        "06" = {}
-        "07" = {}
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
       }
     },
     {
       id = "teku-erigon"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "nimbus-besu"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "nimbus-geth"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "nimbus-nethermind"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "nimbus-erigon"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "prysm-besu"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "prysm-geth"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "prysm-nethermind"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "prysm-erigon"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "lighthouse-besu"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "lighthouse-geth"
       vms = {
-        "01" = {}
+        "1" = {}
       },
     },
     {
       id = "lighthouse-nethermind"
       vms = {
-        "01" = {}
+        "1" = {}
       }
     },
     {
       id = "lighthouse-erigon"
       vms = {
-        "01" = {}
+        "1" = {}
+      }
+    },
+    {
+      id = "lodestar-ethereumjs"
+      vms = {
+        "1" = {}
       }
     },
   ]
