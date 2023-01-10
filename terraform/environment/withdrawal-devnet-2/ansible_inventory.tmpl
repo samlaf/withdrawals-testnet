@@ -73,6 +73,13 @@ prysm
 nimbus
 lodestar
 
+[beacon:children]
+lighthouse
+teku
+prysm
+nimbus
+lodestar
+
 [execution:children]
 besu
 geth
@@ -81,3 +88,7 @@ nethermind
 
 [validator:children]
 beacon
+
+[bootnode:children]
+teku
+geth
