@@ -96,5 +96,23 @@ ethereumjs
 [validator:children]
 beacon
 
-[fuzzing:children]
+[tx-fuzz:children]
+bootnode
+
+[forkmon:children]
+bootnode
+
+[ethstats_server:children]
+bootnode
+
+[faucet:children]
+bootnode
+
+[landing_page:children]
+bootnode
+
+[explorer:children]
+bootnode
+
+[reverse_proxy:children]
 bootnode

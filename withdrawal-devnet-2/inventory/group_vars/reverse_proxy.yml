@@ -1,40 +1,40 @@
 certificates:
-  rpc.withdrawaldevnet2.ethpandaops.io:
+  rpc.withdrawaldevnet2.ethpandaops.com:
     mode: http
-  withdrawaldevnet2.ethpandaops.io:
+  withdrawaldevnet2.ethpandaops.com:
     mode: http
-  faucet.withdrawaldevnet2.ethpandaops.io:
+  faucet.withdrawaldevnet2.ethpandaops.com:
     mode: http
-  explorer.withdrawaldevnet2.ethpandaops.io:
+  explorer.withdrawaldevnet2.ethpandaops.com:
     mode: http
-  ethstats.withdrawaldevnet2.ethpandaops.io:
+  ethstats.withdrawaldevnet2.ethpandaops.com:
     mode: http
-  beaconchain.withdrawaldevnet2.ethpandaops.io:
+  beaconchain.withdrawaldevnet2.ethpandaops.com:
     mode: http
-  forkmon.withdrawaldevnet2.ethpandaops.io:
+  forkmon.withdrawaldevnet2.ethpandaops.com:
     mode: http
 
 haproxy_frontends:
   - name: host_withdrawaldevnet2_rpc
-    address: rpc.withdrawaldevnet2.ethpandaops.io
+    address: rpc.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_rpc
   - name: host_withdrawaldevnet2
-    address: withdrawaldevnet2.ethpandaops.io
+    address: withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2
   - name: host_withdrawaldevnet2_faucet
-    address: faucet.withdrawaldevnet2.ethpandaops.io
+    address: faucet.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_faucet
   - name: host_withdrawaldevnet2_explorer
-    address: explorer.withdrawaldevnet2.ethpandaops.io
+    address: explorer.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_explorer
   - name: host_withdrawaldevnet2_ethstats
-    address: ethstats.withdrawaldevnet2.ethpandaops.io
+    address: ethstats.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_ethstats
   - name: host_withdrawaldevnet2_beaconchain
-    address: beaconchain.withdrawaldevnet2.ethpandaops.io
+    address: beaconchain.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_beaconchain
   - name: host_withdrawaldevnet2_forkmon
-    address: forkmon.withdrawaldevnet2.ethpandaops.io
+    address: forkmon.withdrawaldevnet2.ethpandaops.com
     backend: host_withdrawaldevnet2_forkmon
 
 haproxy_backend_servers:

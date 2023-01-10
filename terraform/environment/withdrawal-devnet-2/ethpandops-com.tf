@@ -16,3 +16,11 @@ resource "cloudflare_record" "dns-entry-bootnode" {
   value   = "${digitalocean_droplet.main["bootnode.1"].ipv4_address}"
   proxied = false
 }
+
+resource "cloudflare_record" "dns-entry-bootnode-wildcard" {
+  zone_id = data.sops_file.cloudflare.data["zones.ethpandaops-com.zone_id"]
+  name    = "*.withdrawaldevnet2"
+  type    = "CNAME"
+  value   = "withdrawaldevnet2.${data.sops_file.cloudflare.data["zones.ethpandaops-com.domain"]}"
+  proxied = false
+}
