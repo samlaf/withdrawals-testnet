@@ -1,3 +1,27 @@
+Timeline:
+
+Public testnet ideally: ~16th Jan,2023
+devnet-2: ~week of 9th Jan, 2023
+
+Spec for devnet2: 
+
+Features:
+
+EIP-6122 : Forkid checks based on timestamps
+EIP-4895 : Withdrawals
+EIP-3651: Warm COINBASE
+EIP-3855 : PUSH0
+EIP-3860 : Limit/meter initcode
+
+Spec version needed:
+
+CL: spec v1.3.0-rc.0
+EL: eip-4895 @ commit 0fa80ec
+Engine API: spec @ commit fb72652
+
+https://notes.ethereum.org/@parithosh/zhejiang-testnet-spec
+
+
 Validator key distribution for devnet 2:
 ```sh
 withdrawal-devnet-2-teku-geth-1: 0 - 2000

@@ -39,11 +39,11 @@ fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-  - "enr:-KG4QJN5wkqqYqzLX1QDZwpTeC8jyUWfuwraZ2WSXaCSA4h1Yk_Q3er5HYUy2Sro4aNZYVdDjwqbOXqv6bzK7cauR8IDhGV0aDKQEQKFwEAAAEAUAAAAAAAAAIJpZIJ2NIJpcISl6FxaiXNlY3AyNTZrMaECF6Z93MCZ1lnmpK19SNcjhgrw3T5eRdYyqr6fPcL1C5qDdGNwgiMog3VkcIIjKA"
+  - "enr:-KG4QJA0CmZHVOQ3uWKipSd_NQ7O4qWHDL7t-wJLGksXphLnWisLkg7uOxSUmSoACstlvguLqwzWB0xECeu0cIVmlgsDhGV0aDKQEQKFwEAAAEAUAAAAAAAAAIJpZIJ2NIJpcISl6FxaiXNlY3AyNTZrMaECh6-QcBGsRtPAqfa3Wz26hgrZGGAtY3H4F1wl08iQW5iDdGNwgiMog3VkcIIjKA"
 multiaddrs:
-  - "/ip4/165.232.92.90/tcp/9000/p2p/16Uiu2HAkw1zbw7PiX9bYzUnWfFFgK5eLjDhwvvw6QcUUagsjRkjj"
+  - "/ip4/165.232.92.90/tcp/9000/p2p/16Uiu2HAm4ZLHihurHz5XWkhuAUdnKdWdMh44twrSJjE3Pp53tpoy"
 el_bootnode_enode:
-  - "enode://ef89be0bbc9fda85a84e7a210967b7b5f98d933d31cdcd406a123f47d7a125dcd175998638f2ea501bb605d493c3be1bf95274a3cc55e9f7b1ebedbd4f4a0e3e@165.232.92.90:30303"
+  - "enode://c0c4f0e4325de37ca7bc2bf01783160852317df7cf8f71e51913c4a91c91bf8451566820bdbb316b66672ec62c9c2adf64712e2a230daf3c06c284223afc7ce1@165.232.92.90:30303"
 el_static_enodes: "{{el_bootnode_enode}}"
 ##############################################
 # metric information
