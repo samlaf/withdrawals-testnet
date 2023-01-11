@@ -54,10 +54,10 @@ haproxy_backend_servers:
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
   - name: host_withdrawaldevnet2_beaconchain
-    address: 134.122.93.21:8080
+    address: 127.0.0.1:8080
     options: 'check fall 3 rise 2'
   - name: host_withdrawaldevnet2_forkmon
-    address: 127.0.0.1:8080
+    address: 127.0.0.1:8181
     options: 'check fall 3 rise 2'
 
 haproxy_stats_port: 8404

@@ -40,8 +40,8 @@
         image: "{{ forkmon_image_name }}"
         pull: true
         restart_policy: unless-stopped
-        network_mode: bridge
-        ports: # Cannot run on host network due to nginx proxy
+        network_mode: host
+        ports: # Cannot run on host network due to nginx proxy, well but we ain't using nginx proxy anymore
           - "{{ forkmon_http_listen_port }}:8080"
         restart: "{{ forkmon_require_restart | default(false) }}"
         memory: "{{forkmon_memory}}"
