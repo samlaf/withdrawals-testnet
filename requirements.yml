@@ -17,7 +17,7 @@ roles:
   version: "4.2.3"
 - name: ansible-haproxy
   src:  https://github.com/ethpandaops/ansible-haproxy
-  version: bc2718275154f9febdf1ee5f9dfbdea5743efecf
+  version: 675a5614cc7f0db5816c83d105849efe8f76bcbe
   scm: git
 
 collections:
