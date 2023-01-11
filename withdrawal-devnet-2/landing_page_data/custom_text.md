@@ -1,16 +1,16 @@
 ## General information
 enode for execution clients:
 ```sh
-- "enode://97d0bc13ddce8b447cac6501005dea9c3efc8039f04b3344a8ee0f296e25ce288220bf84059c83a998c76ad8d8b811cda7da23e55f87da036f7d5caafb31e693@165.232.92.90:30303"
+- "enode://09f67b2694ec4b2a9f56ec182f3f208ab1d710976f7b13d40197496be0a52f5337b3beb0629270b5d66ddda211d5230b75a8c717a7c7abc7a68e68dd8ad50bd3@165.232.92.90:30303"
 ```
 
 enr for consensus clients:
 ```sh
-- "enr:-KG4QJxX9TKvVkptd9h-G_75SPon-WE6NJdsSIaKT13-4bzJCFnUkOPt1fQ_yAiOO-hVvi3aXPI5u5JWbcM9URs_zzADhGV0aDKQEQKFwEAAAEAUAAAAAAAAAIJpZIJ2NIJpcISl6FxaiXNlY3AyNTZrMaECDYeaAG1Xq9pCYV2DWTRipvrm-wJJlWL0cHsiruwp9tmDdGNwgiMog3VkcIIjKA"
+- "enr:-KG4QLZoy4fvyb6QXhRon3JOn_FHHA5kcMGmGfmsnjzfs_MPLN4PzZGw2uFtf7rRGKabgqxMr3FIPFtpYr-bQ3z4sMQDhGV0aDKQEQKFwEAAAEAUAAAAAAAAAIJpZIJ2NIJpcISl6FxaiXNlY3AyNTZrMaEC2EWXXpG8OmVRTsMLMJtd2E513uJLHh680G8QD7Lmfz-DdGNwgiMog3VkcIIjKA"
 ```
 or multiaddrs for consensus client:
 ```sh
-- "/ip4/165.232.92.90/tcp/9000/p2p/16Uiu2HAkvLVCwtJiKEYSNps4tzTyRCP13d2ezqAsCvA5yFwZt2Lp"
+- "/ip4/165.232.92.90/udp/9000/p2p/16Uiu2HAm9yub9gYtSpNLk6Q7CbjbsWtzkCicTrTuxochgJa2iuEe"
 ```
 
 

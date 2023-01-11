@@ -32,10 +32,10 @@ Note: This new terraform module is creating a DNS record in cloudflare (for ethp
 
 ```sh
 # Running the whole playbook
-ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-1/inventory/inventory.ini
+ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-2/inventory/inventory.ini
 # Just targeting the beaconchain explorer tag
-ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-1/inventory/inventory.ini -t beaconchain_explorer_aio
+ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-2/inventory/inventory.ini -t beaconchain_explorer_aio
 # Wiping the beaconchain explorer via an extra var
-ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-1/inventory/inventory.ini -t beaconchain_explorer_aio -e "beaconchain_explorer_aio_cleanup_all=true"
+ansible-playbook playbooks/setup_beaconchain_explorer.yml -i withdrawal-devnet-2/inventory/inventory.ini -t beaconchain_explorer_aio -e "beaconchain_explorer_aio_cleanup_all=true"
 ```
 
