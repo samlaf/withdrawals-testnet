@@ -9,7 +9,7 @@
         prompt: Please confirm that genesis data has been updated, variables testnet_type and deploy_mode and we are ready to continue! Press return to continue. Press Ctrl+c and then "a" to abort
 
 # Wipe all CL data, stop all containers, leave EL data alone for shadowfork
-- import_playbook: stop_all_and_clear_disk.yml
+- import_playbook: prepare_for_shadowfork_clears_cl_data.yml
 
 # Move new testnet configs to all bootnodes
 - import_playbook: setup_execution_and_consensus_full.yml
