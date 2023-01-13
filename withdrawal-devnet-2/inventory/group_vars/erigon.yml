@@ -23,9 +23,10 @@ geth_init_args: >
 el_start_args: >
   erigon --datadir=/eldata
   --networkid={{chainID}}
-  --http --http.api "wen3,admin,engine,net,eth"
+  --http --http.api "eth,erigon,engine,debug,trace,txpool"
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
+  --http.vhosts "*"
   --http.corsdomain "*"
   --ws
   --externalcl
