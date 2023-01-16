@@ -152,12 +152,13 @@ beaconchain_explorer_aio_config: |
     indexMissingEpochsOnStartup: true # Check for missing epochs and export them after startup
     #updateAllEpochStatistics: true
     #fixCanonOnStartup: true
-    #fullIndexOnStartup: true
+    fullIndexOnStartup: true
     #checkAllBlocksOnStartup: true
     node:
       host: "{{ beaconchain_explorer_remote_ethereum_node }}"
       port: '4000'
       type: lighthouse
+      pageSize: 10000
     eth1DepositContractAddress: '{{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
     eth1DepositContractFirstBlock: 0
 
