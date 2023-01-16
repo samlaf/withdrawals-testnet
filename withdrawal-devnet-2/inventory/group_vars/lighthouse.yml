@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: lighthouse
 
-beacon_image_name: sigp/lighthouse:capella
-validator_image_name: sigp/lighthouse:capella
+beacon_image_name: sigp/lighthouse@sha256:6c0bf80b164104b5c14590f8417b1bcef1f2d887d5cef9f1cbb970c5d4c22780
+validator_image_name: sigp/lighthouse@sha256:6c0bf80b164104b5c14590f8417b1bcef1f2d887d5cef9f1cbb970c5d4c22780
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
@@ -63,6 +63,8 @@ beacon_start_args: >
   {% if mev_boost == 'true' %}
   --builder="http://127.0.0.1:{{mev_boost_port}}"
   {% endif %}
+  --slots-per-restore-point=32 
+# slots per restore-point 32 means it will become an archive for beaconchain explorer
 # in case of el deposit endpoint problems: --dummy-el
 
 validator_start_args: >
