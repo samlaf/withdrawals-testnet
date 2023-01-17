@@ -52,3 +52,7 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 466 1 "withdrawal-devnet-3-prysm-erigon" 1
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 467 1 "withdrawal-devnet-3-lodestar-erigon" 100
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 468 1 "withdrawal-devnet-3-nimbus-erigon" 100
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 469 1 "withdrawal-devnet-3-teku-erigon" 100
+prep_group 1 "$VALIDATORS_MNEMONIC_1" 0 1 "extra_key_1" 50
+prep_group 1 "$VALIDATORS_MNEMONIC_2" 0 1 "extra_key_2" 50
+prep_group 1 "$VALIDATORS_MNEMONIC_3" 0 1 "extra_key_3" 50
+prep_group 1 "$VALIDATORS_MNEMONIC_4" 0 1 "extra_key_4" 50
