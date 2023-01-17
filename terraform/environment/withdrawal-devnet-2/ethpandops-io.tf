@@ -11,7 +11,7 @@ resource "cloudflare_record" "dns-entry" {
 
 resource "cloudflare_record" "dns-entry-bootnode" {
   zone_id = data.sops_file.cloudflare.data["zones.ethpandaops-io.zone_id"]
-  name    = "withdrawaldevnet2.${data.sops_file.cloudflare.data["zones.ethpandaops-io.domain"]}"
+  name    = "withdrawal-devnet-2.${data.sops_file.cloudflare.data["zones.ethpandaops-io.domain"]}"
   type    = "A"
   value   = "${digitalocean_droplet.main["bootnode.1"].ipv4_address}"
   proxied = false
@@ -19,8 +19,8 @@ resource "cloudflare_record" "dns-entry-bootnode" {
 
 resource "cloudflare_record" "dns-entry-bootnode-wildcard" {
   zone_id = data.sops_file.cloudflare.data["zones.ethpandaops-io.zone_id"]
-  name    = "*.withdrawaldevnet2"
+  name    = "*.withdrawal-devnet-2"
   type    = "CNAME"
-  value   = "withdrawaldevnet2.${data.sops_file.cloudflare.data["zones.ethpandaops-io.domain"]}"
+  value   = "withdrawal-devnet-2.${data.sops_file.cloudflare.data["zones.ethpandaops-io.domain"]}"
   proxied = false
 }

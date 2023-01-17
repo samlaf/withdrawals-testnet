@@ -3,8 +3,8 @@
 ##############################################
 cl_client_name: lodestar
 
-beacon_image_name: chainsafe/lodestar:next
-validator_image_name: chainsafe/lodestar:next
+beacon_image_name: chainsafe/lodestar@sha256:7481f5a9df6f46a9aa87768ba6833bc4ef80bdade921457bc539ad350a2df62b
+validator_image_name: chainsafe/lodestar@sha256:7481f5a9df6f46a9aa87768ba6833bc4ef80bdade921457bc539ad350a2df62b
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
