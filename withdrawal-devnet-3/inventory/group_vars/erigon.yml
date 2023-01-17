@@ -1,5 +1,5 @@
 el_client_name: erigon
-el_image_name: thorax/erigon:docker_gwei
+el_image_name: thorax/erigon@sha256:60f2210346a6b95468427ede5e3d5de599eacb484cde9f21b8235952b25f3578
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 

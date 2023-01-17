@@ -1,7 +1,7 @@
 #ansible_user: root
 
-beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-3-lighthouse-erigon-1.ethpandaops.io"
-beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:059eb19056d5a6e4998eb79be509c5dfc047e7d86f6ea3f82a9ea05341af4acb
+beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-3-lighthouse-nethermind-1.ethpandaops.io"
+beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:bdb3f00a7e74b12baba45aa27666d1049d4a9a4251056d5e694a3517c70a4aa7
 beaconchain_explorer_aio_url_erigon: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_erigon_ws: ws://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_geth: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
@@ -152,7 +152,7 @@ beaconchain_explorer_aio_config: |
     indexMissingEpochsOnStartup: true # Check for missing epochs and export them after startup
     #updateAllEpochStatistics: true
     #fixCanonOnStartup: true
-    fullIndexOnStartup: true
+    fullIndexOnStartup: false
     #checkAllBlocksOnStartup: true
     node:
       host: "{{ beaconchain_explorer_remote_ethereum_node }}"
