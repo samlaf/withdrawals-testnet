@@ -26,7 +26,8 @@
 #        (testnet_type == 'prater' and cl_client_name == 'prysm')
 
 - import_playbook: tasks/init_geth_node.yml
-  when: el_client_name == 'geth' or el_client_name == 'erigon'
+  when: (testnet_type == 'custom') and
+    (el_client_name == 'geth' or el_client_name == 'erigon')
 
 # starts execution node docker container
 - import_playbook: tasks/start_execution_node.yml

@@ -53,7 +53,7 @@ beacon_start_args: >
   --log-destination=console
   --rest-api-host-allowlist="*"
   --data-storage-non-canonical-blocks-enabled=true
-  {% if no_validator_keys != 'true' %}
+  {% if no_validator_keys|bool != true %}
   --validators-proposer-default-fee-recipient={{fee_recipient}}
   --validators-graffiti="{{graffiti}}"
   --validator-keys="/validatordata/keys:/validatordata/secrets"

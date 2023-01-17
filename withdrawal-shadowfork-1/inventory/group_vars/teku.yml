@@ -2,8 +2,8 @@
 # image name and image location
 ##############################################
 cl_client_name: teku
-beacon_image_name: ethpandaops/teku:revert-cleanup-b484a53
-validator_image_name: ethpandaops/teku:revert-cleanup-b484a53
+beacon_image_name: consensys/teku:develop
+validator_image_name: consensys/teku:develop
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 
 cl_github_external_user_pubkeys:
@@ -28,7 +28,7 @@ beacon_volumes:
 beacon_start_args: >
   {% if deploy_mode == 'sync' %}
   --network=sepolia
-  --initial-state=https://checkpoint-sync.sepolia.ethpandaops.io/eth/v2/debug/beacon/states/finalized
+  --initial-state={{checkpoint_sync_url}}/eth/v2/debug/beacon/states/finalized
   {% elif deploy_mode == 'shadowfork' %}
   --network="/custom_config_data/config.yaml"
   --initial-state="/custom_config_data/genesis.ssz"
@@ -54,7 +54,7 @@ beacon_start_args: >
   --metrics-host-allowlist="*"
   --rest-api-host-allowlist="*"
   --data-storage-non-canonical-blocks-enabled=true
-  {% if no_validator_keys != 'true' %}
+  {% if no_validator_keys|bool != true %}
   --validators-proposer-default-fee-recipient={{fee_recipient}}
   --validators-graffiti="{{graffiti}}"
   --validator-keys="/validatordata/keys:/validatordata/secrets"

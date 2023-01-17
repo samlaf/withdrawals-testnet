@@ -58,14 +58,78 @@ variable "digitalocean_vpcs" {
 variable "digitalocean_vm_groups" {
   type = list
   default = [
-     {
-       id = "lighthouse-geth"
-       vms = {
-         "01" = {}
-         "02" = {}
-         "03" = {}
-       },
-     },
+    {
+      id = "bootnode"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lodestar-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "teku-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "teku-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "teku-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "teku-erigon"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "nimbus-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "prysm-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "prysm-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
+    {
+      id = "lighthouse-besu"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lighthouse-geth"
+      vms = {
+        "01" = {}
+      },
+    },
+    {
+      id = "lighthouse-nethermind"
+      vms = {
+        "01" = {}
+      }
+    },
   ]
 }
 
