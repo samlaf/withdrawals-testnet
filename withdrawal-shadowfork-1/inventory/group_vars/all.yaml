@@ -32,19 +32,21 @@ beacon_api_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 ##############################################
 # testnet specific information
 ##############################################
-testnet_type: sepolia
 cl_network_name: sepolia
-deploy_mode: sync
-no_validator_keys: true
+testnet_type: custom
+deploy_mode: shadowfork
+no_validator_keys: false
 checkpoint_sync_url: "https://checkpoint-sync.sepolia.ethpandaops.io"
 chainID: 11155111
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
+  - "enr:-KG4QJUh5neaK7zqG956rifOTikPd1QZYxgE-pyal6GuYGLmL7whxmS037v7oxZdhrD_B6_nbIkEDPQ7cWYwh8CQKgcDhGV0aDKQpXYm9UAAAEIFAAAAAAAAAIJpZIJ2NIJpcISkXJcIiXNlY3AyNTZrMaEDwY9YZL-k7Caypc8d0ChH3DvTEszBs6WnaM74drqoR5WDdGNwgiMog3VkcIIjKA"
 
 el_bootnode_enode:
   - "enode://ce970ad2e9daa9e14593de84a8b49da3d54ccfdf83cbc4fe519cb8b36b5918ed4eab087dedd4a62479b8d50756b492d5f762367c8d20329a7854ec01547568a6@165.22.196.173:30303"
+  - "enode://89cec38a7608d26ad3b8ad6d3f4d87257f0da70942ad38c270655604dc0f780f9f95bb1988ffa58fcd336d09c183ca935394e58cc3807f84d7399f0ccac46e3d@164.92.151.8:3030"
 
 ##############################################
 # metric information

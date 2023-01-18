@@ -31,5 +31,16 @@ function prep_group {
   done
 }
 
-prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 3 "withdrawal-shadowfork-1-lighthouse-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-shadowfork-1-bootnode" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 1 1 "withdrawal-shadowfork-1-lighthouse-besu" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 2 1 "withdrawal-shadowfork-1-lighthouse-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 3 1 "withdrawal-shadowfork-1-lighthouse-nethermind" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 1 "withdrawal-shadowfork-1-lodestar-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 5 1 "withdrawal-shadowfork-1-nimbus-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 6 1 "withdrawal-shadowfork-1-prysm-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 7 1 "withdrawal-shadowfork-1-prysm-nethermind" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 8 1 "withdrawal-shadowfork-1-teku-besu" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 9 1 "withdrawal-shadowfork-1-teku-erigon" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 10 1 "withdrawal-shadowfork-1-teku-geth" 64
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 11 1 "withdrawal-shadowfork-1-teku-nethermind" 64
 
