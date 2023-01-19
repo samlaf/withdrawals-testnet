@@ -1,7 +1,7 @@
 #ansible_user: root
 
-beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-3-lighthouse-nethermind-1.ethpandaops.io"
-beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:bdb3f00a7e74b12baba45aa27666d1049d4a9a4251056d5e694a3517c70a4aa7
+beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-3-lighthouse-erigon-1.ethpandaops.io"
+beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:c63b6e8b10698476a0ef3fefa5b58572a074ce6ef4e1ce54b75fbfe4ab97a90d
 beaconchain_explorer_aio_url_erigon: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_erigon_ws: ws://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_geth: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
@@ -81,7 +81,7 @@ beaconchain_frontend_config: |
       host: "{{ beaconchain_explorer_remote_ethereum_node }}"
       port: '4000'
       type: lighthouse
-    eth1DepositContractAddress: '{{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
+    eth1DepositContractAddress: '{{ "%#x" % (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
     eth1DepositContractFirstBlock: 0
 
 beaconchain_explorer_aio_config: |
@@ -159,7 +159,7 @@ beaconchain_explorer_aio_config: |
       port: '4000'
       type: lighthouse
       pageSize: 10000
-    eth1DepositContractAddress: '{{ (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
+    eth1DepositContractAddress: '{{ "%#x" % (beaconchain_explorer_aio_extra_config_files["phase0.yml"] | from_yaml)["DEPOSIT_CONTRACT_ADDRESS"] }}'
     eth1DepositContractFirstBlock: 0
 
 
