@@ -46,7 +46,7 @@ beacon_start_args: >
   --metrics --metrics-port={{beacon_metrics_port}} --metrics-address=0.0.0.0
   --log-level="{{ beacon_log_level | upper }}"
   --doppelganger-detection=off
-  {% if no_validator_keys != 'true' %}
+  {% if no_validator_keys|bool != 'true' %}
   --validators-dir="/validatordata/keys"
   --secrets-dir="/validatordata/secrets"
   --suggested-fee-recipient={{fee_recipient}}
