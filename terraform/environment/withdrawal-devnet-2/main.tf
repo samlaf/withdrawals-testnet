@@ -61,7 +61,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "bootnode"
       vms = {
-        "1" = {}
+        "1" = {size = "s-8vcpu-16gb-amd" }
       },
     },
     {
