@@ -12,6 +12,7 @@ github_user_pubkeys:
   - skylenet
   - samcm
   - barnabasbusa
+  - savid
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
@@ -31,18 +32,21 @@ beacon_api_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 ##############################################
 # testnet specific information
 ##############################################
-testnet_type: sepolia
 cl_network_name: sepolia
-deploy_mode: sync
-
+testnet_type: custom
+deploy_mode: shadowfork
+no_validator_keys: false
+checkpoint_sync_url: "https://checkpoint-sync.sepolia.ethpandaops.io"
 chainID: 11155111
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
+  - "enr:-KG4QDGvPWAZ9VkUITeC0r7OafnPR6U660Sv0C5SroSEkSNwCXjOaQ6Ar_Zs0a0EXcYdV5z3Bbv8B_c64JFEiaE_4i0DhGV0aDKQpXYm9UAAAEIFAAAAAAAAAIJpZIJ2NIJpcISkXJcIiXNlY3AyNTZrMaED5q5ZdJkbRLKntHHDAdVHMwg-uEJE0aTPrDsJHQOQXBODdGNwgiMog3VkcIIjKA"
 
 el_bootnode_enode:
   - "enode://ce970ad2e9daa9e14593de84a8b49da3d54ccfdf83cbc4fe519cb8b36b5918ed4eab087dedd4a62479b8d50756b492d5f762367c8d20329a7854ec01547568a6@165.22.196.173:30303"
+  - "enode://5aabc0ca8a312798e01ccc979f8bf9dbc993e807d2ac2a193f7ee01818ee2c82fc8cbb0cae7ed6b45cc5b4a6cae763ad5ae92c2225a8035cc08906c4769fab4e@164.92.151.8:30303"
 
 ##############################################
 # metric information
@@ -50,15 +54,18 @@ el_bootnode_enode:
 # enter pushgateway config if needed
 prometheus_config_file: "prometheus/prometheus.yml.j2"
 push_url: "https://victoriametrics.ethdevops.io/insert/0/prometheus/api/v1/write"
-push_metrics_enabled: false
-remote_write_auth: false
-eth_metrics_exporter_enabled: false
+metrics_enabled: true
+push_metrics_enabled: true
+remote_write_auth: true
+eth_metrics_exporter_enabled: true
+cl_validator_metrics_enabled: false
 eth_metrics_exporter_name: "metrics-exporter"
 eth_metrics_exporter_image: "ethpandaops/ethereum-metrics-exporter:0.19.0"
-remote_write_username: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/withdrawal-shadowfork-1.json | jq .username') }}"
-remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/withdrawal-shadowfork-1.json | jq .password') }}"
-
-no_validator_keys: false
+remote_write_username: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/shadow-withdrawal-1.json | jq .username') }}"
+remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/shadow-withdrawal-1.json | jq .password') }}"
+ethstats_enabled: false
+#ethstats_url: "ethstats.mainnetshadowfork13.ethdevops.io"
+#ethstats_password: "mainnetshadowfork13"
 
 ##############################################
 # ports to configure

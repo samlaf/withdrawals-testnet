@@ -8,16 +8,24 @@
       pause:
         prompt: Please confirm that genesis data has been updated, variables testnet_type and deploy_mode and we are ready to continue! Press return to continue. Press Ctrl+c and then "a" to abort
 
+- name: Refresh Host Inventory at Runtime
+  hosts: all
+  gather_facts: True
+  vars_files:
+    - "{{inventory_dir}}/group_vars/all.yaml"
+  tasks:
+    - meta: refresh_inventory
+
 # Wipe all CL data, stop all containers, leave EL data alone for shadowfork
 - import_playbook: prepare_for_shadowfork_clears_cl_data.yml
 
 # Move new testnet configs to all bootnodes
 - import_playbook: setup_execution_and_consensus_full.yml
-  when: "'bootnodes' in group_names"
+  when: "'bootnode' in group_names"
 
 # Fetch bootnode information
 - name: Get bootnode enode
-  hosts: bootnodes
+  hosts: bootnode
   gather_facts: false
   tasks:
     - name: Wait for EL port to be open, don't start checking for 10 seconds
@@ -29,7 +37,7 @@
         port: "{{beacon_api_port}}"
         delay: 10
     - name: Get enode from logs
-      shell: docker logs {{execution_container_name}} 2>&1 | grep enode:// | sed 's/.*enode:\/\///'
+      shell: docker logs {{execution_container_name}} 2>&1 | grep enode:// | sed -z 's/.*enode:\/\///'
       register: enode_noprefix_cmd
     - name: Set each node's own enode
       set_fact:
@@ -50,12 +58,12 @@
     bootnode_enrs: []
   tasks:
     - name: Create a map with all node's enodes
-      with_items: "{{ groups['bootnodes'] }}"
+      with_items: "{{ groups['bootnode'] }}"
       ignore_errors: yes
       set_fact:
         el_bootnode_enode: "{{hostvars[item]['el_bootnode_enode'] + [hostvars[item]['bootnode_enode']]}}"
     - name: Create a map with all node's enrs
-      with_items: "{{ groups['bootnodes'] }}"
+      with_items: "{{ groups['bootnode'] }}"
       ignore_errors: yes
       set_fact:
         bootnode_enrs: "{{hostvars[item]['bootnode_enrs'] + [hostvars[item]['fetched_bootnode_enr']]}}"
@@ -74,4 +82,4 @@
 
 # Start rest of the network
 - import_playbook: setup_execution_and_consensus_full.yml
-  when: "'bootnodes' not in group_names"
+  when: "'bootnode' not in group_names"

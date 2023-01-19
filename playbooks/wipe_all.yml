@@ -44,17 +44,17 @@
         path: "{{ home_dir }}/jwtsecret"
         state: absent
     - name: Remove static nodes dir
-      file: 
+      file:
         path: "{{home_dir}}/static_nodes"
         state: absent
     - name: Stop RPC snooper container
       shell: "docker rm -f {{snoop_container_name}}"
       register: stop_result
       failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
-    - name: Stop metrics container
-      shell: "docker rm -f {{eth_metrics_exporter_name}}"
-      register: stop_result
-      failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
+#    - name: Stop metrics container
+#      shell: "docker rm -f {{eth_metrics_exporter_name}}"
+#      register: stop_result
+#      failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
     # - name: Stop node_exporter service
     #   become: true
     #   systemd:

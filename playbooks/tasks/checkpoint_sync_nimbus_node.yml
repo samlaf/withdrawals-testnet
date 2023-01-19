@@ -1,0 +1,17 @@
+- name: Checkpoint sync nimbus node
+  hosts: nimbus
+  gather_facts: true
+  tasks:
+    - name: Run nimbus checkpoint sync
+      docker_container:
+        name: "checkpoint_sync_nimbus"
+        state: started
+        image: "{{ beacon_image_name }}"
+        pull: true
+        restart_policy: no
+        auto_remove: false
+        detach: no
+        network_mode: host
+        volumes: "{{beacon_volumes}}"
+        command: "{{ beacon_checkpoint_sync_args }}"
+        env: "{{ cl_env | default({}) }}"

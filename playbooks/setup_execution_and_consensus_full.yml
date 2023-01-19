@@ -17,7 +17,7 @@
 
 # uploads validator keys corresponding to the host
 - import_playbook: tasks/upload_validator_keys.yml
-  when: no_validator_keys != 'true'
+  when: no_validator_keys|bool != true
 
 # uploads custom chain config and genesis data if needed
 - import_playbook: tasks/upload_custom_config_data.yml
@@ -26,7 +26,14 @@
 
 # inits geth instance
 - import_playbook: tasks/init_geth_node.yml
-  when: el_client_name == 'geth' or el_client_name == 'erigon'
+  when: (testnet_type == 'custom') and
+    (el_client_name == 'geth' or el_client_name == 'erigon')
+
+# inits nimbus instance
+- import_playbook: tasks/checkpoint_sync_nimbus_node.yml
+  when: (testnet_type != 'custom') and
+    (cl_client_name == 'nimbus') and
+    (deploy_mode == 'sync')
 
 # stars beacon node docker container
 - import_playbook: tasks/start_beacon.yml
