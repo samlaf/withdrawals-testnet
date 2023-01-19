@@ -30,9 +30,15 @@ el_volumes:
 el_start_args: >
   {% if deploy_mode == 'sync' %}
   --config=sepolia
+  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
+  --Discovery.Bootnodes="{{ el_bootnode_enode | join(',') }}"
+  {% endif %}
   {% elif deploy_mode == 'shadowfork' %}
   --Init.ChainSpecPath="/networkdata/chainspec.json"
-  --config=withdrawals_devnet
+  --config=sepolia
+  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
+  --Network.StaticPeers="{{ el_bootnode_enode | join(',') }}"
+  {% endif %}
   {% endif %}
   --Sync.FastSync=true
   --datadir="/eldata"
@@ -47,9 +53,6 @@ el_start_args: >
   --Init.DiagnosticMode="None"
   --Init.IsMining=true
   --JsonRpc.JwtSecretFile=/jwtsecret
-  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
-  --Discovery.Bootnodes="{{ el_bootnode_enode | join(',') }}"
-  {% endif %}
   {% if (ethstats_enabled) %}
   --EthStats.Enabled=true
   --EthStats.Name={{inventory_hostname}}

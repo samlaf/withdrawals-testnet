@@ -24,8 +24,15 @@ el_start_args: >
   erigon --datadir=/eldata
   {% if deploy_mode == 'sync' %}
   --chain=sepolia
+  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
+  --bootnodes="{{ el_bootnode_enode | join(',') }}"
+  {% endif %}
   {% elif deploy_mode == 'shadowfork' %}
   --networkid={{chainID}}
+  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
+  --nodiscover
+  --staticpeers="{{ el_bootnode_enode | join(',') }}"
+  {% endif %}
   {% endif %}
   --http --http.api "eth,erigon,engine,debug,trace,txpool"
   --http.port {{el_rpc_port}}
@@ -41,9 +48,6 @@ el_start_args: >
   --prune=htc
   --metrics --pprof --pprof.addr 0.0.0.0 --pprof.port={{el_metrics_port}}
   --batchSize=32m
-  {% if (el_bootnode_enode is defined) and el_bootnode_enode %}
-  --bootnodes="{{ el_bootnode_enode | join(',') }}"
-  {% endif %}
 
 #  --nodiscover
 #  --staticpeers="{{ el_bootnode_enode | join(',') }}"

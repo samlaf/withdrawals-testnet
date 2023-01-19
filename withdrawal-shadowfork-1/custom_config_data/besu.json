@@ -13,7 +13,8 @@
     "londonBlock": 0,
     "mergeForkBlock": 1735371,
     "terminalTotalDifficulty": 0,
-    "shanghaiTime": 1674061980
+    "shanghaiTime": 1674127980,
+    "ethash": {}
   },
   "alloc": {
     "0xa2A6d93439144FFE4D27c9E088dCD8b783946263": {
