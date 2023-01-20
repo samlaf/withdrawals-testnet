@@ -11,39 +11,32 @@ ${host.hostname} ansible_host=${host.ip} cloud=${host.cloud} cloud_region=${host
 [lighthouse:children]
 lighthouse_besu
 lighthouse_geth
-lighthouse_erigon
 lighthouse_nethermind
+
 
 [teku:children]
 teku_besu
 teku_geth
 teku_erigon
 teku_nethermind
+bootnode
 
 [prysm:children]
-prysm_besu
 prysm_geth
-prysm_erigon
 prysm_nethermind
 
 [nimbus:children]
-nimbus_besu
 nimbus_geth
-nimbus_erigon
-nimbus_nethermind
+
 
 [lodestar:children]
-lodestar_besu
 lodestar_geth
-lodestar_erigon
-lodestar_nethermind
+
 
 [besu:children]
 lighthouse_besu
 teku_besu
-prysm_besu
-nimbus_besu
-lodestar_besu
+
 
 [geth:children]
 lighthouse_geth
@@ -51,20 +44,16 @@ teku_geth
 prysm_geth
 nimbus_geth
 lodestar_geth
+bootnode
 
 [erigon:children]
-lighthouse_erigon
 teku_erigon
-prysm_erigon
-nimbus_erigon
-lodestar_erigon
 
 [nethermind:children]
 lighthouse_nethermind
 teku_nethermind
 prysm_nethermind
-nimbus_nethermind
-lodestar_nethermind
+
 
 [consensus:children]
 lighthouse
@@ -78,6 +67,9 @@ besu
 geth
 erigon
 nethermind
+
+[beacon:children]
+consensus
 
 [validator:children]
 beacon
