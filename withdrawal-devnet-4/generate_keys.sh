@@ -30,14 +30,14 @@ function prep_group {
     --source-max="$validators_source_max" \
     --source-min="$validators_source_min" \
     --source-mnemonic="$validators_source_mnemonic"
-    # eth2-val-tools bls-address-change \
-    # --withdrawals-mnemonic="$validators_source_mnemonic" \
-    # --execution-address="$el_address" \
-    # --source-min="$validators_source_min" \
-    # --source-max="$validators_source_max" \
-    # --genesis-validators-root=$genesis_root \
-    # --fork-version="$genesis_version" \
-    # --as-json-list=true > "validator_prep/$naming_prefix-$node_index/change_operations.json"
+    eth2-val-tools bls-address-change \
+    --withdrawals-mnemonic="$validators_source_mnemonic" \
+    --execution-address="$el_address" \
+    --source-min="$validators_source_min" \
+    --source-max="$validators_source_max" \
+    --genesis-validators-root=$genesis_root \
+    --fork-version="$genesis_version" \
+    --as-json-list=true > "validator_prep/$naming_prefix-$node_index/change_operations.json"
   done
 }
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 1 "withdrawal-devnet-4-lodestar-geth" 4000
