@@ -21,7 +21,7 @@
         path: "{{local_validator_host_dir}}/selected_keys"
         state: directory
     - name: Copy BLS key changes for all clients
-      when: not does_key_tar_exist.stat.exists
+      when: not does_key_tar_exist.stat.exists and upload_bls_keys|bool == true
       delegate_to: localhost
       shell: |
         cp "{{local_validator_host_dir}}/change_operations.json" "{{local_validator_host_dir}}/selected_keys/."

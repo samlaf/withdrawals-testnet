@@ -16,7 +16,7 @@ el_github_external_user_pubkeys:
   - gezero
   - siladu
   - pinges
-
+  - jframe
 # websocket with /ws suffix
 elendpoint_ws: ws://127.0.0.1:8546/ws
 
