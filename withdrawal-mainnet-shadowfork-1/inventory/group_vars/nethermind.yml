@@ -32,7 +32,8 @@ el_start_args: >
   --config=mainnet
   {% elif deploy_mode == 'shadowfork' %}
   --Init.ChainSpecPath="/networkdata/chainspec.json"
-  --config=withdrawals_devnet
+  --config=mainnet
+  --Merge.TerminalTotalDifficulty=58750000000000000000000
   {% endif %}
   --Sync.FastSync=true
   --datadir="/eldata"
