@@ -35,6 +35,7 @@ el_start_args: >
   --config=mainnet
   --Merge.TerminalTotalDifficulty=58750000000000000000000
   {% endif %}
+  --JsonRpc.MaxBatchSize 1000
   --Sync.FastSync=true
   --datadir="/eldata"
   --Init.WebSocketsEnabled=true

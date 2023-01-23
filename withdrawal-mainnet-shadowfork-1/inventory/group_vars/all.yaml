@@ -32,18 +32,20 @@ beacon_api_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 ##############################################
 # testnet specific information
 ##############################################
-testnet_type: custom
+testnet_type: mainnet
 cl_network_name: mainnet
-deploy_mode: shadowfork
-no_validator_keys: false
+deploy_mode: sync
+no_validator_keys: true
 checkpoint_sync_url: "https://mainnet-checkpoint-sync.attestant.io/"
 chainID: 1
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
+  - "enr:-KG4QN76vS1pkGJFMu02r1kcH7hGOMSbEGd3RqS4A-kE1yQ9AD6tpDmSIqTxnTrR_43eK2mTEBLYKbpGwyjAZD477uEDhGV0aDKQmG5WbUAAAEMYAAAAAAAAAIJpZIJ2NIJpcISlFswWiXNlY3AyNTZrMaECGjp_af-mfhK8dPFCM09g0WuguBpkGWvzUELB2MQ2gCGDdGNwgiMog3VkcIIjKA"
 
 el_bootnode_enode:
+  - "enode://7c9e4cb5a7175822f1967671b2da02beaf9894a5deba7fd33e9844a48231af8f86e919ccb4125252d0bb8e17724e23f48e085b4e0133c9d1cfc0f0d3a1e2e082@165.22.204.22:30303"
   - "enode://7c9e4cb5a7175822f1967671b2da02beaf9894a5deba7fd33e9844a48231af8f86e919ccb4125252d0bb8e17724e23f48e085b4e0133c9d1cfc0f0d3a1e2e082@165.22.204.22:30303"
 
 ##############################################
