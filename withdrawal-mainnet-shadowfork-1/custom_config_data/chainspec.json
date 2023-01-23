@@ -181,7 +181,6 @@
     "eip3198Transition": "0xC5D488",
     "eip3529Transition": "0xC5D488",
     "eip3541Transition": "0xC5D488",
-    "MergeForkIdTransition": "0xfe70d2",
     "totalDifficulty": "0x0c70d808a128d7380000",
     "eip4895TransitionTimestamp": "0x63ce883c",
     "eip3855TransitionTimestamp": "0x63ce883c",
