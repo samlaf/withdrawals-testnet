@@ -24,21 +24,17 @@ teku_nethermind
 [prysm:children]
 prysm_besu
 prysm_geth
-prysm_erigon
 prysm_nethermind
 
 [nimbus:children]
 nimbus_besu
 nimbus_geth
-nimbus_erigon
 nimbus_nethermind
 
 [lodestar:children]
 lodestar_besu
 lodestar_geth
-lodestar_erigon
 lodestar_nethermind
-lodestar_ethereumjs
 
 [besu:children]
 lighthouse_besu
@@ -58,9 +54,6 @@ lodestar_geth
 [erigon:children]
 lighthouse_erigon
 teku_erigon
-prysm_erigon
-nimbus_erigon
-lodestar_erigon
 
 [nethermind:children]
 lighthouse_nethermind
@@ -68,9 +61,6 @@ teku_nethermind
 prysm_nethermind
 nimbus_nethermind
 lodestar_nethermind
-
-[ethereumjs:children]
-lodestar_ethereumjs
 
 [consensus:children]
 lighthouse
@@ -91,7 +81,6 @@ besu
 geth
 erigon
 nethermind
-ethereumjs
 
 [validator:children]
 beacon
