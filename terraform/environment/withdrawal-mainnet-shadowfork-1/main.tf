@@ -291,5 +291,5 @@ resource "local_file" "ansible_inventory" {
       )
     }
   )
-  filename = "../../../withdrawal-mainnet-shadowfork-1/inventory/inventory.ini"
+  filename = "../../../${var.ethereum_network}/inventory/inventory.ini"
 }
