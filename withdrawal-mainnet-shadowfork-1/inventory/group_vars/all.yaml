@@ -32,10 +32,10 @@ beacon_api_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
 ##############################################
 # testnet specific information
 ##############################################
-testnet_type: mainnet
+testnet_type: custom
 cl_network_name: mainnet
-deploy_mode: sync
-no_validator_keys: true
+deploy_mode: shadowfork
+no_validator_keys: false
 checkpoint_sync_url: "https://mainnet-checkpoint-sync.attestant.io/"
 chainID: 1
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
