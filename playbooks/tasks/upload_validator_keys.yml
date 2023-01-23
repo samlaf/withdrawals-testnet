@@ -20,6 +20,11 @@
       file:
         path: "{{local_validator_host_dir}}/selected_keys"
         state: directory
+    - name: Copy BLS key changes for all clients
+      when: not does_key_tar_exist.stat.exists
+      delegate_to: localhost
+      shell: |
+        cp "{{local_validator_host_dir}}/change_operations.json" "{{local_validator_host_dir}}/selected_keys/."
     - name: Copy keys for lighthouse
       when: not does_key_tar_exist.stat.exists and cl_client_name == 'lighthouse'
       delegate_to: localhost
