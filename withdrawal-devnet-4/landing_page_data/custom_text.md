@@ -17,17 +17,17 @@ or multiaddrs for consensus client:
 ## Genesis configuration
 ### Execution layer clients
 
-https://github.com/ethpandaops/withdrawals-testnet/blob/master/withdrawal-devnet-3/custom_config_data/
+https://github.com/ethpandaops/withdrawals-testnet/blob/master/withdrawal-devnet-4/custom_config_data/
 
 
 ## Timeline:
 ```
-withdrawal-devnet-3: 17th Jan, 2023
+withdrawal-devnet-4: 17th Jan, 2023
 withdrawal-devnet-4: 25th Jan, 2023
 Public testnet ideally: Late Jan,2023
 ```
 
 ## Specs and features for devnet3: 
 
-https://notes.ethereum.org/@bbusa/withdrawal-devnet-3
+https://notes.ethereum.org/@bbusa/withdrawal-devnet-4
 
