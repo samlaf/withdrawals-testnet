@@ -81,4 +81,5 @@
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
         mode: '1777'
+      become: true
       when: upload_bls_keys|bool == true
