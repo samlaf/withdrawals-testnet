@@ -1,0 +1,17 @@
+{
+    "genesis_time": "1674635520",
+    "genesis_validators_root": "0x99950afa7dc848f2b6bad936d8b9b83ae39827922e694a5735a791a9c7042f12",
+    "slot": "0",
+    "fork": {
+      "previous_version": "0x20000041",
+      "current_version": "0x30000041",
+      "epoch": "0"
+    },
+    "latest_block_header": {
+      "slot": "0",
+      "proposer_index": "0",
+      "parent_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "state_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "body_root": "0xcd7c49966ebe72b1214e6d4733adf6bf06935c5fbc3b3ad08e84e3085428b82f"
+    }
+}
