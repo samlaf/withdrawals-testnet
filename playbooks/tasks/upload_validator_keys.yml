@@ -26,6 +26,7 @@
       shell: |
         cp "{{local_validator_host_dir}}/change_operations.json" "{{local_validator_host_dir}}/selected_keys/."
       ignore_errors: true
+      register: bls_copy_success
     - name: Copy keys for lighthouse
       when: not does_key_tar_exist.stat.exists and cl_client_name == 'lighthouse'
       delegate_to: localhost
@@ -74,3 +75,10 @@
     - name: Modify permissions to match user-group inside docker image
       shell: chown -R "{{ validator_user_id }}" "{{ validator_node_dir }}"
       become: true
+    - name: Modify permission of BLS change to devops
+      ansible.builtin.file:
+        path: "{{validator_node_dir}}/change_operations.json"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '1777'
+      when: upload_bls_keys|bool == true

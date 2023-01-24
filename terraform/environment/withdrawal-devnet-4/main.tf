@@ -77,19 +77,20 @@ variable "digitalocean_vm_groups" {
       },
     },
     {
-      id = "lighthouse-besu"
-      vms = {
-        "1" = {}
-        "2" = {}
-      },
-    },
-    {
       id = "lighthouse-geth"
       vms = {
         "1" = {}
         "2" = {}
         "3" = {}
         "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
+        "8" = {}
+        "9" = {}
+        "10" = {}
+        "11" = {}
+        "12" = {}
         "evil" = {}
       },
     },
@@ -100,16 +101,38 @@ variable "digitalocean_vm_groups" {
         "2" = {}
         "3" = {}
         "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
+        "8" = {}
+        "9" = {}
+        "10" = {}
+        "11" = {}
+        "12" = {}
       }
+    },
+    {
+      id = "lighthouse-besu"
+      vms = {
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
+      },
     },
     {
       id = "lighthouse-erigon"
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
       }
     },
-
     {
       id = "prysm-geth"
       vms = {
@@ -117,6 +140,14 @@ variable "digitalocean_vm_groups" {
         "2" = {}
         "3" = {}
         "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
+        "8" = {}
+        "9" = {}
+        "10" = {}
+        "11" = {}
+        "12" = {}
       },
     },
     {
@@ -126,6 +157,14 @@ variable "digitalocean_vm_groups" {
         "2" = {}
         "3" = {}
         "4" = {}
+        "5" = {}
+        "6" = {}
+        "7" = {}
+        "8" = {}
+        "9" = {}
+        "10" = {}
+        "11" = {}
+        "12" = {}
       }
     },
     {
@@ -133,6 +172,10 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
       },
     },
     {
@@ -140,18 +183,25 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
+        "6" = {}
       }
     },
     {
       id = "teku-besu"
       vms = {
         "1" = {}
+        "2" = {}
+        "3" = {}
       },
     },
     {
       id = "teku-erigon"
       vms = {
         "1" = {}
+        "2" = {}
       }
     },
     {
@@ -159,36 +209,49 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
       },
     },
     {
       id = "teku-nethermind"
       vms = {
         "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+        "5" = {}
       }
     },
     {
       id = "lodestar-besu"
       vms = {
         "1" = {}
+        "2" = {}
       },
     },
     {
       id = "lodestar-geth"
       vms = {
         "1" = {}
+        "2" = {}
+        "3" = {}
       },
     },
     {
       id = "lodestar-nethermind"
       vms = {
         "1" = {}
+        "2" = {}
+        "3" = {}
       }
     },
     {
       id = "lodestar-erigon"
       vms = {
         "1" = {}
+        "2" = {}
       }
     },
     {
@@ -203,6 +266,8 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
       },
     },
     {
@@ -210,6 +275,8 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
+        "4" = {}
       },
     },
     {
@@ -217,12 +284,15 @@ variable "digitalocean_vm_groups" {
       vms = {
         "1" = {}
         "2" = {}
+        "3" = {}
       }
     },
     {
       id = "nimbus-erigon"
       vms = {
         "1" = {}
+        "2" = {}
+        "3" = {}
       }
     },
   ]
