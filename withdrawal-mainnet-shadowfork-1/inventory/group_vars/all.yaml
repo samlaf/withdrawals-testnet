@@ -55,10 +55,10 @@ el_bootnode_enode:
 # enter pushgateway config if needed
 prometheus_config_file: "prometheus/prometheus.yml.j2"
 push_url: "https://victoriametrics.ethdevops.io/insert/0/prometheus/api/v1/write"
-metrics_enabled: false
-push_metrics_enabled: false
-remote_write_auth: false
-eth_metrics_exporter_enabled: false
+metrics_enabled: true
+push_metrics_enabled: true
+remote_write_auth: true
+eth_metrics_exporter_enabled: true
 cl_validator_metrics_enabled: false
 eth_metrics_exporter_name: "metrics-exporter"
 eth_metrics_exporter_image: "ethpandaops/ethereum-metrics-exporter:0.19.0"
