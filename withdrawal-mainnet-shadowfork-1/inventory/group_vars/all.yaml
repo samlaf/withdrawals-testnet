@@ -13,6 +13,7 @@ github_user_pubkeys:
   - samcm
   - barnabasbusa
   - savid
+  - potuz
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:

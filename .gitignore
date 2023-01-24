@@ -14,7 +14,7 @@ dshackle.yml
 .vscode/settings.json
 enrs.json
 external_roles
-
+parsedBeaconState.json.big
 # Vendored ansible roles and collections defined in 'requirements.yaml'
 vendor/*
 
