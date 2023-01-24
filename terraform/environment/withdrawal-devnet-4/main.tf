@@ -59,10 +59,171 @@ variable "digitalocean_vm_groups" {
   type = list
   default = [
     {
+      id = "bootnode"
+      vms = {
+        "1" = {size = "s-8vcpu-16gb-amd" }
+      },
+    },
+    {
+      id = "explorer"
+      vms = {
+        "1" = {size = "s-8vcpu-16gb-amd" }
+      },
+    },
+    {
+      id = "keygen"
+      vms = {
+        "1" = {size = "s-8vcpu-16gb-amd" }
+      },
+    },
+    {
+      id = "lighthouse-besu"
+      vms = {
+        "1" = {}
+        "2" = {}
+      },
+    },
+    {
+      id = "lighthouse-geth"
+      vms = {
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+        "evil" = {}
+      },
+    },
+    {
+      id = "lighthouse-nethermind"
+      vms = {
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+      }
+    },
+    {
+      id = "lighthouse-erigon"
+      vms = {
+        "1" = {}
+        "2" = {}
+      }
+    },
+
+    {
+      id = "prysm-geth"
+      vms = {
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+      },
+    },
+    {
+      id = "prysm-nethermind"
+      vms = {
+        "1" = {}
+        "2" = {}
+        "3" = {}
+        "4" = {}
+      }
+    },
+    {
+      id = "prysm-besu"
+      vms = {
+        "1" = {}
+        "2" = {}
+      },
+    },
+    {
+      id = "prysm-erigon"
+      vms = {
+        "1" = {}
+        "2" = {}
+      }
+    },
+    {
+      id = "teku-besu"
+      vms = {
+        "1" = {}
+      },
+    },
+    {
+      id = "teku-erigon"
+      vms = {
+        "1" = {}
+      }
+    },
+    {
+      id = "teku-geth"
+      vms = {
+        "1" = {}
+        "2" = {}
+      },
+    },
+    {
+      id = "teku-nethermind"
+      vms = {
+        "1" = {}
+      }
+    },
+    {
+      id = "lodestar-besu"
+      vms = {
+        "1" = {}
+      },
+    },
+    {
       id = "lodestar-geth"
       vms = {
         "1" = {}
       },
+    },
+    {
+      id = "lodestar-nethermind"
+      vms = {
+        "1" = {}
+      }
+    },
+    {
+      id = "lodestar-erigon"
+      vms = {
+        "1" = {}
+      }
+    },
+    {
+      id = "lodestar-ethereumjs"
+      vms = {
+        "1" = {}
+        "2" = {}
+      }
+    },
+    {
+      id = "nimbus-besu"
+      vms = {
+        "1" = {}
+        "2" = {}
+      },
+    },
+    {
+      id = "nimbus-geth"
+      vms = {
+        "1" = {}
+        "2" = {}
+      },
+    },
+    {
+      id = "nimbus-nethermind"
+      vms = {
+        "1" = {}
+        "2" = {}
+      }
+    },
+    {
+      id = "nimbus-erigon"
+      vms = {
+        "1" = {}
+      }
     },
   ]
 }

@@ -12,6 +12,7 @@ cl_github_external_user_pubkeys:
   - terencechain
   - potuz
   - nisdas
+  - james-prysm
 
 ##############################################
 # volume mappings on remote host

@@ -9,13 +9,13 @@ ${host.hostname} ansible_host=${host.ip} cloud=${host.cloud} cloud_region=${host
 %{ endfor ~}
 
 [lighthouse:children]
+bootnode
 lighthouse_besu
 lighthouse_geth
 lighthouse_erigon
 lighthouse_nethermind
 
 [teku:children]
-bootnode
 teku_besu
 teku_geth
 teku_erigon
