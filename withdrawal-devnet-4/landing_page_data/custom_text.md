@@ -1,16 +1,16 @@
 ## General information
 enode for execution clients:
 ```sh
-- "enode://4e4a34339e66884d10f7e6c0683ba1975de32658d33728c54d610d23533fc4579366e0f7372c3328f4ef6f21321ed5da2c5afaa6443a6fe74b4b2d6c6a868fe8@164.90.201.20:30303
+- "enode://7359fc265dfdef1ea136b7da724a746a3af7e7b5322b9d0fb7f98bbb9e93fc53600312c265f0b8401d771f115ca4a567d09c7fbdb80d0d3b614b17dd4ac751e8@146.190.21.166:30303"
 ```
 
 enr for consensus clients:
 ```sh
-- "enr:-Ly4QMiaDqIgFn1ANo9BHr9CWh0syOIzA3QFjU3uNjGPKv2NfX1oKked1GeThGNNqyHXzWUtrv1I7HqGeJAxrMW2M90Bh2F0dG5ldHOIAAAAAAAAAACEZXRoMpAQLtJwQAAAQBQAAAAAAAAAgmlkgnY0gmlwhKRayRSJc2VjcDI1NmsxoQJXlPj-cUCKC9pcs3qhYg0U5s37q8vNhh5nETjpttWoZ4hzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
+- "enr:-Ly4QPqATloC2-lrv-P26WQ6kmFQj3v1-Ss-N0Z12piMmdXiQsgPy3Wihr_pPJKpMK-dJifbzIR0LYzVTqhWqZjCByABh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDN1qioQAAAQRQAAAAAAAAAgmlkgnY0gmlwhJK-FaaJc2VjcDI1NmsxoQP4H8gVZIpu_490Zdb1YX2R9wqYLkMztg0zHM8j3295CohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
 ```
 or multiaddrs for consensus client:
 ```sh
-- "/ip4/164.90.201.20/tcp/9000/p2p/16Uiu2HAm1KZCfJXgHWJV6U1GNpXN4N52GsydLnH4x5nC5LraBnqt"
+- "/ip4/146.190.21.166/tcp/9000/p2p/16Uiu2HAmVMZZsBwYAborij8naZbHT9bRxgjM4KgTptCLUjrUV3YD
 ```
 
 
@@ -26,7 +26,7 @@ withdrawal-devnet-4: 24th Jan, 2023
 Public testnet ideally: Late Jan,2023
 ```
 
-## Specs and features for devnet3: 
+## Specs and features for devnet4: 
 
-https://notes.ethereum.org/@bbusa/withdrawal-devnet-4
+https://notes.ethereum.org/@bbusa/withdrawal-devnet-3
 
