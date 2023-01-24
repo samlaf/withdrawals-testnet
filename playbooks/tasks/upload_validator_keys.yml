@@ -25,6 +25,7 @@
       delegate_to: localhost
       shell: |
         cp "{{local_validator_host_dir}}/change_operations.json" "{{local_validator_host_dir}}/selected_keys/."
+      ignore_errors: true
     - name: Copy keys for lighthouse
       when: not does_key_tar_exist.stat.exists and cl_client_name == 'lighthouse'
       delegate_to: localhost
