@@ -22,8 +22,7 @@ https://github.com/ethpandaops/withdrawals-testnet/blob/master/withdrawal-devnet
 
 ## Timeline:
 ```
-withdrawal-devnet-4: 17th Jan, 2023
-withdrawal-devnet-4: 25th Jan, 2023
+withdrawal-devnet-4: 24th Jan, 2023
 Public testnet ideally: Late Jan,2023
 ```
 

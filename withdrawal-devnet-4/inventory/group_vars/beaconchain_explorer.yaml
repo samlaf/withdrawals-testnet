@@ -1,7 +1,7 @@
 #ansible_user: root
 
-beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-3-lighthouse-erigon-1.ethpandaops.io"
-beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:c7696ab8a5da383f9984d9c24989a8968ad4cdd24560b68d442ace215d70c1ec
+beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-4-lighthouse-erigon-1.ethpandaops.io"
+beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:3a0ada501dbf5b6b1043190b04c86e8f6536bd25e69e470716dc41a173cd4927
 beaconchain_explorer_aio_url_erigon: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_erigon_ws: ws://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_geth: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
@@ -204,5 +204,5 @@ beaconchain_explorer_aio_cl_config_extra: |
 
 beaconchain_explorer_aio_extra_config_files:
   phase0.yml: |
-    {{ lookup('ansible.builtin.file', '../withdrawal-devnet-3/custom_config_data/config.yaml') }}
+    {{ lookup('ansible.builtin.file', '../withdrawal-devnet-4/custom_config_data/config.yaml') }}
     {{ beaconchain_explorer_aio_cl_config_extra }}

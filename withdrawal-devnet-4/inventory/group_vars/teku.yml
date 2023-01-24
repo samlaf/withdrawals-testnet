@@ -61,6 +61,7 @@ beacon_start_args: >
   {% endif %}
   --ee-jwt-secret-file="/jwtsecret"
   --Xlog-include-p2p-warnings-enabled
+  --log-destination=console
   --Xmetrics-block-timing-tracking-enabled
   --Xprogressive-balances-mode=USED
   {% if mev_boost == 'true' %}

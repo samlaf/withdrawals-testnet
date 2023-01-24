@@ -1,62 +1,62 @@
 certificates:
-  rpc.withdrawal-devnet-3.ethpandaops.io:
+  rpc.withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  withdrawal-devnet-3.ethpandaops.io:
+  withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  faucet.withdrawal-devnet-3.ethpandaops.io:
+  faucet.withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  explorer.withdrawal-devnet-3.ethpandaops.io:
+  explorer.withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  ethstats.withdrawal-devnet-3.ethpandaops.io:
+  ethstats.withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  beaconchain.withdrawal-devnet-3.ethpandaops.io:
+  beaconchain.withdrawal-devnet-4.ethpandaops.io:
     mode: http
-  forkmon.withdrawal-devnet-3.ethpandaops.io:
+  forkmon.withdrawal-devnet-4.ethpandaops.io:
     mode: http
 
 haproxy_frontends:
-  - name: host_withdrawaldevnet2_rpc
-    address: rpc.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_rpc
-  - name: host_withdrawaldevnet2
-    address: withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2
-  - name: host_withdrawaldevnet2_faucet
-    address: faucet.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_faucet
-  - name: host_withdrawaldevnet2_explorer
-    address: explorer.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_explorer
-  - name: host_withdrawaldevnet2_ethstats
-    address: ethstats.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_ethstats
-  - name: host_withdrawaldevnet2_beaconchain
-    address: beaconchain.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_beaconchain
-  - name: host_withdrawaldevnet2_forkmon
-    address: forkmon.withdrawal-devnet-3.ethpandaops.io
-    backend: host_withdrawaldevnet2_forkmon
+  - name: host_withdrawal_devnet_4_rpc
+    address: rpc.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_rpc
+  - name: host_withdrawal_devnet_4
+    address: withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4
+  - name: host_withdrawal_devnet_4_faucet
+    address: faucet.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_faucet
+  - name: host_withdrawal_devnet_4_explorer
+    address: explorer.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_explorer
+  - name: host_withdrawal_devnet_4_ethstats
+    address: ethstats.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_ethstats
+  - name: host_withdrawal_devnet_4_beaconchain
+    address: beaconchain.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_beaconchain
+  - name: host_withdrawal_devnet_4_forkmon
+    address: forkmon.withdrawal-devnet-4.ethpandaops.io
+    backend: host_withdrawal_devnet_4_forkmon
 
 haproxy_backend_servers:
-  - name: host_withdrawaldevnet2_rpc
+  - name: host_withdrawal_devnet_4_rpc
     address: 127.0.0.1:8545
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2
+  - name: host_withdrawal_devnet_4
     address: 127.0.0.1:1313
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2_faucet
+  - name: host_withdrawal_devnet_4_faucet
     address: 127.0.0.1:8010
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2_explorer
+  - name: host_withdrawal_devnet_4_explorer
     address: 167.172.37.176:3334
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2_ethstats
+  - name: host_withdrawal_devnet_4_ethstats
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2_beaconchain
+  - name: host_withdrawal_devnet_4_beaconchain
     address: 167.172.37.176:8080
     options: 'check fall 3 rise 2'
-  - name: host_withdrawaldevnet2_forkmon
+  - name: host_withdrawal_devnet_4_forkmon
     address: 127.0.0.1:8181
     options: 'check fall 3 rise 2'
 
@@ -66,7 +66,7 @@ haproxy_group: devops
 haproxy_stats_user: devops
 haproxy_stats_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/verkle/verkle-haproxy-key') }}"
 
-haproxy_default_backend_name: host_withdrawaldevnet2
+haproxy_default_backend_name: host_withdrawal_devnet_4
 grafana_prometheus_network_name: explorernet
 
 le_email: bbusa@ethereum.org

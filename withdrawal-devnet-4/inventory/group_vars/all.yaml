@@ -33,7 +33,7 @@ elendpoint: http://127.0.0.1:8545
 # testnet specific information
 ##############################################
 testnet_type: custom
-cl_network_name: withdrawal-devnet-3
+cl_network_name: withdrawal-devnet-4
 chainID: 1337807
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 upload_bls_keys: true
