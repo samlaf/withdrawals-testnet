@@ -42,25 +42,25 @@ function prep_group {
 }
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 0 4 "withdrawal-devnet-4-lighthouse-geth" 15000
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 4 4 "withdrawal-devnet-4-lighthouse-nethermind" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 8 4 "withdrawal-devnet-4-prysm-geth" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 12 4 "withdrawal-devnet-4-prysm-nethermind" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 16 2 "withdrawal-devnet-4-lighthouse-besu" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 18 2 "withdrawal-devnet-4-lighthouse-erigon" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 20 2 "withdrawal-devnet-4-prysm-besu" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 22 2 "withdrawal-devnet-4-prysm-erigon" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 24 2 "withdrawal-devnet-4-teku-geth" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 26 1 "withdrawal-devnet-4-teku-besu" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 27 1 "withdrawal-devnet-4-teku-nethermind" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 28 1 "withdrawal-devnet-4-teku-erigon" 15000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 44 2 "withdrawal-devnet-4-nimbus-geth" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 46 2 "withdrawal-devnet-4-nimbus-besu" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 48 2 "withdrawal-devnet-4-nimbus-nethermind" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 50 1 "withdrawal-devnet-4-nimbus-erigon" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 51 1 "withdrawal-devnet-4-lodestar-geth" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 52 2 "withdrawal-devnet-4-lodestar-ethereumjs" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 54 1 "withdrawal-devnet-4-lodestar-besu" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 55 1 "withdrawal-devnet-4-lodestar-nethermind" 10000
-# prep_group 1 "$VALIDATORS_MNEMONIC_0" 56 1 "withdrawal-devnet-4-lodestar-erigon" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 8 4 "withdrawal-devnet-4-prysm-geth" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 12 4 "withdrawal-devnet-4-prysm-nethermind" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 16 2 "withdrawal-devnet-4-lighthouse-besu" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 18 2 "withdrawal-devnet-4-lighthouse-erigon" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 20 2 "withdrawal-devnet-4-prysm-besu" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 22 2 "withdrawal-devnet-4-prysm-erigon" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 24 2 "withdrawal-devnet-4-teku-geth" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 26 1 "withdrawal-devnet-4-teku-besu" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 27 1 "withdrawal-devnet-4-teku-nethermind" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 28 1 "withdrawal-devnet-4-teku-erigon" 15000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 44 2 "withdrawal-devnet-4-nimbus-geth" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 46 2 "withdrawal-devnet-4-nimbus-besu" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 48 2 "withdrawal-devnet-4-nimbus-nethermind" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 50 1 "withdrawal-devnet-4-nimbus-erigon" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 51 1 "withdrawal-devnet-4-lodestar-geth" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 52 2 "withdrawal-devnet-4-lodestar-ethereumjs" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 54 1 "withdrawal-devnet-4-lodestar-besu" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 55 1 "withdrawal-devnet-4-lodestar-nethermind" 10000
+prep_group 1 "$VALIDATORS_MNEMONIC_0" 56 1 "withdrawal-devnet-4-lodestar-erigon" 10000
 
 
 echo "435k-440k missing add that to lodestar-erigon"
