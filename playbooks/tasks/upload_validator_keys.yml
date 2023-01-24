@@ -82,4 +82,5 @@
         group: "{{ ansible_user }}"
         mode: '1777'
       become: true
+      become_method: sudo
       when: upload_bls_keys|bool == true
