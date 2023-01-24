@@ -50,7 +50,6 @@ beacon_start_args: >
   --rest-api-interface=0.0.0.0
   --rest-api-port="{{beacon_api_port}}"
   --metrics-host-allowlist="*"
-  --log-destination=console
   --rest-api-host-allowlist="*"
   --data-storage-non-canonical-blocks-enabled=true
   {% if no_validator_keys|bool != 'true' %}
