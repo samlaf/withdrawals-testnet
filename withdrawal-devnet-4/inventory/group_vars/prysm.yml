@@ -60,6 +60,7 @@ beacon_start_args: >
   --grpc-gateway-host=0.0.0.0
   --grpc-gateway-port={{beacon_api_port}}
   --enable-debug-rpc-endpoints
+  --grpc-max-msg-size=43000000
   --jwt-secret=/jwtsecret
   --disable-staking-contract-check
   --suggested-fee-recipient={{ fee_recipient }}
@@ -75,6 +76,7 @@ validator_start_args: >
   --beacon-rpc-provider={{beacon_endpoint}}
   --monitoring-host=0.0.0.0 --monitoring-port={{validator_metrics_port}}
   --graffiti="{{graffiti}}"
+  --grpc-max-msg-size=43000000
   --suggested-fee-recipient={{ fee_recipient }}
   --wallet-dir=/validatordata/wallet
   --wallet-password-file="/validatordata/wallet_pass.txt"
