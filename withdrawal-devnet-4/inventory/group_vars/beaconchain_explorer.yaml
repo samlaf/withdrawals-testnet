@@ -34,8 +34,8 @@ beaconchain_frontend_config: |
     user: postgres
     password: "pass"
   bigtable:
-    project: explorer
-    instance: beaconchain_bigtable:9000
+    project: etherchain
+    instance: devnet
   lastAttestationCachePath: "/data/lastAttestationCache"
   eth1ErigonEndpoint: "{{ beaconchain_explorer_aio_url_erigon }}"
   eth1GethEndpoint: "{{ beaconchain_explorer_aio_url_geth }}"
@@ -110,8 +110,8 @@ beaconchain_explorer_aio_config: |
     user: postgres
     password: "pass"
   bigtable:
-    project: explorer
-    instance: beaconchain_bigtable:9000
+    project: etherchain
+    instance: devnet
   lastAttestationCachePath: "/data/lastAttestationCache"
   eth1ErigonEndpoint: "{{ beaconchain_explorer_aio_url_erigon }}"
   eth1GethEndpoint: "{{ beaconchain_explorer_aio_url_geth }}"
@@ -149,10 +149,10 @@ beaconchain_explorer_aio_config: |
     csrfAuthKey: '1111111111111111111111111111111111111111111111111111111111111111'
   indexer:
     enabled: true
-    indexMissingEpochsOnStartup: false # Check for missing epochs and export them after startup
+    indexMissingEpochsOnStartup: true # Check for missing epochs and export them after startup
     #updateAllEpochStatistics: true
     #fixCanonOnStartup: true
-    fullIndexOnStartup: true
+    fullIndexOnStartup: false
     #checkAllBlocksOnStartup: true
     node:
       host: "{{ beaconchain_explorer_remote_ethereum_node }}"
