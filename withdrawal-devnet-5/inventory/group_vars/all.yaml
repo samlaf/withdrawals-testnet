@@ -98,6 +98,7 @@ el_engine_port_no_auth: 8550
 el_engine_port: 8551
 el_engine_snoop_port: 8560
 el_engine_ws_port: 8552
+el_private_api_port: 9999
 nimbus_rpc_port: 4009
 beacon_api_port: 4000
 beacon_grpc_port: 4001

@@ -3,4 +3,4 @@
 - import_playbook: setup_forkmon_full.yml
 - import_playbook: setup_faucet_full.yml
 - import_playbook: setup_beaconchain_explorer.yml
-- import_playbook: setup_execution_explorer_full.yml
+# - import_playbook: setup_execution_explorer_full.yml

@@ -29,6 +29,7 @@ el_start_args: >
   --http.vhosts "*"
   --http.corsdomain "*"
   --ws
+  --private.api.addr=127.0.0.1:{{el_private_api_port}}
   --externalcl
   --authrpc.port={{el_engine_port}}
   --authrpc.addr=0.0.0.0
