@@ -305,7 +305,7 @@ variable "digitalocean_vm_groups" {
 
 locals {
   digitalocean_default_region = "ams3"
-  digitalocean_default_size   = "s-4vcpu-8gb-amd"
+  digitalocean_default_size   = "s-8vcpu-16gb-amd"
   digitalocean_default_image  = "debian-11-x64"
   digitalocean_global_tags = [
     "Owner:Devops",

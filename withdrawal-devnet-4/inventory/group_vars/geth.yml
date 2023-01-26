@@ -1,5 +1,5 @@
 el_client_name: geth
-el_image_name: ethpandaops/geth:withdrawals-timestamp-6ab6d73
+el_image_name: ethpandaops/geth:master
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
