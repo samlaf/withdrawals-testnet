@@ -3,9 +3,11 @@
 ##############################################
 cl_client_name: nimbus
 
-beacon_image_name: ethpandaops/nimbus:unstable-285eec6
-validator_image_name: ethpandaops/nimbus:unstable-285eec6
+beacon_image_name: ethpandaops/nimbus:unstable-daa99f4
+validator_image_name: ethpandaops/nimbus:unstable-daa99f4
 beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
+
+nimbus_metrics: true
 
 cl_github_external_user_pubkeys:
   - zah
@@ -43,7 +45,10 @@ beacon_start_args: >
   --nat="extip:{{ansible_host}}"
   --enr-auto-update=false
   --rest --rest-port={{beacon_api_port}} --rest-address=0.0.0.0
-  --metrics --metrics-port={{beacon_metrics_port}} --metrics-address=0.0.0.0
+  {% if nimbus_metrics|bool == 'true' %}
+  --metrics --metrics-port={{beacon_metrics_port}} --metrics-address=0.0.0.0 --validator-monitor-totals
+  {% endif %}
+  --validator-monitor-auto=false
   --log-level="{{ beacon_log_level | upper }}"
   --doppelganger-detection=off
   {% if no_validator_keys|bool != 'true' %}

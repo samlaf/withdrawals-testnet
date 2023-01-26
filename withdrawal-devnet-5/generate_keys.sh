@@ -1,6 +1,6 @@
 #!/bin/bash
 
-val=5
+val=5000
 
 if [ -z "$VALIDATORS_MNEMONIC_0" ]; then
   echo "missing mnemonic 0"
@@ -62,4 +62,4 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 103 2 "withdrawal-devnet-5-lodestar-ethere
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 106 2 "withdrawal-devnet-5-lodestar-besu" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 108 3 "withdrawal-devnet-5-lodestar-nethermind" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 111 2 "withdrawal-devnet-5-lodestar-erigon" $val
-prep_group 1 "$VALIDATORS_MNEMONIC_1" 0 1 "withdrawal-devnet-5-lighthouse-geth-evil" 1
+prep_group 1 "$VALIDATORS_MNEMONIC_1" 0 1 "withdrawal-devnet-5-lighthouse-geth-evil" 1000
