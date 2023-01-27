@@ -1,12 +1,9 @@
 - name: Start node exporter and prometheus
-  hosts: beacon, validator, execution
-  become: true
+  hosts: all
   gather_facts: true
-  roles:
-    - role: ethpandaops.general.node_exporter
-      tags: [init-server, node_exporter]
-    - role: ethpandaops.general.prometheus
-      tags: [init-server, prometheus]
+#  roles:
+#    - cloudalchemy.node_exporter
+#    - cloudalchemy.prometheus
   tasks:
     - name: Start exporter container
       when:
