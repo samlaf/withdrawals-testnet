@@ -13,6 +13,6 @@
         mode: '755'
     - name: Move the landing_page random text to remote
       template:
-        src: "{{inventory_dir}}/../landing_page_data/custom_text.md"
+        src: "{{inventory_dir}}/../landing_page_data/custom_text.j2"
         dest:  "{{landing_page_dir}}/custom_text.md"
         mode: '755'

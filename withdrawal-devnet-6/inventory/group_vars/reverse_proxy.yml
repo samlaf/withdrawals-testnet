@@ -1,40 +1,40 @@
 certificates:
-  rpc.withdrawal-devnet-6.ethpandaops.io:
+  rpc.withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  withdrawal-devnet-6.ethpandaops.io:
+  withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  faucet.withdrawal-devnet-6.ethpandaops.io:
+  faucet.withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  explorer.withdrawal-devnet-6.ethpandaops.io:
+  explorer.withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  ethstats.withdrawal-devnet-6.ethpandaops.io:
+  ethstats.withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  beaconchain.withdrawal-devnet-6.ethpandaops.io:
+  beaconchain.withdrawal-devnet-6.ethpandaops.com:
     mode: http
-  forkmon.withdrawal-devnet-6.ethpandaops.io:
+  forkmon.withdrawal-devnet-6.ethpandaops.com:
     mode: http
 
 haproxy_frontends:
   - name: host_withdrawal_devnet_rpc
-    address: rpc.withdrawal-devnet-6.ethpandaops.io
+    address: rpc.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_rpc
   - name: host_withdrawal_devnet
-    address: withdrawal-devnet-6.ethpandaops.io
+    address: withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet
   - name: host_withdrawal_devnet_faucet
-    address: faucet.withdrawal-devnet-6.ethpandaops.io
+    address: faucet.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_faucet
   - name: host_withdrawal_devnet_explorer
-    address: explorer.withdrawal-devnet-6.ethpandaops.io
+    address: explorer.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_explorer
   - name: host_withdrawal_devnet_ethstats
-    address: ethstats.withdrawal-devnet-6.ethpandaops.io
+    address: ethstats.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_ethstats
   - name: host_withdrawal_devnet_beaconchain
-    address: beaconchain.withdrawal-devnet-6.ethpandaops.io
+    address: beaconchain.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_beaconchain
   - name: host_withdrawal_devnet_forkmon
-    address: forkmon.withdrawal-devnet-6.ethpandaops.io
+    address: forkmon.withdrawal-devnet-6.ethpandaops.com
     backend: host_withdrawal_devnet_forkmon
 
 haproxy_backend_servers:
@@ -54,7 +54,7 @@ haproxy_backend_servers:
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_beaconchain
-    address: withdrawal-devnet-6-explorer-1.ethpandaops.io:8080
+    address: withdrawal-devnet-6-explorer-1.ethpandaops.com:8080
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_forkmon
     address: 127.0.0.1:8181
