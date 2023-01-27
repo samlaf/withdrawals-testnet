@@ -1,5 +1,5 @@
 el_client_name: geth
-el_image_name: ethpandaops/geth:master
+el_image_name: ethpandaops/geth:master-df52967
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
