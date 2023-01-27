@@ -46,6 +46,7 @@ bootnode_enrs:
 multiaddrs: 
 
 el_bootnode_enode:
+  - "enode://7408ae3b801040e3990aeb3c11c6d27e72d04b94b1cca2e640eff2eae3eeae99a1d512c596c44fac348ab4fa350aea82bfbbd13d0086eaa9bf4888e8c0473049@134.209.204.189:30303"
 
 el_static_enodes: "{{el_bootnode_enode}}"
 ##############################################
