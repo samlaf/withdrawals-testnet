@@ -1,12 +1,21 @@
 ## General information
-```sh
-Bootnode ENRs: {{ bootnode_enrs }}
+Bootnode ENRs: 
+```yaml
+{% for bootnode_enrs in bootnode_enrs %}
+"{{ bootnode_enrs }}"
+{% endfor %}
 ```
-```sh
-MultiAddrs: {{ multiaddrs }} 
+MultiAddrs: 
+```yaml
+{% for multiaddrs in multiaddrs %}
+"{{ multiaddrs }}"
+{% endfor %}
 ```
-```sh
-Execution Layer bootnode Enodes: {{ el_bootnode_enode }}
+Execution Layer bootnode Enodes: 
+```yaml
+{% for el_bootnode_enode in el_bootnode_enode %}
+"{{ el_bootnode_enode }}"
+{% endfor %}
 ```
 
 ## Genesis configuration
