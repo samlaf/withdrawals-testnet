@@ -5,14 +5,14 @@
   become: true
   tasks:
     - name: Stop cl beacon node container
-      shell: "docker stop --time=10 {{beacon_container_name}}"
+      shell: "docker stop --time=500 {{beacon_container_name}}"
       register: stop_result
       failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
     - name: Stop cl validator client container
-      shell: "docker stop --time=10 {{validator_container_name}}"
+      shell: "docker stop --time=500 {{validator_container_name}}"
       register: stop_result
       failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
     - name: Stop geth client container
-      shell: "docker stop --time=10 {{execution_container_name}}"
+      shell: "docker stop --time=500 {{execution_container_name}}"
       register: stop_result
       failed_when: "(stop_result.rc >= 1) and not ('No such container' in stop_result.stderr)"
