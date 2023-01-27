@@ -2,7 +2,7 @@ Spec & features:
 https://notes.ethereum.org/@bbusa/withdrawal-devnet-3
 We now just try with more validators 
 565000 keys
-Validator key distribution for devnet 4:
+Validator key distribution for devnet 6:
 ```sh
 withdrawal-devnet-6-lighthouse-geth-1: 0 - 5000
 withdrawal-devnet-6-lighthouse-geth-2: 5000 - 10000
