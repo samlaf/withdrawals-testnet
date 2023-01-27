@@ -113,13 +113,13 @@ prometheus_config: |
     - job_name: "exporter"
       metrics_path: "/metrics"
       static_configs:
-        - targets: ["metrics-exporter:9090"]
+        - targets: ["172.17.0.1:8003"]
           labels:
             instance: "{{ inventory_hostname }}"
     - job_name: "consensus_node"
       metrics_path: "/metrics"
       static_configs:
-        - targets: ["beacon:{{ beacon_metrics_port }}"]
+        - targets: ["172.17.0.1:{{ beacon_metrics_port }}"]
           labels:
             instance: "{{ inventory_hostname }}"
 
