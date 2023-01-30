@@ -1,0 +1,35 @@
+## General information
+Bootnode ENRs: 
+```yaml
+{% for bootnode_enrs in bootnode_enrs %}
+"{{ bootnode_enrs }}"
+{% endfor %}
+```
+MultiAddrs: 
+```yaml
+{% for multiaddrs in multiaddrs %}
+"{{ multiaddrs }}"
+{% endfor %}
+```
+Execution Layer bootnode Enodes: 
+```yaml
+{% for el_bootnode_enode in el_bootnode_enode %}
+"{{ el_bootnode_enode }}"
+{% endfor %}
+```
+
+## Genesis configuration
+### Execution layer clients
+
+https://github.com/ethpandaops/withdrawals-testnet/blob/master/zhejiang-testnet/custom_config_data/
+
+
+## Timeline:
+```
+zhejiang-testnet: 1st Feb, 2023
+```
+
+## Specs and features for devnet4: 
+
+https://notes.ethereum.org/@launchpad/zhejiang
+
