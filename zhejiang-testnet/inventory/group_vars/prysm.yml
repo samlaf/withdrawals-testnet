@@ -2,7 +2,7 @@
 # image name and image location
 ##############################################
 cl_client_name: prysm
-beacon_image_name: gcr.io/prylabs-dev/beacon-chain@sha256:bee4c65a8d730877cfb1855314b7e9893acaa16d8fc704194f5d6479f548aea8
+beacon_image_name: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
 validator_image_name: gcr.io/prysmaticlabs/prysm/validator:latest
 # GRPC, not REST JSON
 beacon_endpoint: "127.0.0.1:{{beacon_grpc_port}}"

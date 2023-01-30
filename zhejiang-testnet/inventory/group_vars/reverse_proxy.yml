@@ -1,40 +1,40 @@
 certificates:
-  rpc.withdrawal-devnet-6.ethpandaops.com:
+  rpc.zhejiang-testnet.ethpandaops.io:
     mode: http
-  withdrawal-devnet-6.ethpandaops.com:
+  zhejiang-testnet.ethpandaops.io:
     mode: http
-  faucet.withdrawal-devnet-6.ethpandaops.com:
+  faucet.zhejiang-testnet.ethpandaops.io:
     mode: http
-  explorer.withdrawal-devnet-6.ethpandaops.com:
+  explorer.zhejiang-testnet.ethpandaops.io:
     mode: http
-  ethstats.withdrawal-devnet-6.ethpandaops.com:
+  ethstats.zhejiang-testnet.ethpandaops.io:
     mode: http
-  beaconchain.withdrawal-devnet-6.ethpandaops.com:
+  beaconchain.zhejiang-testnet.ethpandaops.io:
     mode: http
-  forkmon.withdrawal-devnet-6.ethpandaops.com:
+  forkmon.zhejiang-testnet.ethpandaops.io:
     mode: http
 
 haproxy_frontends:
   - name: host_withdrawal_devnet_rpc
-    address: rpc.withdrawal-devnet-6.ethpandaops.com
+    address: rpc.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_rpc
   - name: host_withdrawal_devnet
-    address: withdrawal-devnet-6.ethpandaops.com
+    address: zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet
   - name: host_withdrawal_devnet_faucet
-    address: faucet.withdrawal-devnet-6.ethpandaops.com
+    address: faucet.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_faucet
   - name: host_withdrawal_devnet_explorer
-    address: explorer.withdrawal-devnet-6.ethpandaops.com
+    address: explorer.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_explorer
   - name: host_withdrawal_devnet_ethstats
-    address: ethstats.withdrawal-devnet-6.ethpandaops.com
+    address: ethstats.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_ethstats
   - name: host_withdrawal_devnet_beaconchain
-    address: beaconchain.withdrawal-devnet-6.ethpandaops.com
+    address: beaconchain.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_beaconchain
   - name: host_withdrawal_devnet_forkmon
-    address: forkmon.withdrawal-devnet-6.ethpandaops.com
+    address: forkmon.zhejiang-testnet.ethpandaops.io
     backend: host_withdrawal_devnet_forkmon
 
 haproxy_backend_servers:
@@ -54,7 +54,7 @@ haproxy_backend_servers:
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_beaconchain
-    address: withdrawal-devnet-6-explorer-1.ethpandaops.com:8080
+    address: 34.29.53.16:8080
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_forkmon
     address: 127.0.0.1:8181
