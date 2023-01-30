@@ -1,40 +1,40 @@
 certificates:
-  rpc.zhejiang-testnet.ethpandaops.io:
+  rpc.zhejiang.ethpandaops.io:
     mode: http
-  zhejiang-testnet.ethpandaops.io:
+  zhejiang.ethpandaops.io:
     mode: http
-  faucet.zhejiang-testnet.ethpandaops.io:
+  faucet.zhejiang.ethpandaops.io:
     mode: http
-  explorer.zhejiang-testnet.ethpandaops.io:
+  explorer.zhejiang.ethpandaops.io:
     mode: http
-  ethstats.zhejiang-testnet.ethpandaops.io:
+  ethstats.zhejiang.ethpandaops.io:
     mode: http
-  beaconchain.zhejiang-testnet.ethpandaops.io:
+  beaconchain.zhejiang.ethpandaops.io:
     mode: http
-  forkmon.zhejiang-testnet.ethpandaops.io:
+  forkmon.zhejiang.ethpandaops.io:
     mode: http
 
 haproxy_frontends:
   - name: host_withdrawal_devnet_rpc
-    address: rpc.zhejiang-testnet.ethpandaops.io
+    address: rpc.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_rpc
   - name: host_withdrawal_devnet
-    address: zhejiang-testnet.ethpandaops.io
+    address: zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet
   - name: host_withdrawal_devnet_faucet
-    address: faucet.zhejiang-testnet.ethpandaops.io
+    address: faucet.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_faucet
   - name: host_withdrawal_devnet_explorer
-    address: explorer.zhejiang-testnet.ethpandaops.io
+    address: explorer.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_explorer
   - name: host_withdrawal_devnet_ethstats
-    address: ethstats.zhejiang-testnet.ethpandaops.io
+    address: ethstats.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_ethstats
   - name: host_withdrawal_devnet_beaconchain
-    address: beaconchain.zhejiang-testnet.ethpandaops.io
+    address: beaconchain.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_beaconchain
   - name: host_withdrawal_devnet_forkmon
-    address: forkmon.zhejiang-testnet.ethpandaops.io
+    address: forkmon.zhejiang.ethpandaops.io
     backend: host_withdrawal_devnet_forkmon
 
 haproxy_backend_servers:
