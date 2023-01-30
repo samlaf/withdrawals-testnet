@@ -19,7 +19,7 @@
       owner: "{{ ansible_user }}"
       group: "{{ ansible_user }}"
   - name: Modify permissions to match user-group inside docker image
-    shell: chown -R devops:users "{{ testnet_dir }}"
+    shell: chown -R {{ ansible_user }}:{{ ansible_user }} "{{ testnet_dir }}"
     become: true
   - name: "Temp hack fix for teku not taking EIP4844 flag"
     lineinfile:

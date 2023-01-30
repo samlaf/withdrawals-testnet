@@ -13,7 +13,7 @@ resource "cloudflare_record" "dns-entry-bootnode" {
   zone_id = data.sops_file.cloudflare.data["zones.ethpandaops-io.zone_id"]
   name    = "${var.ethereum_network}.${data.sops_file.cloudflare.data["zones.ethpandaops-io.domain"]}"
   type    = "A"
-  value   = "${digitalocean_droplet.main["bootnode.1"].ipv4_address}"
+  value   = "${digitalocean_droplet.main["lighthouse-geth.bootnode"].ipv4_address}"
   proxied = false
 }
 
