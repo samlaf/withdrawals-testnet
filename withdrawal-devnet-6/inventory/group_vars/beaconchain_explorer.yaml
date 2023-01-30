@@ -1,7 +1,7 @@
 #ansible_user: root
 google_bigtable: true
 beaconchain_explorer_remote_ethereum_node: "withdrawal-devnet-6-lighthouse-erigon-1.ethpandaops.com"
-beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:0c8e79ef50ea39170703ed3c335afebee9329917420504b3fcf25226a8663842
+beaconchain_explorer_aio_docker_image_default: gobitfly/eth2-beaconchain-explorer@sha256:da6b00c016c5cf2bf7b40a2a251d853c9d3ea66f7fb4fb148262ebcd1f4dc604
 beaconchain_explorer_aio_url_erigon: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_erigon_ws: ws://{{ beaconchain_explorer_remote_ethereum_node }}:8545
 beaconchain_explorer_aio_url_geth: http://{{ beaconchain_explorer_remote_ethereum_node }}:8545
