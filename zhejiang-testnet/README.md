@@ -1,5 +1,6 @@
-Spec & features:
-https://notes.ethereum.org/@lanchpad/zhejiang
+Spec & features: https://notes.ethereum.org/@launchpad/zhejiang
+
+
 We now just try with more validators 
 58000 keys
 Validator key distribution for Zhejiang testnet:
