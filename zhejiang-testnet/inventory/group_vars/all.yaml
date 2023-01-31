@@ -35,7 +35,7 @@ elendpoint: http://127.0.0.1:8545
 # testnet specific information
 ##############################################
 testnet_type: custom
-cl_network_name: zhejiang-testnet
+cl_network_name: zhejiang
 chainID: 1337803
 fee_recipient: "0xf97e180c050e5Ab072211Ad2C213Eb5AEE4DF134"
 upload_bls_keys: true

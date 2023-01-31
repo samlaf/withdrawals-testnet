@@ -1,7 +1,8 @@
-baseURL: https://zhejiang-testnet.ethpandaops.io
+baseURL: https://{{ cl_network_name }}.{{ domain }}
 languageCode: en-us
 title: {{ cl_network_name }}
 theme: PaperMod
+domain: ethpandaops.io
 
 markup:
   highlight:
@@ -16,34 +17,34 @@ params:
   disableThemeToggle: true
   defaultTheme: dark
   ethereum:
-    beaconexplorerUrl: https://beaconchain.zhejiang-testnet.ethpandaops.io
-    #ethstatsUrl: https://ethstats.zhejiang-testnet.ethpandaops.io
-    faucetUrl: https://faucet.zhejiang-testnet.ethpandaops.io
-    forkmonUrl: https://forkmon.zhejiang-testnet.ethpandaops.io
-    rpcUrl: https://rpc.zhejiang-testnet.ethpandaops.io
-    explorerUrl: https://beaconchain.zhejiang-testnet.ethpandaops.io
+    beaconexplorerUrl: https://beaconchain.{{ cl_network_name }}.{{ domain }}
+    #ethstatsUrl: https://ethstats.{{ cl_network_name }}.{{ domain }}
+    faucetUrl: https://faucet.{{ cl_network_name }}.{{ domain }}
+    forkmonUrl: https://forkmon.{{ cl_network_name }}.{{ domain }}
+    rpcUrl: https://rpc.{{ cl_network_name }}.{{ domain }}
+    explorerUrl: https://beaconchain.{{ cl_network_name }}.{{ domain }}
     chainName: "{{cl_network_name}}"
     chainId: "{{chainID}}"
   metamask:
     enabled: true
 
   links:
-  - name: "Beaconchain explorer"
+  - name: "Beaconchain explorer (soon!)"
     dataLookup: beaconexplorerUrl
-  - name: "Transaction explorer"
+  - name: "Transaction explorer (soon!)"
     dataLookup: explorerUrl
 #  - name: "Ethstats"
 #    dataLookup: ethstatsUrl
-  - name: "Faucet"
+  - name: "Faucet (available post genesis)"
     dataLookup: faucetUrl
   - name: "Forkmon"
     dataLookup: forkmonUrl
   - name: "JSON RPC"
     dataLookup: rpcUrl
 
-  additionalLinks:
-   - name: "Launchpad"
-     url: "https://zhejiang.launchpad.ethereum.org"
+  #additionalLinks:
+  # - name: "Launchpad (available post genesis)"
+  #   url: "https://{{ cl_network_name }}.launchpad.ethereum.org"
 
 menu:
   main:
