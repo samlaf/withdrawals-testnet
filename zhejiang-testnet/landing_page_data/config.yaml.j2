@@ -2,7 +2,6 @@ baseURL: https://{{ cl_network_name }}.{{ domain }}
 languageCode: en-us
 title: {{ cl_network_name }}
 theme: PaperMod
-domain: ethpandaops.io
 
 markup:
   highlight:
@@ -17,21 +16,21 @@ params:
   disableThemeToggle: true
   defaultTheme: dark
   ethereum:
-    beaconexplorerUrl: https://beaconchain.{{ cl_network_name }}.{{ domain }}
+    beaconexplorerUrl: https://zhejiang.beaconcha.in
     #ethstatsUrl: https://ethstats.{{ cl_network_name }}.{{ domain }}
     faucetUrl: https://faucet.{{ cl_network_name }}.{{ domain }}
     forkmonUrl: https://forkmon.{{ cl_network_name }}.{{ domain }}
     rpcUrl: https://rpc.{{ cl_network_name }}.{{ domain }}
-    explorerUrl: https://beaconchain.{{ cl_network_name }}.{{ domain }}
+    explorerUrl: https://zhejiang.beaconcha.in
     chainName: "{{cl_network_name}}"
     chainId: "{{chainID}}"
   metamask:
     enabled: true
 
   links:
-  - name: "Beaconchain explorer (soon!)"
+  - name: "Beaconchain explorer"
     dataLookup: beaconexplorerUrl
-  - name: "Transaction explorer (soon!)"
+  - name: "Transaction explorer"
     dataLookup: explorerUrl
 #  - name: "Ethstats"
 #    dataLookup: ethstatsUrl
@@ -42,9 +41,9 @@ params:
   - name: "JSON RPC"
     dataLookup: rpcUrl
 
-  #additionalLinks:
-  # - name: "Launchpad (available post genesis)"
-  #   url: "https://{{ cl_network_name }}.launchpad.ethereum.org"
+  additionalLinks:
+   - name: "Launchpad (available post genesis)"
+     url: "https://{{ cl_network_name }}.launchpad.ethereum.org"
 
 menu:
   main:

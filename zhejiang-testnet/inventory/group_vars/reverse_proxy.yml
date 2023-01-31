@@ -1,40 +1,40 @@
 certificates:
-  rpc.zhejiang.ethpandaops.io:
+  "rpc.{{ cl_network_name }}.{{ domain }}":
     mode: http
-  zhejiang.ethpandaops.io:
+  "{{ cl_network_name }}.{{ domain }}":
     mode: http
-  faucet.zhejiang.ethpandaops.io:
+  "forkmon.{{ cl_network_name }}.{{ domain }}":
     mode: http
-  explorer.zhejiang.ethpandaops.io:
+  "faucet.{{ cl_network_name }}.{{ domain }}":
     mode: http
-  ethstats.zhejiang.ethpandaops.io:
-    mode: http
-  beaconchain.zhejiang.ethpandaops.io:
-    mode: http
-  forkmon.zhejiang.ethpandaops.io:
-    mode: http
+  # "explorer.{{ cl_network_name }}.{{ domain }}":
+  #   mode: http
+  # "ethstats.{{ cl_network_name }}.{{ domain }}":
+  #   mode: http
+  # "beaconchain.{{ cl_network_name }}.{{ domain }}":
+  #   mode: http
 
 haproxy_frontends:
   - name: host_withdrawal_devnet_rpc
-    address: rpc.zhejiang.ethpandaops.io
+    address: "rpc.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_rpc
   - name: host_withdrawal_devnet
-    address: zhejiang.ethpandaops.io
+    address: "{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet
   - name: host_withdrawal_devnet_faucet
-    address: faucet.zhejiang.ethpandaops.io
+    address: "faucet.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_faucet
   - name: host_withdrawal_devnet_explorer
-    address: explorer.zhejiang.ethpandaops.io
+    address: "explorer.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_explorer
   - name: host_withdrawal_devnet_ethstats
-    address: ethstats.zhejiang.ethpandaops.io
+    address: "ethstats.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_ethstats
   - name: host_withdrawal_devnet_beaconchain
-    address: beaconchain.zhejiang.ethpandaops.io
+    address: "beaconchain.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_beaconchain
   - name: host_withdrawal_devnet_forkmon
-    address: forkmon.zhejiang.ethpandaops.io
+    address: "forkmon.{{ cl_network_name }}.{{ domain }}"
     backend: host_withdrawal_devnet_forkmon
 
 haproxy_backend_servers:
