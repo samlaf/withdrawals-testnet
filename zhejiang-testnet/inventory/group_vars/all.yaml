@@ -73,8 +73,8 @@ eth_metrics_exporter_enabled: true
 cl_validator_metrics_enabled: false
 eth_metrics_exporter_name: "metrics-exporter"
 eth_metrics_exporter_image: "ethpandaops/ethereum-metrics-exporter:0.19.0"
-remote_write_username: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/zhejiang-testnet.json | jq .username') }}"
-remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/zhejiang-testnet.json | jq .password') }}"
+remote_write_username: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/zhejiang.json | jq .username') }}"
+remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/eth2/monitoring/observability-cluster/metrics-ingress-users/zhejiang.json | jq .password') }}"
 
 
 no_validator_keys: false
