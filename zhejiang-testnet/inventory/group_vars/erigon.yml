@@ -1,5 +1,5 @@
 el_client_name: erigon
-el_image_name: thorax/erigon:docker_shadowfork1
+el_image_name: thorax/erigon:devel
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -23,7 +23,7 @@ geth_init_args: >
 el_start_args: >
   erigon --datadir=/eldata
   --networkid={{chainID}}
-  --http --http.api "eth,erigon,engine,debug,trace,txpool"
+  --http --http.api "eth,erigon,engine,debug,trace,txpool,web3"
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
   --http.vhosts "*"

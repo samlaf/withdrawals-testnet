@@ -17,7 +17,7 @@ params:
   defaultTheme: dark
   ethereum:
     beaconexplorerUrl: https://zhejiang.beaconcha.in
-    #ethstatsUrl: https://ethstats.{{ cl_network_name }}.{{ domain }}
+    ethstatsUrl: https://ethstats.{{ cl_network_name }}.{{ domain }}
     faucetUrl: https://faucet.{{ cl_network_name }}.{{ domain }}
     forkmonUrl: https://forkmon.{{ cl_network_name }}.{{ domain }}
     rpcUrl: https://rpc.{{ cl_network_name }}.{{ domain }}
@@ -32,8 +32,8 @@ params:
     dataLookup: beaconexplorerUrl
   - name: "Transaction explorer"
     dataLookup: explorerUrl
-#  - name: "Ethstats"
-#    dataLookup: ethstatsUrl
+  - name: "Ethstats"
+    dataLookup: ethstatsUrl
   - name: "Faucet"
     dataLookup: faucetUrl
   - name: "Forkmon"

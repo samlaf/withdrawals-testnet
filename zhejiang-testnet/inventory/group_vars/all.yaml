@@ -78,11 +78,11 @@ remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereu
 
 domain: ethpandaops.io
 no_validator_keys: false
-ethstats_enabled: false
+ethstats_enabled: true
 metrics_enabled: false
 snapsync_enabled: false
-ethstats_url: "example.io"
-ethstats_password: "example"
+ethstats_url: "ethstats.zhejiang.ethpandaops.io"
+ethstats_password: "zhejiang"
 
 ##############################################
 # mev boost configs

@@ -9,9 +9,9 @@ certificates:
     mode: http
   "beacon.{{ cl_network_name }}.{{ domain }}":
     mode: http
+  "ethstats.{{ cl_network_name }}.{{ domain }}":
+    mode: http
   # "explorer.{{ cl_network_name }}.{{ domain }}":
-  #   mode: http
-  # "ethstats.{{ cl_network_name }}.{{ domain }}":
   #   mode: http
   # "beaconchain.{{ cl_network_name }}.{{ domain }}":
   #   mode: http

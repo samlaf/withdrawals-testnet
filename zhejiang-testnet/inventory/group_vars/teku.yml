@@ -28,7 +28,6 @@ beacon_volumes:
 beacon_start_args: >
   --network="/custom_config_data/config.yaml"
   --initial-state="/custom_config_data/genesis.ssz"
-  --Xee-version=kilnv2
   --data-path="/beacondata"
   --data-storage-mode=PRUNE
   --p2p-enabled=true
