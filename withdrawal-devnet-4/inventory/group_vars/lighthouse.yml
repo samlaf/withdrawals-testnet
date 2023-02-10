@@ -64,7 +64,7 @@ beacon_start_args: >
   {% if mev_boost == 'true' %}
   --builder="http://127.0.0.1:{{mev_boost_port}}"
   {% endif %}
-  --slots-per-restore-point=32 
+  --slots-per-restore-point=256
 # slots per restore-point 32 means it will become an archive for beaconchain explorer
 # in case of el deposit endpoint problems: --dummy-el
 

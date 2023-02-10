@@ -1,5 +1,5 @@
 el_client_name: geth
-el_image_name: ethpandaops/geth:master-df52967
+el_image_name: ethpandaops/geth:master
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -26,7 +26,7 @@ geth_init_args: >
 el_start_args: >
   --datadir=/eldata
   --networkid={{chainID}}
-  --http --http.api "debug,txpool,admin,engine,net,eth"
+  --http --http.api "debug,txpool,admin,engine,net,eth,web3"
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
   --http.corsdomain "*"

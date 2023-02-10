@@ -74,3 +74,17 @@ PROPOSER_SCORE_BOOST: 40
 DEPOSIT_CHAIN_ID: 1337808
 DEPOSIT_NETWORK_ID: 1337808
 DEPOSIT_CONTRACT_ADDRESS: 0x4242424242424242424242424242424242424242
+MAX_EFFECTIVE_BALANCE: 32000000000
+# Minimal preset - Capella
+# Max operations per block
+# ---------------------------------------------------------------
+# 2**4 (= 16)
+MAX_BLS_TO_EXECUTION_CHANGES: 16
+# Execution
+# ---------------------------------------------------------------
+# [customized] 2**2 (= 4)
+MAX_WITHDRAWALS_PER_PAYLOAD: 4
+# Withdrawals processing
+# ---------------------------------------------------------------
+# [customized] 2**4 (= 16) validators
+MAX_VALIDATORS_PER_WITHDRAWALS_SWEEP: 16

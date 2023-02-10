@@ -16,9 +16,6 @@ el_volumes:
   - "{{testnet_dir}}:/networkdata"
   - "{{home_dir}}/jwtsecret:/jwtsecret"
 
-el_env:
-  DEBUG: vm:*
-
 el_start_args: >
   --dataDir=/eldata
   --gethGenesis=/networkdata/genesis.json

@@ -62,3 +62,8 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 25 1 "zhejiang-testnet-lodestar-ethereumjs
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 26 1 "zhejiang-testnet-lodestar-besu" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 27 1 "zhejiang-testnet-lodestar-nethermind" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 28 1 "zhejiang-testnet-lodestar-erigon" $val
+
+# prep_group 1 "$VALIDATORS_MNEMONIC_7" 0 1 "extra-7" 100
+# prep_group 1 "$VALIDATORS_MNEMONIC_8" 0 1 "extra-8" 100
+# prep_group 1 "$VALIDATORS_MNEMONIC_9" 0 1 "extra-9" 100
+# prep_group 1 "$VALIDATORS_MNEMONIC_10" 0 1 "extra-10" 100
