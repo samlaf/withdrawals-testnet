@@ -1,0 +1,40 @@
+# Unitap backend
+unitap_backend_container_name: unitap
+unitap_backend_image_name: bbusa/unitap-backend
+unitap_backend_host_dir: "{{ home_dir }}/unitap_data/unitap"
+unitap_backend_port: 5678
+unitap_backend_volumes: 
+  - "{{ unitap_backend_host_dir }}:/code"
+unitap_field_key: "6y&fk$+fahz6fh)k1n#&@s(9vf56y&fk$+fahz6fh)k1n#&@s(9vf56y&fk"
+unitap_secret_key: "django-insecure-!=0wg-3me6y&fk$+fahz60wg-3me6y&fk$+fahz60wg-3me6y&fk$+fahz6"
+unitap_brigh_private_key: ""
+unitap_debug: True
+unitap_sentry_dsn: "DEBUG_DSN"
+
+
+# Unitap backend postgres
+unitap_postgres_name: unitap-postgres
+unitap_postgres_image: postgres:14.1-alpine
+unitap_postgres_host_dir: "{{ unitap_backend_host_dir }}/unitap_postgres_data"
+unitap_postgres_port: 5432
+unitap_postgres_user: postgres
+unitap_postgres_password: postgrespasswd
+unitap_postgres_db_name: unitappostgresdb
+unitap_postgres_volumes: 
+  - "{{ unitap_postgres_host_dir }}:/var/lib/postgresql/data"
+
+# Unitap backend redis
+unitap_redis_name: unitap-redis
+unitap_redis_image: redis:6.2-alpine
+unitap_redis_host_dir: "{{ unitap_backend_host_dir }}/unitap_redis_data"
+unitap_redis_port: 6379
+unitap_redis_volumes:
+  - "{{ unitap_redis_host_dir }}/cache:/data"
+unitap_redis_start_args: redis-server --save 20 1 --loglevel warning
+
+# Unitap backend ganache
+unitap_ganache_name: unitap-ganache
+unitap_ganache_image: trufflesuite/ganache-cli
+unitap_ganache_host_dir: "{{ unitap_backend_host_dir }}/unitap_ganache_data"
+unitap_ganache_port: 7545
+unitap_ganache_start_args: ganache-cli -d -p 7545

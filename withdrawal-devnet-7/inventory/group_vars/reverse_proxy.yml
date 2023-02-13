@@ -1,0 +1,81 @@
+certificates:
+  "rpc.{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  "{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  "forkmon.{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  "faucet.{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  "beacon.{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  "ethstats.{{ cl_network_name }}.{{ domain }}":
+    mode: http
+  # "explorer.{{ cl_network_name }}.{{ domain }}":
+  #   mode: http
+  # "beaconchain.{{ cl_network_name }}.{{ domain }}":
+  #   mode: http
+
+haproxy_frontends:
+  - name: host_withdrawal_devnet_rpc
+    address: "rpc.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_rpc
+  - name: host_withdrawal_devnet
+    address: "{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet
+  - name: host_withdrawal_devnet_faucet
+    address: "faucet.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_faucet
+  - name: host_withdrawal_devnet_explorer
+    address: "explorer.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_explorer
+  - name: host_withdrawal_devnet_ethstats
+    address: "ethstats.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_ethstats
+  - name: host_withdrawal_devnet_beaconchain
+    address: "beaconchain.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_beaconchain
+  - name: host_withdrawal_devnet_forkmon
+    address: "forkmon.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_forkmon
+  - name: host_withdrawal_devnet_beacon
+    address: "beacon.{{ cl_network_name }}.{{ domain }}"
+    backend: host_withdrawal_devnet_beacon
+
+haproxy_backend_servers:
+  - name: host_withdrawal_devnet_rpc
+    address: 127.0.0.1:8545
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet
+    address: 127.0.0.1:1313
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_faucet
+    address: 127.0.0.1:8010
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_explorer
+    address: 127.0.0.1:3334
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_ethstats
+    address: 127.0.0.1:3000
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_beaconchain
+    address: 34.29.53.16:8080
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_forkmon
+    address: 127.0.0.1:8181
+    options: 'check fall 3 rise 2'
+  - name: host_withdrawal_devnet_beacon
+    address: 127.0.0.1:4000
+    options: 'check fall 3 rise 2'
+
+haproxy_stats_port: 8404
+haproxy_user: devops
+haproxy_group: devops
+haproxy_stats_user: devops
+haproxy_stats_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereum.devops/verkle/verkle-haproxy-key') }}"
+
+haproxy_default_backend_name: host_withdrawal_devnet
+grafana_prometheus_network_name: explorernet
+
+le_email: bbusa@ethereum.org
+debian_certbot: false
