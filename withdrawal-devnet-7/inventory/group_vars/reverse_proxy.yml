@@ -11,10 +11,11 @@ certificates:
     mode: http
   "ethstats.{{ cl_network_name }}.{{ domain }}":
     mode: http
+  "beaconchain.{{ cl_network_name }}.{{ domain }}":
+    mode: http
   # "explorer.{{ cl_network_name }}.{{ domain }}":
   #   mode: http
-  # "beaconchain.{{ cl_network_name }}.{{ domain }}":
-  #   mode: http
+
 
 haproxy_frontends:
   - name: host_withdrawal_devnet_rpc
@@ -59,7 +60,7 @@ haproxy_backend_servers:
     address: 127.0.0.1:3000
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_beaconchain
-    address: 34.29.53.16:8080
+    address: 167.71.11.65:8080
     options: 'check fall 3 rise 2'
   - name: host_withdrawal_devnet_forkmon
     address: 127.0.0.1:8181

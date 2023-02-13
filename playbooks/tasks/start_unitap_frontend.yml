@@ -1,0 +1,4 @@
+- name: Start unitap frontend
+  hosts: unitap
+  gather_facts: true
+  tasks:

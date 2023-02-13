@@ -1,0 +1,82 @@
+- name: Start unitap backend
+  hosts: unitap
+  gather_facts: true
+  tasks:
+    # Postgres
+    - name: Create postgres storage dir for unitap
+      file:
+        path: "{{ unitap_postgres_host_dir }}"
+        state: directory
+    - name: Start unitap backend postgres
+      docker_container:
+        name: "{{ unitap_postgres_name }}"
+        state: started
+        image: "{{ unitap_postgres_image }}"
+        pull: true
+        restart_policy: unless-stopped
+        network_mode: host
+        expose:
+          - "{{unitap_postgres_port}}"
+        restart: "{{ explorer_postgres_require_restart | default(false) }}"
+        volumes: "{{unitap_postgres_volumes}}"
+        env:
+          POSTGRES_DB: "{{unitap_postgres_db_name}}"
+          POSTGRES_USER: "{{unitap_postgres_user}}"
+          POSTGRES_PASSWORD: "{{unitap_postgres_password}}"
+    # Redis
+    - name: Create redis storage dir for unitap
+      file:
+        path: "{{ unitap_redis_host_dir }}"
+        state: directory
+    - name: Start unitap backend redis
+      docker_container:
+        name: "{{ unitap_redis_name }}"
+        state: started
+        image: "{{ unitap_redis_image }}"
+        pull: true
+        restart_policy: unless-stopped
+        network_mode: host
+        expose:
+          - "{{unitap_redis_port}}"
+        restart: "{{ explorer_redis_require_restart | default(false) }}"
+        command: "{{ unitap_redis_start_args }}"
+    
+    # Ganache
+    - name: Create ganache storage dir for unitap
+      file:
+        path: "{{ unitap_ganache_host_dir }}"
+        state: directory
+    - name: Start unitap backend ganache
+      docker_container:
+        name: "{{ unitap_ganache_name }}"
+        state: started
+        image: "{{ unitap_ganache_image }}"
+        pull: true
+        restart_policy: unless-stopped
+        network_mode: host
+        expose:
+          - "{{unitap_ganache_port}}"
+        restart: "{{ explorer_ganache_require_restart | default(false) }}"
+        command: "{{ unitap_ganache_start_args }}"
+
+    - name: Start unitap backend container
+      docker_container:
+        name: "{{ unitap_backend_container_name }}"
+        state: started
+        image: "{{ unitap_backend_image_name }}"
+        pull: true
+        restart_policy: unless-stopped
+        network_mode: host
+        ports:
+          - "{{ unitap_backend_port }}:{{ unitap_backend_port }}"
+        expose:
+          - "{{ unitap_backend_port }}"
+        restart: "{{ unitap_backend_require_restart | default(false) }}"
+        volumes: "{{ unitap_backend_volumes }}"
+        env:
+          FIELD_KEY: "{{ unitap_field_key }}"
+          SECRET_KEY: "{{ unitap_secret_key }}"
+          BRIGHT_PRIVATE_KEY: "{{ unitap_brigh_private_key }}"
+          SENTRY_DSN: "{{ unitap_sentry_dsn }}"
+          DATABASE_URL: postgres://{{ unitap_postgres_user }}:{{ unitap_postgres_password }}@{{ unitap_postgres_name }}:{{ unitap_postgres_port }}/{{ unitap_postgres_db_name }}
+          REDIS_URL: "redis://{{ unitap_redis_name }}:{{ unitap_redis_port }}"

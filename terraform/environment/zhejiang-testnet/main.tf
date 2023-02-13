@@ -61,7 +61,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "lighthouse-geth"
       vms = {
-        "bootnode" = {tags = ["bootnode", "tooling"]}
+        "bootnode" = {tags = "bootnode,tooling"}
         "1" = {}
         "2" = {}
       },
@@ -90,7 +90,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "prysm-geth"
       vms = {
-        "bootnode" = {tags = ["bootnode"]}
+        "bootnode" = {tags = "bootnode"}
         "1" = {}
         "2" = {}
       },
@@ -130,7 +130,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "teku-geth"
       vms = {
-        "bootnode" = {tags = ["bootnode"]}
+        "bootnode" = {tags = "bootnode"}
         "1" = {}
       },
     },
@@ -149,7 +149,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "lodestar-geth"
       vms = {
-        "bootnode" = {tags = ["bootnode"]}
+        "bootnode" = {tags = "bootnode"}
         "1" = {}
       },
     },
@@ -180,7 +180,7 @@ variable "digitalocean_vm_groups" {
     {
       id = "nimbus-geth"
       vms = {
-        "bootnode" = {tags = ["bootnode"]}
+        "bootnode" = {tags = "bootnode"}
         "1" = {}
       },
     },
@@ -234,7 +234,7 @@ locals {
           digitalocean_vpc.main[vm.region].id,
           digitalocean_vpc.main[try(group.region, local.digitalocean_default_region)].id
         ))
-        tags = concat(local.digitalocean_global_tags, try(vm.tags,[]))
+        tags = concat(local.digitalocean_global_tags, try(split(",", vm.tags),[]))
       }
     ]
   ])

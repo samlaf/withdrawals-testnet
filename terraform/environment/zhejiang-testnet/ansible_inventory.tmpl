@@ -26,7 +26,7 @@ ${host.hostname}
 [tooling]
 %{ for key, host in hosts ~}
 %{ if contains(host.tags, "tooling") ~}
-zhejiang-testnet-lighthouse-geth-bootnode
+${host.hostname}
 %{ endif ~}
 %{ endfor ~}
 
@@ -133,4 +133,7 @@ tooling
 tooling
 
 [reverse_proxy:children]
+tooling
+
+[unitap:children]
 tooling

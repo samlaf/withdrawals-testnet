@@ -1,0 +1,2 @@
+- import_playbook: tasks/start_unitap_backend.yml
+- import_playbook: tasks/start_unitap_frontend.yml
