@@ -59,6 +59,12 @@ variable "digitalocean_vm_groups" {
   type = list
   default = [
     {
+      id = "explorer"
+      vms = {
+        "1" = {tags = "explorer"}
+      }
+    },
+    {
       id = "lighthouse-geth"
       vms = {
         "bootnode" = {tags = "bootnode,tooling"}

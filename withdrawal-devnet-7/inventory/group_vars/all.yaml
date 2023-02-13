@@ -42,11 +42,11 @@ upload_bls_keys: true
 # enter bootnodes here if needed
 bootnode_enrs:
   - "enr:-Iq4QMCTfIMXnow27baRUb35Q8iiFHSIDBJh6hQM5Axohhf4b6Kr_cOCu0htQ5WvVqKvFgY28893DHAg8gnBAXsAVqmGAX53x8JggmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
-
+  - "enr:-Ly4QOejdqJ68ZgSnUPsQ5ZMe7Y_VEISwRtre51wwd8t_3k-KGxSO14pXg0AIAjm_eibAZxgyMkzELIaite46pM_sxwBh2F0dG5ldHOIAAAAAAAAAACEZXRoMpAEF12pQAAARMIBAAAAAAAAgmlkgnY0gmlwhK6KBJ6Jc2VjcDI1NmsxoQPdgGhtl1f7T0w1AhtgkVhH3ihMa0-4pH6TKWegTPtM0ohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
 multiaddrs: 
-
+  - "/ip4/174.138.4.158/tcp/9000/p2p/16Uiu2HAmTZe1ubNqQ74jxEpqQwY4SQWhFo6AbTCydfsJf7LkYoZs"
 el_bootnode_enode:
-
+  - "enode://7a62fa742b72275cdc7602595ee795cb7ae05901a1e0a85cf79ee56f8f7751a6a648aba75826cce888c9a00547579519c90ea9a73fa63c1e484ed47611c41f08@174.138.4.158:30303"
 
 el_static_enodes: "{{el_bootnode_enode}}"
 ##############################################
