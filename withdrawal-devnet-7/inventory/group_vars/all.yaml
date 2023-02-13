@@ -189,5 +189,9 @@ firewall_allowed_udp_ports:
 firewall_flush_rules_and_chains: true
 
 firewall_additional_rules:
-  - "iptables -A INPUT -p tcp --dport 8545 -s 172.16.0.0/12 -j ACCEPT"
-  - "iptables -A INPUT -p tcp --dport 8546 -s 172.16.0.0/12 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 172.16.0.0/12 -j ACCEPT" #docker internal
+  - "iptables -A INPUT -p tcp --dport 8546 -s 172.16.0.0/12 -j ACCEPT" #docker internal
+  - "iptables -A INPUT -p tcp --dport 8545 -s 174.138.4.158 -j ACCEPT" #forkmon
+  - "iptables -A INPUT -p tcp --dport 4000 -s 167.71.11.65 -j ACCEPT" #beaconchain explorer
+  - "iptables -A INPUT -p tcp --dport 8545 -s 167.71.11.65 -j ACCEPT" #beaconchain explorer
+  - "iptables -A INPUT -p tcp --dport 8546 -s 167.71.11.65 -j ACCEPT" #beaconchain explorer

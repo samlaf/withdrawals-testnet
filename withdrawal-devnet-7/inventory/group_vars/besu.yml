@@ -58,7 +58,7 @@ el_start_args: >
   --engine-jwt-enabled
   --engine-jwt-secret=/jwtsecret
   {% if (ethstats_enabled) %}
-  --ethstats={{inventory_hostname}}:{{ethstats_password}}@{{ethstats_url}}:3000
+  --ethstats={{inventory_hostname}}:{{ethstats_password}}@{{ethstats_url}}
   {% endif %}
   {% if (el_bootnode_enode is defined) and bootnode_enrs %}
   --bootnodes="{{ el_bootnode_enode | join(',') }}"
