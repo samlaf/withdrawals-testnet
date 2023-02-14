@@ -59,7 +59,9 @@ beacon_start_args: >
   {% endif %}
   --jwt-secret=/jwtsecret
   --dump:on
-
+  {% if mev_boost|bool is sameas true %}
+  --payload-builder=true --payload-builder-url="http://127.0.0.1:{{mev_boost_port}}"
+  {% endif %}
 
 ##############################################
 # file permissions and user ids
