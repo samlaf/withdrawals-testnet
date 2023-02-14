@@ -294,6 +294,12 @@ variable "digitalocean_vm_groups" {
         "3" = {}
       }
     },
+    {
+      id = "grandine-geth"
+      vms = {
+        "1" = {}
+      }
+    },
   ]
 }
 
