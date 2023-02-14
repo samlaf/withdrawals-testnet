@@ -38,6 +38,12 @@
       shell: |
         cp -r "{{local_validator_host_dir}}/teku-keys" "{{local_validator_host_dir}}/selected_keys/keys"
         cp -r "{{local_validator_host_dir}}/teku-secrets" "{{local_validator_host_dir}}/selected_keys/secrets"
+    - name: Copy keys for grandine
+      when: not does_key_tar_exist.stat.exists and cl_client_name == 'grandine'
+      delegate_to: localhost
+      shell: |
+        cp -r "{{local_validator_host_dir}}/teku-keys" "{{local_validator_host_dir}}/selected_keys/keys"
+        cp -r "{{local_validator_host_dir}}/teku-secrets" "{{local_validator_host_dir}}/selected_keys/secrets"
     - name: Create folders for prysm
       when: not does_key_tar_exist.stat.exists and cl_client_name == 'prysm'
       delegate_to: localhost

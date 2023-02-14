@@ -1,0 +1,48 @@
+##############################################
+# image name and image location
+##############################################
+cl_client_name: grandine
+
+beacon_image_name: sifrai/grandine:unstable
+beacon_endpoint: "http://127.0.0.1:{{beacon_api_port}}"
+
+cl_github_external_user_pubkeys:
+  - sauliusgrigaitis
+
+##############################################
+# volume mappings on remote host
+##############################################
+beacon_volumes:
+  - "{{beacon_node_dir}}:/beacondata"
+  - "{{testnet_dir}}:/custom_config_data"
+  - "{{validator_node_dir}}:/validatordata"
+  - "{{home_dir}}/jwtsecret:/jwtsecret"
+
+##############################################
+# arguments to run the containers with
+##############################################
+beacon_start_args: >
+  --data-dir="/beacondata"
+  --http-address 0.0.0.0 
+  --http-port={{beacon_api_port}}
+  --libp2p-port={{beacon_p2p_port}}  
+  --discovery-port={{beacon_p2p_port}} 
+  --jwt-secret=/jwtsecret
+  --eth1-rpc-urls={{execution_endpoint}}
+  --configuration-directory=/custom_config_data 
+  {% if no_validator_keys|bool != true %}
+  --keystore-dir="/validatordata/keys"
+  --keystore-password-file="/validatordata/secrets"
+  --suggested-fee-recipient={{fee_recipient}}
+  --graffiti={{graffiti}}
+  {% endif %}
+
+##############################################
+# file permissions and user ids
+##############################################
+keystores_file_mode: "0704"
+beacon_user_id: "1000:1000"
+validator_user_id: "1000:1000"
+
+# Grandine currently runs on a combined beacon validator process for the merge code
+separate_validator_process_enabled: false

@@ -62,3 +62,5 @@ prep_group 1 "$VALIDATORS_MNEMONIC_0" 107 2 "withdrawal-devnet-7-lodestar-ethere
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 109 2 "withdrawal-devnet-7-lodestar-besu" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 111 7 "withdrawal-devnet-7-lodestar-nethermind" $val
 prep_group 1 "$VALIDATORS_MNEMONIC_0" 118 2 "withdrawal-devnet-7-lodestar-erigon" $val
+
+prep_group 1 "$VALIDATORS_MNEMONIC_1" 0 1 "withdrawal-devnet-7-grandine-geth" $val

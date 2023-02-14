@@ -52,7 +52,6 @@ beacon_start_args: >
   --verbosity="{{ beacon_log_level | lower }}"
   --min-sync-peers=1
   --pprof
-  --slasher
   --p2p-host-ip={{ansible_host}}
   --p2p-max-peers={{hi_peer_count}}
   --p2p-udp-port={{beacon_p2p_port}} --p2p-tcp-port={{beacon_p2p_port}}
@@ -61,7 +60,7 @@ beacon_start_args: >
   --grpc-gateway-host=0.0.0.0
   --grpc-gateway-port={{beacon_api_port}}
   --enable-debug-rpc-endpoints
-  --grpc-max-msg-size=43000000
+  --grpc-max-msg-size=1000000000
   --jwt-secret=/jwtsecret
   --disable-staking-contract-check
   --suggested-fee-recipient={{ fee_recipient }}
