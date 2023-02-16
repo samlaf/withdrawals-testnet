@@ -8,4 +8,12 @@ checkpointz_volumes:
   - "{{checkpointz_host_dir}}/config.yml:/opt/checkpointz/config.yml"
 
 checkpointz_endpoints:
-  - http://zhejiang-testnet-prysm-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+  - name: prysm-geth
+    address: http://zhejiang-testnet-prysm-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true
+  - name: teku-geth
+    address: http://zhejiang-testnet-teku-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true
+  - name: nimbus-geth
+    address: http://zhejiang-testnet-nimbus-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true
