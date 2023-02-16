@@ -1,0 +1,2 @@
+- import_playbook: tasks/upload_checkpointz_data.yml
+- import_playbook: tasks/start_checkpointz.yml

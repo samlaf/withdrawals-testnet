@@ -1,0 +1,11 @@
+checkpointz_mode: full
+checkpointz_container_name: checkpointz
+checkpointz_image_name: ethpandaops/checkpointz:latest
+checkpointz_http_listen_port: 5555
+checkpointz_start_args: --config /opt/checkpointz/config.yml
+checkpointz_host_dir: "{{home_dir}}/checkpointz"
+checkpointz_volumes:
+  - "{{checkpointz_host_dir}}/config.yml:/opt/checkpointz/config.yml"
+
+checkpointz_endpoints:
+  - http://zhejiang-testnet-prysm-geth-bootnode.ethpandaops.io:{{beacon_api_port}}

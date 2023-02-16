@@ -51,6 +51,7 @@ el_start_args: >
   --metrics-host=0.0.0.0
   --metrics-port={{el_metrics_port}}
   --p2p-enabled=true
+  --rpc-http-max-batch-size=1000
   --miner-coinbase="{{fee_recipient}}"
   --p2p-host={{ansible_host}}
   --sync-mode=FULL
@@ -60,9 +61,9 @@ el_start_args: >
   {% if (el_bootnode_enode is defined) and bootnode_enrs %}
   --bootnodes="{{ el_bootnode_enode | join(',') }}"
   {% endif %}
-# {% if (ethstats_enabled) %}
-# --ethstats={{inventory_hostname}}:{{ethstats_password}}@{{ethstats_url}}:3000
-# {% endif %}
+  {% if (ethstats_enabled) %}
+  --ethstats={{inventory_hostname}}:{{ethstats_password}}@{{ethstats_url}}:3000
+  {% endif %}
 
 
 el_user_id: "1000:1000"

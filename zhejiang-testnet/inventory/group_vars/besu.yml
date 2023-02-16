@@ -51,6 +51,7 @@ el_start_args: >
   --metrics-host=0.0.0.0
   --metrics-port={{el_metrics_port}}
   --p2p-enabled=true
+  --rpc-http-max-batch-size=1000
   --miner-coinbase="{{fee_recipient}}"
   --p2p-host={{ansible_host}}
   --sync-mode=FULL

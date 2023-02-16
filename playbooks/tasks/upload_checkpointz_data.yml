@@ -1,0 +1,13 @@
+- name: Upload checkpointz data
+  hosts: checkpointz
+  gather_facts: true
+  tasks:
+  - name: Creates checkpointz dir
+    file:
+      path: "{{checkpointz_host_dir}}"
+      state: directory
+  - name: Move the checkpointz config j2 template to remote
+    template:
+      src: checkpointz/config.yml.j2
+      dest:  "{{checkpointz_host_dir}}/config.yml"
+      mode: '755'

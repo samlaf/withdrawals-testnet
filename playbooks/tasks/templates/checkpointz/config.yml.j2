@@ -1,0 +1,14 @@
+checkpointz:
+  mode: {{ checkpointz_mode }}
+
+beacon:
+  upstreams:
+  - name: prysm-geth
+    address: http://zhejiang-testnet-prysm-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true
+  - name: nimbus-geth
+    address: http://zhejiang-testnet-nimbus-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true
+  - name: lodetar-geth
+    address: http://zhejiang-testnet-lodestar-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true

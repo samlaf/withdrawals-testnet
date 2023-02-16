@@ -59,6 +59,7 @@ beacon_start_args: >
   {% endif %}
   --ee-jwt-secret-file="/jwtsecret"
   --Xlog-include-p2p-warnings-enabled
+  --metrics-block-timing-tracking-enabled
   --log-destination=console
   {% if mev_boost == 'true' %}
   --builder-endpoint="http://127.0.0.1:{{mev_boost_port}}"
