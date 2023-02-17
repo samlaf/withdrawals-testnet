@@ -64,6 +64,7 @@ beacon_start_args: >
   {% endif %}
   --jwt-secret=/jwtsecret
   --dump:on
+  --history=prune
 
 
 ##############################################

@@ -1,5 +1,5 @@
 el_client_name: besu
-el_image_name: hyperledger/besu:latest
+el_image_name: hyperledger/besu:23.1.0-openjdk-latest-amd64
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -40,7 +40,6 @@ el_start_args: >
   --network-id={{chainID}}
   --sync-mode=FULL
   {% endif %}
-  --static-nodes-file="/static_nodes/static-nodes.json"
   --max-peers=100
   --rpc-http-enabled=true --rpc-http-api=ADMIN,CLIQUE,MINER,ETH,NET,DEBUG,TXPOOL,ENGINE,TRACE
   --rpc-http-host=0.0.0.0
