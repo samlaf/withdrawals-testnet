@@ -80,7 +80,6 @@ remote_write_password: "{{ lookup('pipe', 'keybase fs read /keybase/team/ethereu
 domain: ethpandaops.io
 no_validator_keys: false
 ethstats_enabled: true
-metrics_enabled: false
 snapsync_enabled: false
 ethstats_url: "ethstats.withdrawal-devnet-7.ethpandaops.io"
 ethstats_password: "withdrawal-devnet-7"

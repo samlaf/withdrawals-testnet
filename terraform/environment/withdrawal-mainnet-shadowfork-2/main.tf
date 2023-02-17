@@ -96,12 +96,6 @@ variable "digitalocean_vm_groups" {
       }
     },
     {
-      id = "lodestar-erigon"
-      vms = {
-        "1" = { size = "so1_5-8vcpu-64gb", image = "125869010" }
-      }
-    },
-    {
       id = "teku-besu"
       vms = {
         "1" = {image = "125410919"}
@@ -121,12 +115,6 @@ variable "digitalocean_vm_groups" {
       }
     },
     {
-      id = "teku-erigon"
-      vms = {
-        "1" = { size = "so1_5-8vcpu-64gb", image = "125869024"  }
-      }
-    },
-    {
       id = "nimbus-besu"
       vms = {
         "1" = {image = "125410822"}
@@ -142,12 +130,6 @@ variable "digitalocean_vm_groups" {
       id = "nimbus-nethermind"
       vms = {
         "1" = {image = "125410799"}
-      }
-    },
-    {
-      id = "nimbus-erigon"
-      vms = {
-        "1" = { size = "so1_5-8vcpu-64gb", image = "125869010" }
       }
     },
     {
@@ -170,12 +152,6 @@ variable "digitalocean_vm_groups" {
       }
     },
     {
-      id = "prysm-erigon"
-      vms = {
-        "1" = { size = "so1_5-8vcpu-64gb",image = "125869010" }
-      }
-    },
-    {
       id = "lighthouse-besu"
       vms = {
         "1" = {image = "125410973"}
@@ -192,12 +168,6 @@ variable "digitalocean_vm_groups" {
       id = "lighthouse-nethermind"
       vms = {
         "1" = {image = "125410760"}
-      }
-    },
-    {
-      id = "lighthouse-erigon"
-      vms = {
-        "1" = { size = "so1_5-8vcpu-64gb",image = "125869010" }
       }
     },
   ]
