@@ -58,7 +58,6 @@ beacon_start_args: >
   --suggested-fee-recipient={{fee_recipient}}
   {% endif %}
   --jwt-secret=/jwtsecret
-  --dump:on
 
 
 ##############################################

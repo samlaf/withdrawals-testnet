@@ -25,7 +25,7 @@ beacon_volumes:
   - "{{validator_node_dir}}:/validatordata"
   - "{{home_dir}}/jwtsecret:/jwtsecret"
 
-beacon_log_level: debug
+beacon_log_level: info
 ##############################################
 # arguments to run the containers with
 ##############################################
@@ -58,7 +58,6 @@ beacon_start_args: >
   --suggested-fee-recipient={{fee_recipient}}
   {% endif %}
   --jwt-secret=/jwtsecret
-  --dump:on
   {% if mev_boost|bool is sameas true %}
   --payload-builder=true --payload-builder-url="http://127.0.0.1:{{mev_boost_port}}"
   {% endif %}

@@ -17,3 +17,6 @@ checkpointz_endpoints:
   - name: nimbus-geth
     address: http://zhejiang-testnet-nimbus-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
     dataProvider: true
+  - name: lodestar-geth
+    address: http://zhejiang-testnet-lodestar-geth-bootnode.ethpandaops.io:{{beacon_api_port}}
+    dataProvider: true

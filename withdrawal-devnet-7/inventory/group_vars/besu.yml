@@ -1,5 +1,5 @@
 el_client_name: besu
-el_image_name: hyperledger/besu:develop
+el_image_name: hyperledger/besu:23.1.1-RC1
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -51,7 +51,6 @@ el_start_args: >
   --metrics-host=0.0.0.0
   --metrics-port={{el_metrics_port}}
   --p2p-enabled=true
-  --rpc-http-max-batch-size=1000
   --miner-coinbase="{{fee_recipient}}"
   --p2p-host={{ansible_host}}
   --sync-mode=FULL
