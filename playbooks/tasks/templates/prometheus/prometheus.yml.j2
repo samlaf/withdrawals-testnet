@@ -68,7 +68,7 @@ scrape_configs:
 {% endif %}
 {% endif %}
 
-{% if el_client_name is defined %}
+{% if el_client_name is defined and el_client_name != "ethereumjs" %}
 
   - job_name: execution_node
 {% if el_client_name == "geth" or el_client_name == "erigon" %}
