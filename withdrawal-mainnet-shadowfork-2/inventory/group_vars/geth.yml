@@ -1,5 +1,5 @@
 el_client_name: geth
-el_image_name: ethpandaops/geth:master-101587b
+el_image_name: ethpandaops/geth:master-fe01a2f
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
@@ -22,10 +22,11 @@ el_start_args: >
   --datadir=/eldata
   {% if deploy_mode == 'sync' %}
   --mainnet
+  --syncmode=full
   {% elif deploy_mode == 'shadowfork' %}
   --networkid={{chainID}}
   --syncmode=full
-  --override.shanghai=1674479676
+  --override.shanghai=1680835260
   {% endif %}
   --http --http.api "admin,engine,net,eth"
   --http.port {{el_rpc_port}}
