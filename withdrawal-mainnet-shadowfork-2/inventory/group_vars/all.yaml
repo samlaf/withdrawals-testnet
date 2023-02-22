@@ -160,5 +160,7 @@ firewall_allowed_udp_ports:
   - 9000
   - 80
   - 443
+
 firewall_additional_rules:
-  - "iptables -A INPUT -p tcp --dport 4000 -s 165.22.204.22 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 4000 -s 159.223.215.206 -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 8545 -s 159.223.215.206 -j ACCEPT"
