@@ -3,6 +3,9 @@
   gather_facts: true
   serial: 20
   tasks:
+    - name: debug task
+      debug:
+        msg: "{{ el_start_args }}"
     - name: Start execution node container
       docker_container:
         name: "{{ execution_container_name }}"

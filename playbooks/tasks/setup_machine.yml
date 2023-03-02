@@ -1,3 +1,12 @@
+- name: Setup Debian aws ec2 instances
+  hosts: all # eventually we might want to add a tag for aws debian instances only
+  become: true # need to be sudo
+  tasks:
+    - name: apt update (required by robertdebock.bootstrap which tries to install gnupg)
+      apt:
+        update_cache: yes
+        upgrade: yes
+
 - name: Run bootstrap playbook to ensure basic stuff works and add oh-my-zsh
   hosts: all
   remote_user: "{{ bootstrap_user }}"

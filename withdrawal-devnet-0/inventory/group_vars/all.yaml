@@ -1,15 +1,12 @@
 ##############################################
 # generic ansible config information
 ##############################################
-ansible_user: "devops"
-bootstrap_user: "devops"
-initial_remote_user: "root"
+ansible_user: "admin"
+bootstrap_user: "admin"
+initial_remote_user: "admin"
 
 github_user_pubkeys:
-  - parithosh
-  - barnabasbusa
-  - skylenet
-  - samcm
+  - samlaf
 
 ansible_python_interpreter: /usr/bin/python3
 oh_my_zsh_config:
@@ -33,17 +30,18 @@ elendpoint: http://127.0.0.1:8545
 ##############################################
 testnet_type: custom
 cl_network_name: withdrawal-devnet-0
-chainID: 1337804
+chainID: 133751634
 fee_recipient: "0xE7c180eAdA8f60D63e9671867b2e0CA2649207A8"
+upload_bls_keys: false
 # enter bootnodes here if needed
 bootnode_enrs:
-  - "enr:-Ly4QGFMq0MRD-siQNaCIqV1Dzs2FdI_WYQtidD-2hX5Mw7SaZbmLCQVH_LEYU55aKGx_29wPdtJiOgxRN-PclZG4Bsph2F0dG5ldHOI__________-EZXRoMpDThdgCQAAAQP__________gmlkgnY0gmlwhKdHPBCJc2VjcDI1NmsxoQOnEQE70ElmRPTICG24Xvc0Eckwch8IJvDshhBdwEjTSohzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
-multiaddrs:
-  - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmPu9UXAq4JhCnz4QKZCsattzEbT6wZBg1PXscgtr1aTGu"
+  - "enr:-Ly4QPCkzsgySxTbmESxD2Bqd5AhBgPNCwBaHSpYoozsmANMM_LFOMqhquZ3ae-r8gTKBzes4bYpozTt3C81C9da3eUZh2F0dG5ldHOIAKPAAtYKmEOEZXRoMpBUdGTOQAAAQAUAAAAAAAAAgmlkgnY0gmlwhCLriGOJc2VjcDI1NmsxoQNodJ6EJSUf2frCIwMnqwbgSmtt9hK6SQrEIA9AJxwmyohzeW5jbmV0cw-DdGNwgiMog3VkcIIjKA"
+# multiaddrs:
+# - "/ip4/167.71.60.16/tcp/9000/p2p/16Uiu2HAmPu9UXAq4JhCnz4QKZCsattzEbT6wZBg1PXscgtr1aTGu"
 el_bootnode_enode:
-  - "enode://bb2ddbbc3201859c6e8b70a5000fd103eeead2b797dd23b9d55c0984e8587639110a69093a23ffe6543c0b56323d0c7a02f731aa3b15fff9e65e8d9d6af8cbd2@167.71.60.16:30303"
+  - "enode://8c764376fd7e78bae6ee20ca27977f8c2cf5fc380035bae22cc8df18d813d4ea636ecd8b212492a3806ef581e9109494e62c39b706fbb769477f30d21fa5e509@34.235.136.99:30303"
 el_static_enodes:
-  - "enode://bb2ddbbc3201859c6e8b70a5000fd103eeead2b797dd23b9d55c0984e8587639110a69093a23ffe6543c0b56323d0c7a02f731aa3b15fff9e65e8d9d6af8cbd2@167.71.60.16:30303"
+  - "enode://8c764376fd7e78bae6ee20ca27977f8c2cf5fc380035bae22cc8df18d813d4ea636ecd8b212492a3806ef581e9109494e62c39b706fbb769477f30d21fa5e509@34.235.136.99:30303"
 
 ##############################################
 # metric information
@@ -144,7 +142,6 @@ common_log_options:
   mode: non-blocking
   max-buffer-size: 4m
 common_log_driver: json-file
-
 
 ##############################################
 # container names

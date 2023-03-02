@@ -1,15 +1,12 @@
 el_client_name: geth
-el_image_name: ethpandaops/geth:withdrawals-timestamp-f7ab681
+el_image_name: ethpandaops/geth:master
 execution_endpoint: http://127.0.0.1:{{el_engine_snoop_port}}
 snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{el_engine_port}}"
 
 home_dir: "/home/{{ansible_user}}"
 
 el_github_external_user_pubkeys:
-  - mariusVanDerWijden
-  - holiman
-  - karalabe
-  - g11tech
+  - samlaf
 
 # bare websocket
 elendpoint_ws: ws://127.0.0.1:8546
@@ -26,7 +23,7 @@ geth_init_args: >
 el_start_args: >
   --datadir=/eldata
   --networkid={{chainID}}
-  --http --http.api "debug,txpool,admin,engine,net,eth"
+  --http --http.api "debug,txpool,admin,engine,net,eth,web3"
   --http.port {{el_rpc_port}}
   --http.addr 0.0.0.0
   --http.corsdomain "*"

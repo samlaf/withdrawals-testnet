@@ -1,0 +1,9 @@
+- name: Health Check Ping
+  hosts: all
+  become: true
+  tasks:
+    - name: ping
+      ansible.builtin.ping:
+    - name: debug ssh key
+      ansible.builtin.debug:
+        var: ansible_ssh_private_key_file

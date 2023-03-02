@@ -6,15 +6,7 @@ snoop_command: "./json_rpc_snoop -p {{el_engine_snoop_port}} http://127.0.0.1:{{
 home_dir: "/home/{{ansible_user}}"
 
 el_github_external_user_pubkeys:
-  - MarekM25
-  - avalonche
-  - DockBoss
-  - LukaszRozmej
-  - marcindsobczak
-  - asdacap
-  - rubo
-  - smartprogrammer93
-  - g11tech
+  - samlaf
 
 el_memory: 5000M
 el_kernel_memory: 5500M

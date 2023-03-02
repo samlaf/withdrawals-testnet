@@ -1,0 +1,9 @@
+withdrawal-devnet-0-bootnode-1:
+  indexes: 0000..2000
+  mnemonic: test test test test test test test test test test test junk
+withdrawal-devnet-0-lighthouse-geth-1:
+  indexes: 2000..4000
+  mnemonic: test test test test test test test test test test test junk
+withdrawal-devnet-0-lighthouse-geth-2:
+  indexes: 4000..6000
+  mnemonic: test test test test test test test test test test test junk

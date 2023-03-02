@@ -9,6 +9,24 @@
     - name: Set each node's own enode
       set_fact:
         beacon_enr: "{{( node_identity_response.stdout | from_json)['data']['enr'] }}"
+    - name: print the enrs
+      debug:
+        msg: "{{beacon_enr}}"
+- name: Collect ENodes
+  hosts: execution
+  gather_facts: false
+  serial: 20
+  tasks:
+    - name: admin_nodeInfo_response
+      shell: |
+        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":67}' 127.0.0.1:8545
+      register: admin_nodeInfo_response
+    - name: Set each node's own enode
+      set_fact:
+        execution_enr: "{{( admin_nodeInfo_response.stdout | from_json)['result']['enode'] }}"
+    - name: print the enrs
+      debug:
+        msg: "{{execution_enr}}"
 - name: Write ENRs
   hosts: localhost
   gather_facts: true

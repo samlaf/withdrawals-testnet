@@ -1,0 +1,32 @@
+- name: Collect EL peers for debugging
+  hosts: all
+  tasks:
+    - name: admin_nodeInfo response
+      shell: |
+        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"admin_peers","params":[],"id":67}' 127.0.0.1:8545
+      register: admin_nodeInfo_response
+    - name: Set peers variable
+      set_fact:
+        peers: "{{( admin_nodeInfo_response.stdout | from_json)['result'] }}"
+        num_peers: "{{( admin_nodeInfo_response.stdout | from_json)['result'] | length }}"
+    - name: print the number of peers (+ enrs if enabled)
+      debug:
+        # we show host ip and its peers
+        msg:
+          - "{{ ansible_ssh_host}}"
+          - "{{ num_peers }}"
+          # - "{{peers}}"
+
+- name: Check EL syncing status
+  hosts: all
+  tasks:
+    - name: eth_syncing response
+      shell: |
+        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":67}' 127.0.0.1:8545
+      register: eth_syncing_response
+    - name: Set syncing variable
+      set_fact:
+        syncing: "{{( eth_syncing_response.stdout | from_json)['result'] }}"
+    - name: print the syncing status
+      debug:
+        msg: "{{syncing}}"

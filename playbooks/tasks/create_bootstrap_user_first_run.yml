@@ -17,7 +17,13 @@
     - name: Set ansible_ssh_user to bootstrap_user
       set_fact:
         ansible_ssh_user: "{{bootstrap_user}}"
+        ansible_ssh_private_key_file: "/Users/samlaf/.ssh/id_ed25519"
       changed_when: false
       delegate_to: localhost
       run_once: true
-# After this playbook: whoami -> devops
+    # After this playbook: whoami -> devops
+    - name: print whoami
+      shell: whoami
+      register: whoami
+      changed_when: false
+    - debug: var=whoami.stdout

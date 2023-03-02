@@ -1,302 +1,97 @@
 terraform {
-  required_providers {
-    digitalocean = {
-      source = "digitalocean/digitalocean"
-      version = "~> 2.0"
+  cloud {
+    organization = "Layr-Labs"
+
+    workspaces {
+      name = "ansible-devnet-test-samlaf"
     }
   }
 }
 
+provider "aws" {
+  region = local.aws_region
+}
 
-terraform {
-  backend "s3" {
-    skip_credentials_validation = true
-    skip_metadata_api_check     = true
-    endpoint                    = "https://fra1.digitaloceanspaces.com"
-    region                      = "us-east-1"
-    bucket                      = "merge-testnets"
-    key                         = "infrastructure/withdrawal-devnet-0/terraform.tfstate"
+locals {
+  aws_region = "us-east-1"
+  name       = "withdrawal-devnet-0"
+}
+
+module "withdrawal-devnet-0-ec2-instances" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "~> 3.0"
+
+  for_each = toset(["bootnode", "lighthouse-geth", "teku-nethermind"])
+  name     = "${local.name}-${each.key}"
+
+  ami                    = "ami-0fec2c2e2017f4e7b" // debian-11-amd64-20230124-1270
+  instance_type          = "t2.small"
+  key_name               = "samlaf"
+  vpc_security_group_ids = [module.security_group.security_group_id]
+  # Use the default vpc and subnet for now
+  # subnet_id              = "subnet-eddcdzz4"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
   }
 }
 
+module "security_group" {
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "~> 4.0"
 
-locals {
-  ssh_key_name = "barnabasbusa"
-  digital_ocean_project_name = "Withdrawals"
-  size = "s-4vcpu-8gb-amd"
-  region = "fra1"
-  image = "ubuntu-22-04-x64"
-  name = "withdrawal-devnet-0"
-  vpc_name="withdrawal-devnet-0"
-  vpc_ip_range="10.100.70.0/24"
-  vpc_region = "fra1"
-  shared_project_tags = [
-                            "Owner:Barnabas",
-                        ]
+  name        = local.name
+  description = "Security group for EC2 instances running EL+CL nodes"
+  # vpc_id      = module.vpc.vpc_id
 
+  # See in all.yaml for list of all ports that need to be open
+  # we start with just 30303 which is minimum to get p2p working
+  # TODO: try by manually allowing all traffic first.. see if that works.
+  ingress_with_cidr_blocks = [
+    {
+      from_port   = 30303
+      to_port     = 30303
+      protocol    = "tcp"
+      description = "EL p2p port"
+      cidr_blocks = "0.0.0.0/0"
+    },
+    {
+      from_port   = 9000 // from_port is not the port of the source, but from/to form a range of allowed ports
+      to_port     = 9000
+      protocol    = "tcp"
+      description = "CL p2p port"
+      cidr_blocks = "0.0.0.0/0"
+    },
+    {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "SSH"
+      cidr_blocks = "0.0.0.0/0"
+    }
+  ]
+  egress_with_cidr_blocks = [{
+    from_port   = 0
+    to_port     = 0
+    protocol    = "all"
+    description = "all traffic"
+    cidr_blocks = "0.0.0.0/0"
+  }]
 }
 
-# resource "digitalocean_vpc" "vpc" {
-#   name = local.vpc_name
-#   ip_range = local.vpc_ip_range
-#   region = local.vpc_region
+# TODO: the ec2 instances come with 8GB of storage, which seems enough for now,
+#       but at some point we might need more
+# resource "aws_volume_attachment" "this" {
+#   device_name = "/dev/sdh"
+#   volume_id   = aws_ebs_volume.this.id
+#   instance_id = module.ec2.id
 # }
 
+# resource "aws_ebs_volume" "this" {
+#   availability_zone = local.availability_zone
+#   size              = 50
 
-# module "withdrawal-devnet-0_bootnode" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-bootnode"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","explorer","bootnode","faucet","forkmon","ethstats_server","txfuzz","landing_page","reverse_proxy","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-# #  vpc_uuid = digitalocean_vpc.vpc.id
+#   tags = local.tags
 # }
 
-
-# module "withdrawal-devnet-0-lighthouse-geth" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lighthouse-geth"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","geth","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-lighthouse-nethermind" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lighthouse-nethermind"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","nethermind","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-lighthouse-besu" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lighthouse-besu"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lighthouse","execution","besu","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-
-# module "withdrawal-devnet-0-lodestar-geth" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lodestar-geth"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","geth","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-
-# module "withdrawal-devnet-0-lodestar-nethermind" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lodestar-nethermind"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","nethermind","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-lodestar-besu" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lodestar-besu"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","besu","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-teku-geth" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-teku-geth"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","geth","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-teku-nethermind" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-teku-nethermind"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","nethermind","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-teku-besu" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-teku-besu"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","teku","execution","besu","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-prysm-geth" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-prysm-geth"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","geth","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-prysm-nethermind" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-prysm-nethermind"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","nethermind","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-prysm-besu" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-prysm-besu"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","prysm","execution","besu","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-nimbus-geth" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-nimbus-geth"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","nimbus","execution","geth","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-nimbus-nethermind" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-nimbus-nethermind"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","nimbus","execution","nethermind","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-nimbus-besu" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-nimbus-besu"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","nimbus","execution","besu","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
-
-# module "withdrawal-devnet-0-lodestar-ethereumjs" {
-#   droplet_count = 1
-
-#   size      =  local.size
-#   region    = local.region
-#   image     = local.image
-#   name      = "withdrawal-devnet-0-lodestar-ethereumjs"
-#   source    = "../../modules/"
-
-#   tags = concat(local.shared_project_tags,["beacon","validator","lodestar","execution","ethereumjs","withdrawal-devnet-0"])
-#   ssh_key_name = local.ssh_key_name
-#   digital_ocean_project_name = local.digital_ocean_project_name
-#   #  vpc_uuid = digitalocean_vpc.vpc.id
-# }
